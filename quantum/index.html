@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta id="vp" name="viewport" content="user-scalable=no">
+<title>Quantum</title>
+
+<link rel="stylesheet" href="./css/jquery.mobile-1.1.0.css" media="all" />
+<link rel="stylesheet" href="./css/jquery.mobile.simpledialog.css" media="all" />
+<link rel="stylesheet" media="all and (orientation:landscape) and (min-width:961px),(orientation:portrait) and (min-width:641px)" href="./css/style-ipad.css" />
+<link rel="stylesheet" media="all and (orientation:landscape) and (max-width:960px),(orientation:portrait) and (max-width:640px)" href="./css/style-iphone.css" />
+<!--<link rel="stylesheet" href="./css/style-iphone.css" />-->
+
+<!-- json data -->   
+<script type="text/javascript" src="data/data.json"></script>
+
+<!-- external javascript -->   
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.1.0.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+
+</head>
+
+<body>
+<!-- #pageLogin -->
+<div data-role="page" id="pageLogin" data-title="Login - Quantum">
+	<div data-role="content">
+		<div class="loginBox">
+			<h1><span>Quantum</span></h1>
+			<form>
+				<fieldset id="inputsFieldset">
+					<div class="formRow">
+                        <label for="username">Login ID</label>
+						<input id="username" type="text" required />
+						<a href="#" data-role="none" class="btnClear" tabindex="-1"></a>
+					</div>
+					<div class="formRow">
+                        <label for="username">Password</label>
+						<input id="password" type="password" required />
+						<a href="#" data-role="none" class="btnClear" tabindex="-1"></a>
+					</div>
+				</fieldset>
+				<a href="#pageCloud" id="btnSignInAndAcceptTerms" class="btnBlue" data-role="button">SIGN IN & ACCEPT TERMS</a>
+			</form>
+		</div>
+		<section class="copyRight">
+			<p>By signing in, you agree to the</p>
+			<strong><a href="#pageTerms" data-role="none">License Agreement and Terms of Use</a></strong>
+		</section>
+	</div>
+</div>
+<!-- end #pageLogin -->
+
+<!-- #pageCloud -->
+<div data-role="page" id="pageCloud" data-title="Cloud - Quantum">
+	<div data-role="content" data-iscroll="scroller" data-scroll="y" class="grid">
+		<div class="boxInner">
+			<div class="pullDown">
+				<div class="pullDownInner">
+					<span class="pullDownIcon"></span><span class="pullDownLabel">Pull down to refresh...</span>
+					<div class="clearFixed"></div>
+				</div>
+			</div><!-- end .pullDown -->
+			
+			<!-- pullList -->
+			<ul class="pullList"></ul>
+		</div>
+	</div>
+	<footer data-role="footer">
+		<div class="inner">
+			<div class="leftPart">
+				<a href="#" data-role="none" class="btnShowList"></a>
+				<a href="#" data-role="none" class="btnShowGrid"></a>
+				<a href="#" data-role="none" class="btnSorting"></a>
+			</div>
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#pageCloud" data-role="button" class="current">Cloud</a>
+				<a href="#pageDevice" data-role="button">Device</a>
+			</div>
+			<a href="#pageSetting" data-role="none" class="btnInfo btnIpadPage"></a>
+		</div>
+	</footer><!-- /footer -->
+    <div class="sortPop">
+        <div class="sortPopInner">
+            <div class="sortPopContent">
+                <dl>
+                    <dt>Sort</dt>
+                    <dd class="selected">
+                        <input type="radio" name="sortType" data-role="none" checked />
+                        <label class="ui-label">
+                            <span class="ui-icon-radio">&nbsp;</span>
+                            <span class="ui-label-text">Recent</span>
+                        </label>
+                    </dd>
+                    <dd>
+                        <input type="radio" name="sortType" data-role="none" />
+                        <label class="ui-label">
+                            <span class="ui-icon-radio">&nbsp;</span>
+                            <span class="ui-label-text">Program</span>
+                        </label>
+                    </dd>
+                    <dd>
+                        <input type="radio" name="sortType" data-role="none" />
+                        <label class="ui-label">
+                            <span class="ui-icon-radio">&nbsp;</span>
+                            <span class="ui-label-text">Channel</span>
+                        </label>
+                    </dd>
+                </dl>
+            </div>
+            <span class="arrow"></span>
+        </div>
+    </div>
+</div>
+<!-- end #pageCloud -->
+
+
+<!-- #pageCloud -->
+<div data-role="page" id="pageDevice" data-title="Device - Quantum">
+
+	<div class="filterBar" data-iscroll="carousel" data-scroll="x">
+		<div class="carouselInner">
+			<ul>
+				<li class="first"><a href="#" data-role="none" data-json-name="null"></a></li>
+				<li><a href="#" data-role="none" data-json-name="all">All Items</a></li>
+				<li><a href="#" data-role="none" data-json-name="item01">Item1</a></li>
+				<li><a href="#" data-role="none" data-json-name="item02">Item2</a></li>
+				<li><a href="#" data-role="none" data-json-name="item03">Item3</a></li>
+				<li class="last"><a href="#" data-role="none" data-json-name="null"></a></li>
+			</ul>
+		</div>
+		<div class="leftGradient"></div>
+		<div class="rightGradient"></div>
+	</div>
+	<div data-role="content" class="grid" data-iscroll="scroller" data-scroll="y">
+		<div class="boxInner">			
+			<!-- pullList -->
+			<ul class="pullList"></ul>
+		</div>
+	</div>
+	<footer data-role="footer">
+		<div class="inner">
+			<div class="leftPart">
+				<a href="#" data-role="none" class="btnShowList"></a>
+				<a href="#" data-role="none" class="btnShowGrid"></a>
+				<a href="#" data-role="none" class="btnSorting"></a>
+			</div>
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#pageCloud" data-role="button">Cloud</a>
+				<a href="#pageDevice" data-role="button" class="current">Device</a>
+			</div>
+            <a href="#pageSetting" data-role="none" class="btnInfo btnIpadPage"></a>
+		</div>
+	</footer><!-- /footer -->
+    <div class="sortPop">
+        <div class="sortPopInner">
+            <div class="sortPopContent">
+                <dl>
+                    <dt>Sort</dt>
+                    <dd class="selected">
+                        <input type="radio" name="sortType" data-role="none" checked />
+                        <label class="ui-label">
+                            <span class="ui-icon-radio">&nbsp;</span>
+                            <span class="ui-label-text">Recent</span>
+                        </label>
+                    </dd>
+                    <dd>
+                        <input type="radio" name="sortType" data-role="none" />
+                        <label class="ui-label">
+                            <span class="ui-icon-radio">&nbsp;</span>
+                            <span class="ui-label-text">Program</span>
+                        </label>
+                    </dd>
+                    <dd>
+                        <input type="radio" name="sortType" data-role="none" />
+                        <label class="ui-label">
+                            <span class="ui-icon-radio">&nbsp;</span>
+                            <span class="ui-label-text">Channel</span>
+                        </label>
+                    </dd>
+                </dl>
+            </div>
+            <span class="arrow"></span>
+        </div>
+    </div>
+</div>
+<!-- end #pageDevice -->
+
+
+<!-- #pageInfo -->
+<div data-role="page" id="pageInfo" data-title="Info - Quantum">
+	<header data-role="header">
+		<div class="inner">
+			<h1>Info</h1>
+			<a href="#pageCloud" data-role="button" class="btnRightSide">Done</a>
+		</div>
+	</header>
+	
+	<div data-role="content" data-iscroll="scroller" data-scroll="y">
+		<div class="boxInner">			
+			<ul>
+				<li>
+					<a href="#pageSetting" data-role="none">
+						<span class="icon menuSetting"></span>
+						<span class="title">Settings</span>
+						<span class="arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#pageContactSupport" data-role="none">
+						<span class="icon menuSupport"></span>
+						<span class="title">Support</span>
+						<span class="arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#pageAbout" data-role="none">
+						<span class="icon menuAbout"></span>
+						<span class="title">About</span>
+						<span class="arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#pageTerms" data-role="none">
+						<span class="icon menuTerms"></span>
+						<span class="title">Terms</span>
+						<span class="arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#" data-role="none">
+						<span class="icon menuLegalNotices"></span>
+						<span class="title">Legal Notices</span>
+						<span class="arrow"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end #pageInfo -->
+
+
+<!-- #pageSetting -->
+<div data-role="page" id="pageSetting" data-title="Settings - Quantum">
+	<header data-role="header">
+		<div class="inner">
+			<a href="#" data-role="button" data-rel="back" class="btnBack"><span class="arrow"></span></a>
+			<h1>Info</h1>
+			<h2>Settings</h2>
+			<!--<a href="#pageCloud" data-role="button" class="btnRightSide">Done</a>-->
+            <a href="#pageCloud" data-role="button" class="btnDone"><span class="arrow"></span></a>
+		</div>
+	</header>
+	
+	<div data-role="content">
+		<div class="leftSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">
+				<ul>
+					<li class="current">
+						<a href="#pageSetting" data-role="none">
+							<span class="icon menuSetting"></span>
+							<span class="title">Settings</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageContactSupport" data-role="none">
+							<span class="icon menuSupport"></span>
+							<span class="title">Support</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageAbout" data-role="none">
+							<span class="icon menuAbout"></span>
+							<span class="title">About</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageTerms" data-role="none">
+							<span class="icon menuTerms"></span>
+							<span class="title">Terms</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-role="none">
+							<span class="icon menuLegalNotices"></span>
+							<span class="title">Legal Notices</span>
+						</a>
+					</li>
+				</ul>	
+			</div>
+		</div>
+		
+		<div class="rightSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">
+				<h2 class="subTitle">Settings</h2>			
+				<ul>
+					<li>
+						<a href="#pageLogin" data-role="none" class="cell">
+							<span class="title">Logout and return to login</span>
+							<span class="arrow"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-role="none" class="cell">
+							<span class="title">Video Format</span>
+							<span class="rightPart">HSL</span>
+						</a>
+					</li>
+					<li class="videoResolution">
+						<div class="cell">
+							<span class="title">Video Download Resolution</span>
+							<dl>
+								<dd>
+									<input type="radio" name="vdieoResolutionGroup" data-role="none"/>
+									<label class="ui-label">
+										<span class="ui-icon-radio">&nbsp;</span>
+										<span class="ui-label-text"><strong>HD</strong> 1280x720</span>
+									</label>
+								</dd>
+								<dd>
+									<input type="radio" name="vdieoResolutionGroup" data-role="none" />
+									<label class="ui-label">
+										<span class="ui-icon-radio">&nbsp;</span>
+										<span class="ui-label-text"><strong>SD</strong> 640x360</span>
+									</label>
+								</dd>
+								<dd class="selected">
+									<input type="radio" name="vdieoResolutionGroup" data-role="none" checked  />
+									<label class="ui-label">
+										<span class="ui-icon-radio">&nbsp;</span>
+										<span class="ui-label-text"><strong>Portable</strong> 320x180</span>
+									</label>
+								</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<a href="#pageParentalControls" data-role="none" class="cell">
+							<span class="title">Parental Controls</span>
+							<span class="arrow"></span>
+						</a>
+					</li>
+					<li class="closeCaptionsOption">
+						<div class="cell">
+							<span class="title">Close Captions</span>
+							<div data-role="controlgroup" data-type="horizontal">
+								<a href="#" data-role="button" class="current" data-theme="a">ON</a>
+								<a href="#" data-role="button" data-theme="a">OFF</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end #pageSetting -->
+
+
+<!-- #pageParentalControls -->
+<div data-role="page" id="pageParentalControls" data-title="Parental Controls - Quantum">
+	<header data-role="header">
+		<div class="inner">
+			<a href="#" data-role="button" data-rel="back" class="btnBack"><span class="arrow"></span></a>
+			<h1>Info</h1>
+			<h2>Parental Controls</h2>
+			<!--<a href="#pageCloud" data-role="button" class="btnRightSide">Done</a>-->
+            <a href="#" data-role="button" data-rel="back" class="btnDone"><span class="arrow"></span></a>
+		</div>
+	</header>
+	
+	<div data-role="content">
+		<div class="leftSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">
+				<ul>
+					<li class="current">
+						<a href="#pageSetting" data-role="none">
+							<span class="icon menuSetting"></span>
+							<span class="title">Settings</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageContactSupport" data-role="none">
+							<span class="icon menuSupport"></span>
+							<span class="title">Support</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageAbout" data-role="none">
+							<span class="icon menuAbout"></span>
+							<span class="title">About</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageTerms" data-role="none">
+							<span class="icon menuTerms"></span>
+							<span class="title">Terms</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-role="none">
+							<span class="icon menuLegalNotices"></span>
+							<span class="title">Legal Notices</span>
+						</a>
+					</li>
+				</ul>	
+			</div>
+		</div>
+		
+		<div class="rightSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">
+				<h2 class="subTitle">Parental Controls</h2>
+				<ul>
+					<li class="parentalControlsContentRow">
+						<div class="cell">
+							<p>Parental control settings are for the videos on your iPad, iPhone and online only. You can manage parental controls for your TV through your cable box</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" id="btnParentalControls" data-role="none" class="cell">
+							<span class="title">Manage Parental Controls</span>
+							<span class="arrow"></span>
+						</a>
+					</li>
+					<li class="closeCaptionsOption">
+						<div class="cell">
+							<span class="title">Show Adult Content</span>
+							<div data-role="controlgroup" data-type="horizontal">
+								<a href="#" data-role="button" class="current" data-theme="a">ON</a>
+								<a href="#" data-role="button" data-theme="a">OFF</a>
+							</div>
+						</div>
+					</li>
+					
+					<!--<a href="#" data-role="button" data-rel="back" class="btnBack btnIpadHave"><span class="arrow"></span></a>-->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end #pageParentalControls -->
+
+<!-- #pageContactSupport -->
+<div data-role="page" id="pageContactSupport" data-title="Contact Support - Quantum">
+	<header data-role="header">
+		<div class="inner">
+			<a href="#pageInfo" data-role="button" class="btnLeftSide btnIpadPage" data-direction="reverse">Cancel</a>
+			<h1>Info</h1>
+			<h2>Contact Support</h2>
+			<!--<a href="#pageCloud" data-role="button" class="btnRightSide">Done</a>-->
+            <a href="#pageCloud" data-role="button" class="btnDone"><span class="arrow"></span></a>
+			<a href="#pageInfo" data-role="button" class="btnRightSide btnSend btnIpadPage">Send</a>
+		</div>
+	</header>
+	
+	
+	<div data-role="content">
+		<div class="leftSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">
+				<ul>
+					<li>
+						<a href="#pageSetting" data-role="none">
+							<span class="icon menuSetting"></span>
+							<span class="title">Settings</span>
+						</a>
+					</li>
+					<li class="current">
+						<a href="#pageContactSupport" data-role="none">
+							<span class="icon menuSupport"></span>
+							<span class="title">Support</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageAbout" data-role="none">
+							<span class="icon menuAbout"></span>
+							<span class="title">About</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageTerms" data-role="none">
+							<span class="icon menuTerms"></span>
+							<span class="title">Terms</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-role="none">
+							<span class="icon menuLegalNotices"></span>
+							<span class="title">Legal Notices</span>
+						</a>
+					</li>
+				</ul>	
+			</div>
+		</div>
+		
+		<div class="rightSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">	
+				<h2 class="subTitle">Contact Support</h2>
+				<form>
+					<dl>
+						<dt>Subject :</dt>
+						<dd><input type="text" /></dd>
+						<dt>Message :</dt>
+						<dd>
+							<textarea></textarea>
+						</dd>
+						<dd class="command">
+							<a href="#pageSetting" data-role="button" class="btnSend">Send</a>
+							<a href="#pageSetting" data-role="button" class="btnCancel" data-direction="reverse">Cancel</a>
+						</dd>
+					</dl>
+				</form>
+			</div>	
+		</div>
+	</div>
+</div>
+<!-- end #pageContactSupport -->
+
+<!-- #pageContactSupport -->
+<div data-role="page" id="pageAbout" data-title="About - Quantum">
+	<header data-role="header">
+		<div class="inner">
+			<a href="#" data-role="button" data-rel="back" class="btnBack"><span class="arrow"></span></a>
+			<h1>Info</h1>
+			<h2>About</h2>
+			<!--<a href="#pageCloud" data-role="button" class="btnRightSide">Done</a>-->
+            <a href="#pageCloud" data-role="button" class="btnDone"><span class="arrow"></span></a>
+		</div>
+	</header>
+	
+	<div data-role="content">
+		<div class="leftSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">
+				<ul>
+					<li>
+						<a href="#pageSetting" data-role="none">
+							<span class="icon menuSetting"></span>
+							<span class="title">Settings</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageContactSupport" data-role="none">
+							<span class="icon menuSupport"></span>
+							<span class="title">Support</span>
+						</a>
+					</li>
+					<li class="current">
+						<a href="#pageAbout" data-role="none">
+							<span class="icon menuAbout"></span>
+							<span class="title">About</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageTerms" data-role="none">
+							<span class="icon menuTerms"></span>
+							<span class="title">Terms</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-role="none">
+							<span class="icon menuLegalNotices"></span>
+							<span class="title">Legal Notices</span>
+						</a>
+					</li>
+				</ul>	
+			</div>
+		</div>
+		
+		<div class="rightSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">	
+				<h2 class="subTitle">About</h2>
+				<div class="shadowBox">
+					<div class="shadowBoxContent">
+						<div class="shadowBoxContentInner">
+							<h2><span>Quantum</span></h2>
+							<div class="versionRow">
+								<h3>Quantum Mobile App</h3>
+								<p>Version 1.0.0</p>
+							</div>
+							<div class="copyRightRow">
+								<p>Copyright 2012 Quantum company</p>
+								<a href="#" data-role="none">http://www.Quantumvideo.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+<!-- end #pageContactSupport -->
+
+<!-- #pageContactSupport -->
+<div data-role="page" id="pageTerms" data-title="Terms - Quantum">
+	<header data-role="header">
+		<div class="inner">
+			<a href="#" data-role="button" data-rel="back" class="btnBack"><span class="arrow"></span></a>
+			<h1>Info</h1>
+			<h2>Terms</h2>
+			<!--<a href="#pageCloud" data-role="button" class="btnRightSide">Done</a>-->
+            <a href="#pageCloud" data-role="button" class="btnDone"><span class="arrow"></span></a>
+		</div>
+	</header>
+	
+	<div data-role="content">
+		
+		<div class="leftSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">
+				<ul>
+					<li>
+						<a href="#pageSetting" data-role="none">
+							<span class="icon menuSetting"></span>
+							<span class="title">Settings</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageContactSupport" data-role="none">
+							<span class="icon menuSupport"></span>
+							<span class="title">Support</span>
+						</a>
+					</li>
+					<li>
+						<a href="#pageAbout" data-role="none">
+							<span class="icon menuAbout"></span>
+							<span class="title">About</span>
+						</a>
+					</li>
+					<li class="current">
+						<a href="#pageTerms" data-role="none">
+							<span class="icon menuTerms"></span>
+							<span class="title">Terms</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-role="none">
+							<span class="icon menuLegalNotices"></span>
+							<span class="title">Legal Notices</span>
+						</a>
+					</li>
+				</ul>	
+			</div>
+		</div>
+		
+		
+		<div class="rightSide" data-iscroll="scroller" data-scroll="y">
+			<div class="boxInner">
+				<!--<h2 class="subTitle">Web Services Terms of Service / March 31, 2011</h2>-->
+				<div class="shadowBox">
+					<div class="shadowBoxContent">
+						<div class="shadowBoxContentInner">
+                            <h2>Web Services Terms of Service / March 31, 2011</h2>
+                            <p><strong>Effective March 31, 2011</strong></p>
+                            <p><a href="http://customer.comcast.com/Pages/FAQListViewer.aspx?topic=Internet&folder=cdf13524-c22a-49b8-9128-6896a8719ad0" target="_blank">Learn More</a></p>
+                            <h3>1. About the Web Services Terms of Service and Comcast Web Services</h3>
+                            <p>Within these Web Services Terms of Service ("<strong>Terms</strong>") the term "<strong>Comcast</strong>" or "<strong>we</strong>" will refer to Comcast Cable Communications Management, LLC, Comcast Interactive
+                                Media, LLC, and their respective subsidiaries and affiliates that own and operate
+                                Websites and Internet services on their behalf. The term “you” refers to you as a user
+                                of Comcast's Websites or Internet services described below.</p>
+                            <h4>What do these Terms cover?</h4>
+                            <p>These Terms set forth the terms and conditions through which Comcast will permit you to use these Comcast-owned and operated websites and services:</p>
+                            <ul>
+                                <li>1.	the Websites <a href="http://www.comcast.net" target="_blank">www.comcast.net</a>, <a href="http://customer.comcast.com" target="_blank">customer.comcast.com</a>, <a href="www.tunerfish.com" target="_blank">www.tunerfish.com</a> and <a href="http://www.plaxo.com" target="_blank">www.plaxo.com</a> (the "<strong>Comcast Sites</strong>"); and</li>
+                                <li>2.	all software and services provided by Plaxo, including those services made available by Plaxo through its application programming interfaces ("APIs") (collectively the "Plaxo Service"); and</li>
+                                <li>3.	all software and services provided by Tunerfish, including those services made available by Tunerfish through its application programming interfaces ("APIs") (collectively the "Tunerfish Service", and collectively, (1), (2), and (3) the "Comcast Web Services").</li>
+                            </ul>
+                            <h4>What is outside the scope of these Terms?</h4>
+                            <p>These Terms <strong>do not apply</strong> to your use of any other products or services provided by
+                                Comcast such as Comcast Digital Cable with On Demand, Comcast Digital Voice, Comcast
+                                High Speed Internet, XFINITY TV, XFINITY Internet, and XFINITY Voice. If you subscribe
+                                to or use one or more of these services, you can see the terms that apply to the
+                                residential versions of these services by
+                                visiting <a href="?http://www.comcast.com/Corporate/Customers/Policies/Policies.html" target="_blank">?http://www.comcast.com/Corporate/Customers/Policies/Policies.html</a>.</p>
+
+                            <p>These Terms also <strong>do not apply</strong> to your use of the XFINITY TV Store
+                                (<a href="http://store.xfinitytv.comcast.net" target="_blank">store.xfinitytv.comcast.net</a>). Comcast's use of the information you provide through the
+                                XFINITY TV Store is described in the XFINITY TV Store Privacy Policy, available at
+                                <a href="http://store.xfinitytv.comcast.net/TermsOfUse.aspx" target="_blank">http://store.xfinitytv.comcast.net/TermsOfUse.aspx</a>.</p>
+
+                            <p>Some of the Comcast Web Services contain links to other Websites, including Websites of
+                                third parties who are acting on our behalf as our agents, suppliers, or providers. These
+                                other Websites are not operated by Comcast and have their own terms of service that we
+                                encourage you to read before you use them. Other sites that we link to may contain
+                                Comcast branding, but these non-Comcast Websites and resources are provided by companies
+                                or persons other than Comcast. Examples of these non-Comcast Websites include Websites
+                                where you are required to log-in using a username and password other than your username
+                                and password for the Comcast Web Services, such as the Jobs channel and the Dating
+                                channel on <a href="http://Comcast.net" target="_blank">Comcast.net</a>. These Terms <strong>do not apply</strong> to those non-Comcast sites. Those sites
+                                will have their own terms of use that we encourage you to read before you use them.</p>
+
+                            <h3>2. Accepting These Terms</h3>
+
+                            <p>In order for you to use any of the Comcast Web Services, you must first agree to abide by the Terms. You can accept these Terms by:</p>
+                            <ul>
+                                <li>a.	Checking the box next to “I have read and agree to the Terms of Service” (or similar language); or</li>
+                                <li>b.	Using any of the Comcast Web Services, in which case you understand and agree that these Terms will apply to your use of those services (or any parts of them).</li>
+                            </ul>
+                            <p>Before you continue to use the Comcast Web Services, you should print or save a local copy of the Terms for your records.</p>
+
+                            <h3>3. Registration</h3>
+                            <p>In order to use the Comcast Web Services you may be required to provide information about yourself (such as identification or contact details) as part of the registration process. You agree that any registration information you give to Comcast will be accurate, correct, and current.</p>
+
+                            <h3>4. Prohibited Uses</h3>
+                            <p>You specifically agree not to:</p>
+                            <ul class="list">
+                                <li>use the Comcast Web Services to undertake or accomplish any unlawful purpose, including but not limited to, posting, storing, transmitting or disseminating information, data or material which is libelous, obscene, unlawful, threatening or defamatory, or which infringes the intellectual property rights of any person or entity, or which in any way constitutes or encourages conduct that would constitute a criminal offense, or otherwise violate any local, state, federal, or non-U.S. law, order, or regulation;</li>
+                                <li>post, store, send, transmit, or disseminate on the Comcast Web Services any information or material which a reasonable person could deem to be unlawful;</li>
+                                <li>upload, post, publish, transmit, reproduce, create derivative works of, or distribute on the Comcast Web Services in any way information, software or other material that is protected by copyright or other proprietary right, without obtaining any required permission of the owner;</li>
+                                <li>post on the Comcast Web Services unsolicited bulk or commercial messages commonly known as “spam;”</li>
+                                <li>send very large numbers of copies of the same or substantially similar messages, empty messages, or messages which contain no substantive content, or send very large messages or files that disrupt a blog, newsgroup, chat, or similar feature of the Comcast Web Services;</li>
+                                <li>initiate, perpetuate, or in any way participate in any pyramid or other illegal scheme through the Comcast Web Services;</li>
+                                <li>participate in the collection of very large numbers of e-mail addresses, screen names, or other identifiers of others (without their prior consent) from the Comcast Web Services, a practice sometimes known as spidering or harvesting, or participate in the use of software (including “spyware”) designed to facilitate this activity;</li>
+                                <li>collect responses from unsolicited bulk messages posted on the Comcast Web Services;</li>
+                                <li>impersonate any person or entity, engage in sender address falsification, forge anyone else's digital or manual signature, or perform any other similar fraudulent activity (for example,"phishing") on the Comcast Web Services;</li>
+                                <li>restrict, inhibit, or otherwise interfere with the ability of any other person, regardless of intent, purpose or knowledge, to use or enjoy the Comcast Web Services (except for tools for safety and security functions such as parental controls, for example), including, without limitation, posting or transmitting any information or software which contains a worm, virus, or other harmful feature, or generating levels of traffic sufficient to impede others' ability to use, send, or retrieve information;</li>
+                                <li>register under the name of, nor attempt to use the Comcast Web Services under the name of, another person;</li>
+                                <li>allow another person to access the Comcast Web Services using your credentials;</li>
+                                <li>access (or attempt to access) the Comcast Web Services through any automated means (including use of scripts or web crawlers), except through APIs or other interfaces specifically provided for this purpose, or violate the instructions set out in any robots.txt or similar file present within the Comcast Web Services;</li>
+                                <li>engage in the systematic retrieval of data or other content from the Comcast Web Services, except though APIs or other interfaces specifically provided for this purpose, to create or compile, directly or indirectly, a collection, compilation, database or directory, without Comcast's prior written consent;</li>
+                                <li>capture, rip, download, or otherwise create a copy of any content that is shown on the Comcast Sites without obtaining any required permission of the content owner; or</li>
+                                <li>take any actions for the purpose of manipulating or distorting, or that may undermine the integrity and accuracy of, any ratings or reviews of any movie or other entertainment program, service or product that may be presented by the Comcast Service.</li>
+                                <li>attempt to or actually circumvent any method used by Comcast to control access to the Web Services, including, but not limited to, spoofing or otherwise impersonating an IP address for your computer that is not actually assigned to your computer or setting up a proxy or other device that allows others to access the Web Services through it.</li>
+                            </ul>
+                            <p>If you are a Comcast High Speed Internet customer, you can find the guidelines for acceptable use of the Internet service, including any Comcast email or webmail services, at <a href="http://www.comcast.com/Corporate/Customers/Policies/Policies.html" target="_blank">http://www.comcast.com/Corporate/Customers/Policies/Policies.html</a>.</p>
+
+                            <h3>5. Your Passwords and Unauthorized Use of Your Account</h3>
+                            <p>You agree and understand that you are responsible for maintaining the confidentiality of the password(s) you use to access the Comcast Web Services. Accordingly, you agree that you will be solely responsible to Comcast for all activities that occur under your Comcast Web Services accounts, and will be responsible for any breach of these Terms caused by these activities. If you become aware of any unauthorized use of your password or of your account, you agree to notify Comcast immediately.</p>
+
+                            <h3>6. Privacy and Your Personal Information</h3>
+                            <p>To understand how the Comcast Web Services use information you provide, please read the Web Services Privacy Policy at <a href="http://www.comcast.net/privacy/2011-03/" target="_blank">http://www.comcast.net/privacy/2011-03/</a>. This policy explains how Comcast and its providers handle your personal information when you register and use the Comcast Web Services.</p>
+
+                            <h3>7. Content on the Comcast Web Services</h3>
+                            <p>The Comcast Web Services will allow you to access information, such as collections of data, video, audio, or other multimedia, and photographs and other static images (the "<strong>Content</strong>"). This Content may be owned by Comcast, other companies that give Comcast the right to distribute their Content (like movie publishers), or users of the Comcast Web Services (like you). Comcast grants you a limited license to view the Content and to use the Comcast Web Services for personal, non-commercial purposes as set forth in these Terms or in a manner that does not require a license. Unless the Content was legally posted by you on the Comcast Web Services, you may not distribute copies of the Content in any form (including by e-mail or other electronic means), without prior written permission from its owner except as permitted by law. Of course, you are free to encourage others to access the Content and to tell them how to find it.</p>
+                            <p>In addition, our Content providers want to remind you that you must not remove, alter, interfere with, or circumvent any copyright, trademark, or other proprietary notices marked on the Content or any digital rights management mechanism, device, or other content protection or access control measure associated with the Content. The copying, downloading, stream capturing, reproduction, duplication, archiving, distribution, uploading, publication, modification, translation, broadcast, performance, display, sale, or transmission of the Content is strictly prohibited unless it is expressly permitted by Comcast in writing. You may not incorporate the Content into any hardware or software application. This prohibition applies even if you intend to give away the derivative materials free of charge.</p>
+                            <p>You understand that by using the Comcast Web Services you may be exposed to Content that you may find offensive, indecent or objectionable. In this respect, you use the Comcast Web Services at your own risk. If you would like to use them, there are commercially available services and software that can limit exposure to material that you may find objectionable. The Comcast High Speed Internet service provides security information and tools for all users, including parents, at <a href="http://security.comcast.net/" target="_blank">http://security.comcast.net/</a>. Some of the tools may require that you be a registered Comcast High Speed Internet user in order to download and use them.</p>
+
+                            <h3>8. User Submissions</h3>
+                            <p>Some of the material appearing on the Comcast Web Services will be provided by users. Comcast does not claim ownership of any material that users submit or post on the Comcast Web Services. You agree that you are solely responsible for (and that Comcast has no responsibility to you or to any third party for) any material that you create, transmit, or display while using the Comcast Web Services, and for the consequences of your actions (including any loss or damage which Comcast may suffer) by doing so. Further, you agree that, with respect to any communication you submit to us for posting on the Comcast Web Services, you will not: (i) include any content that violates a third party's copyright or other proprietary or privacy rights; (ii) publish falsehoods or misrepresentations portrayed as fact; (iii) include any advertising or solicitations; or (iv) submit any material that is unlawful, obscene, defamatory, libelous, threatening, pornographic, harassing, hateful, racially or ethnically offensive, or encourages conduct that would be considered a criminal offense, give rise to civil liability, violate any law, or is otherwise clearly inappropriate.</p>
+                            <p>If you post any content to the Comcast Web Services, you hereby grant Comcast and its licensees a worldwide, royalty-free, non-exclusive right and license to use, reproduce, publicly display, publicly perform, modify, sublicense, and distribute the content, on or in connection with the Comcast Web Services or the promotion of the Comcast Web Services, and incorporate it in other works, in whole or in part, in any manner. You represent and warrant that you own the content or otherwise have sufficient rights in it to grant to Comcast the license set forth in this section without infringing or violating the rights of any third party. If you remove content that you have posted to the Comcast Web Services or terminate your Comcast Web Services account, this license will automatically expire, with a few limited exceptions. Comcast may retain, but will not actively use, copies of your data that were archived in the normal course of Comcast's database backups. In addition, copies of content that you have shared with other users of the Comcast Web Services may be retained by Comcast and associated with those other users' accounts in order to provide them with the Comcast Web Services. Comcast does not assert any ownership over content that you post to the Comcast Web Services; rather, as between us and you, subject to the rights granted to us in these Terms, you retain full ownership of all content you post to the Comcast Web Services and any intellectual property rights or other proprietary rights associated with the content.</p>
+                            <p>The Comcast Web Services may also contain links to community forums, bulletin boards, chat rooms, and blogs about the various Comcast Web Services. Children under the age of 13 should not post in any of the forums, boards, chat rooms, blogs, other editorial sections of the Comcast Web Services. Participants in these forums, bulletin boards, chat rooms, and blogs are solely responsible for all content that they post there. Comcast retains the right, but not the obligation, to correct any errors or omissions in any of this content, as it may determine in its sole discretion. Comcast further reserve the right to delete or remove any content from the forums or blogs without prior notice or liability. You agree that your participation in these forums, bulletin boards, chat rooms, and blogs will at all times conform with the policy available here: <a href="http://www.comcast.net/blog/comment-policy" target="_blank">http://www.comcast.net/blog/comment-policy</a>.</p>
+                            <p>Comcast reserves the right, but does not assume any obligation, to review any user submission prior to its display on the Comcast Web Services using automated tools or manual processes. Comcast may refuse to display or remove any user submission from the Comcast Web Services for any reason in our sole discretion. However, we will typically only do so when we become aware that the material in question is harmful, clearly illegal, or likely to be considered highly offensive or objectionable to a large segment of our users.</p>
+
+                            <h3>9. Feedback</h3>
+                            <p>Comcast welcomes your feedback about the Comcast Web Services. Comcast asks that you limit your feedback to the Comcast Web Services. Any communications you send to Comcast are deemed to be submitted on a non-confidential basis and become the sole property of Comcast. Comcast may, in its sole discretion, reproduce, use, publish, modify, disclose, distribute, or otherwise use these communications in any way and for any purpose. All of these uses by Comcast shall be without liability or obligation of any kind to you. These uses may include, for example, use of the content of any of these communications, including any works, marks or names, ideas, inventions, concepts, techniques or know-how disclosed therein, for any purpose without any obligation to compensate the originator of the communications and without liability to that person.</p>
+
+                            <h3>10. Proprietary Rights</h3>
+                            <p>You acknowledge and agree that Comcast (or Comcast's licensors) own all legal right, title, and interest in and to the Comcast Web Services, including any intellectual property rights which subsist in the Comcast Web Services (whether those rights happen to be registered or not, and wherever in the world those rights may exist).</p>
+                            <p>Unless you have agreed otherwise in writing with Comcast, nothing in the Terms gives you a right to use any of Comcast's trade names, trade marks, service marks, logos, domain names, and other distinctive brand features except as permitted by law. If you have been given an explicit right to use any of these brand features in a separate written agreement with Comcast, then you agree that your use of these features shall be in compliance with that agreement, any applicable provisions of the Terms, and Comcast's brand feature use guidelines as updated from time to time.</p>
+                            <p>Unless you have been expressly authorized to do so in writing by Comcast, you agree that in using the Comcast Web Services, you will not use any trade mark, service mark, trade name, logo of any company or organization in a way that is likely or intended to cause confusion about the owner or authorized user of these marks, names or logos.</p>
+
+                            <h3>11. Linking to the Comcast Sites</h3>
+                            <p>Comcast welcomes links to the homepages of any of the Comcast Sites. You are free to establish a hypertext link to these homepages so long as the link does not state or imply any affiliation, connection, sponsorship, or approval of your site by Comcast. Comcast does not permit framing or inline linking to the Comcast Sites or any portions of them.</p>
+
+                            <h3>12. License from Comcast</h3>
+                            <p>Comcast gives you a worldwide, non-assignable and non-exclusive license to use the Comcast Web Services for your personal, non-commercial use on the terms and conditions described in these Terms. This license is for the sole purpose of enabling you to use and enjoy the benefit of the Comcast Web Services as provided by Comcast, in the manner permitted by the Terms.</p>
+
+                            <h3>13. Discontinuing Use of the Comcast Web Services and Termination of the Terms; Provisions That Remain in Effect after Termination</h3>
+                            <p>The Terms apply to all users of the Comcast Web Services. Except as described below, depending on whether you are an unregistered user or a registered user, you can discontinue your use of the Comcast Web Services so that these Terms no longer apply to you.</p>
+
+                            <h4>Unregistered Users</h4>
+                            <p>If you use any of the Comcast Web Services (or parts of those services) that are accessible without registration, you may discontinue use of those services at any time. Doing so will terminate the Terms. If you breach any provision of these Terms or other applicable policies, or for any other reason, Comcast reserves the right to restrict, suspend, or terminate your use of the Comcast Web Services and terminate the Terms. We may take these actions with or without notice to you. Because unregistered users are generally unknown to us, in most cases we will be unable to give notice of these actions.</p>
+
+                            <h4>Registered Users</h4>
+                            <p>If you use any of the Comcast Web Services (or parts of those services) as a registered user, you may terminate your registered user account at any time. Doing so will delete your account and, because you can no longer use the service associated with that account, terminate the Terms with respect to that service. If you breach any provision of these Terms or other applicable policies, or for any other reason, Comcast reserves the right to restrict, suspend, or terminate your registered user account for any or all of the Comcast Web Services and terminate the Terms. We may take these actions with or without notice to you. Because registered users are known to us, however, we will generally use reasonable efforts to give notice of these actions.</p>
+                            <p>Currently, registered user accounts for <a href="http://Comcast.net" target="_blank">Comcast.net</a> are associated with Comcast High-Speed Internet Service or Comcast Digital Voice Service and cannot be deleted solely for the <a href="http://Comcast.net" target="_blank">Comcast.net</a> Website.</p>
+                            <p>Sections 8, 10, 13 through 16, and 22 of these Terms will survive termination, and shall continue to apply indefinitely.</p>
+
+                            <h3>14. EXCLUSION OF WARRANTIES</h3>
+                            <p>YOU AGREE THAT YOUR USE OF THE COMCAST WEB SERVICES IS AT YOUR SOLE RISK. BECAUSE OF THE NUMBER OF POSSIBLE SOURCES OF INFORMATION AVAILABLE THROUGH THE COMCAST WEB SERVICES, AND THE INHERENT HAZARDS AND UNCERTAINTIES OF ELECTRONIC DISTRIBUTION, THERE MAY BE INTERRUPTIONS, DELAYS, OMISSIONS, INACCURACIES, OR OTHER PROBLEMS WITH THIS INFORMATION. IF YOU RELY ON THE COMCAST WEB SERVICES OR ANY MATERIAL AVAILABLE THROUGH THEM, YOU DO SO AT YOUR OWN RISK. YOU UNDERSTAND THAT YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM ANY MATERIAL AND/OR DATA DOWNLOADED FROM OR OTHERWISE PROVIDED THROUGH THE COMCAST WEB SERVICES.</p>
+                            <p>THE COMCAST WEB SERVICES ARE PROVIDED TO YOU “AS IS,” “WITH ALL FAULTS,” AND “AS AVAILABLE.” COMCAST AND ITS AGENTS AND LICENSORS CANNOT AND DO NOT WARRANT THE ACCURACY, COMPLETENESS, USEFULNESS, TIMELINESS, NONINFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OF THE INFORMATION AVAILABLE THROUGH THE COMCAST WEB SERVICES, NOR DO THEY GUARANTEE THAT THE COMCAST WEB SERVICES WILL BE ERROR-FREE, OR CONTINUOUSLY AVAILABLE, OR THAT THE COMCAST WEB SERVICES WILL BE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</p>
+
+                            <h3>15. LIMITATION OF LIABILITY</h3>
+                            <p>UNDER NO CIRCUMSTANCES SHALL COMCAST (INCLUDING ITS PARENTS, SUBSIDIARIES, AND AFFILIATES) OR ITS AGENTS OR LICENSORS BE LIABLE TO YOU OR ANYONE ELSE FOR ANY DAMAGES ARISING OUT OF ANY USE OR MISUSE OF THE COMCAST WEB SERVICES, INCLUDING, WITHOUT LIMITATION, LIABILITY FOR CONSEQUENTIAL, SPECIAL, INCIDENTAL, INDIRECT, OR SIMILAR DAMAGES, EVEN IF ADVISED BEFOREHAND OF THE POSSIBILITY OF THESE DAMAGES, REGARDLESS OF THE FORM OR CAUSE OF ACTION INCLUDING, BUT NOT LIMITED TO, CONTRACT, NEGLIGENCE, AND OTHER TORT ACTIONS. BECAUSE SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN CATEGORIES OF DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. IN THESE STATES, THE LIABILITY OF COMCAST AND ITS AGENTS AND LICENSORS IS LIMITED TO THE FULLEST EXTENT PERMITTED BY APPLICABLE STATE LAW. YOU AGREE THAT THE LIABILITY OF COMCAST (INCLUDING ITS PARENTS, SUBSIDIARIES, AND AFFILIATES) AND ITS AGENTS AND LICENSORS, IF ANY, ARISING OUT OF ANY KIND OF LEGAL CLAIM IN ANY WAY CONNECTED TO THE COMCAST WEB SERVICES SHALL NOT EXCEED THE AMOUNT YOU PAID TO COMCAST FOR THE USE OF THE COMCAST WEB SERVICES.</p>
+
+                            <h3>16. Indemnification</h3>
+                            <p>You agree to indemnify, defend, and hold harmless Comcast (including its parents, subsidiaries, and affiliates and all of their respective officers, directors, employees, agents, licensors, suppliers and any third-party information providers) against all claims, losses, expenses, damages and costs (including reasonable attorney fees) resulting from any breach of the Terms or unauthorized use of the Comcast Web Services. Comcast reserves the right, at its election to assume the exclusive defense and control of any matter subject to indemnification by you and you agree to cooperate with Comcast in connection with our defense.</p>
+
+                            <h3>17. Copyright Infringement</h3>
+                            <p>Comcast is committed to complying with U.S. copyright and related laws, and requires all users of the Comcast Web Services to comply with these laws. Accordingly, you may not use the Comcast Web Services to store any material or content, or disseminate any material or content, in any manner that constitutes an infringement of third party intellectual property rights, including rights granted by U.S. copyright law.</p>
+                            <p>If you are the owner of any copyrighted work and believe your rights under U.S. copyright law have been infringed by any material on the Comcast Web Services, you may take advantage of certain provisions of the Digital Millennium Copyright Act (the "<strong>DMCA</strong>") by sending Comcast's authorized agent a notification of claimed infringement that satisfies the requirements of the DMCA. Upon Comcast's receipt of a satisfactory notice of claimed infringement, Comcast will respond expeditiously either directly or indirectly (i) to remove the allegedly infringing work(s) accessible through the Comcast Web Services or (ii) to disable access to the work(s). It is Comcast's policy in accordance with the DMCA and other applicable laws to reserve the right to terminate access to the Comcast Web Services (or any part of those services) for any user who is either found to infringe third party copyright or other intellectual property rights, including repeat infringers, or who Comcast, in its sole discretion, believes is infringing these rights. Comcast may terminate access to the Comcast Web Services at any time with or without notice for any affected customer or user. If the affected user believes in good faith that the allegedly infringing works have been removed or blocked by mistake or misidentification, then that person may send a counter notification to Comcast. Upon Comcast's receipt of a counter notification that satisfies the requirements of DMCA, Comcast will provide a copy of the counter notification to the person who sent the original notification of claimed infringement and will follow the DMCA's procedures with respect to a received counter notification. In all events, you expressly agree that Comcast will not be a party to any disputes or lawsuits regarding alleged copyright infringement.</p>
+                            <p>Copyright owners may send Comcast a notification of claimed infringement to report alleged infringements of their works to:</p>
+                            <ul>
+                                <li>
+                                    <p>Comcast Interactive Media, LLC</p>
+                                    <p>Attn: Vice President, Legal & Business Affairs</p>
+                                    <p>One Comcast Center</p>
+                                    <p>Philadelphia, PA 19103</p>
+                                    <p>DMCA_Notice at Comcast dot com</p>
+                                </li>
+                            </ul>
+                            <p>Any notification of claimed infringement must be in a form that satisfies the requirements of Section 512(c)(3) of the U.S. Copyright Act. Under the DMCA, anyone who knowingly makes misrepresentations regarding alleged copyright infringement may be liable to Comcast, the alleged infringer, and the affected copyright owner for any damages incurred in connection with the removal, blocking, or replacement of allegedly infringing material.</p>
+                            <p>If a notification of claimed infringement has been filed against you, you can file a counter notification with Comcast's designated agent using the contact information shown above. All counter notifications must satisfy the requirements of Section 512(g)(3) of the U.S. Copyright Act.</p>
+
+                            <h3>18. Other Sites</h3>
+                            <p>The Comcast Web Services contains links to other sites. Some of these other sites may be co-branded with Comcast branding and may look like features of the Comcast Web Services, but these Websites and resources are provided by companies or persons other than Comcast. Comcast does not control the terms of service or the privacy policies of these sites, and their terms and policies will govern your use of those sites and their use of any information you provide to them through those sites. You acknowledge and agree that Comcast is not responsible for the availability of any of these external sites or resources, and does not endorse any advertising, products or other materials on or available from these Websites or resources. You acknowledge and agree that Comcast is not liable for any loss or damage which may be incurred by you as a result of the availability of those external sites or resources, or as a result of any reliance placed by you on the completeness, accuracy or existence of any advertising, products or other materials on, or available from, these Websites or resources.</p>
+
+                            <h3>19. Changes to the Terms</h3>
+                            <p>Comcast reserves the right to change these Terms from time to time consistent with applicable contract laws and principles. When these changes are made, Comcast will make a copy of the updated Terms available at this web page and will also make any updated Terms available to you by e-mail, direct mail, or other reasonable means as selected by Comcast.</p>
+                            <p>Comcast will make the updated Terms available to you before they take effect. You understand and agree that if you use the Comcast Web Services after the date on which the Terms take effect; Comcast will treat your use as acceptance of the updated Terms.</p>
+
+                            <h3>20. Trademarks</h3>
+                            <p>Comcast®, the Comcast design logo, XFINITY®, the XFINITY design logo, Plaxo®, Plaxo PulseTM, and the Plaxo design logo are all trademarks or service marks of Comcast Corporation or its subsidiaries. All other trademarks and service marks appearing on the Comcast Web Services are the properties of their respective owners.</p>
+
+                            <h3>21. Special Note about Plaxo</h3>
+                            <p>Plaxo is not intended for use by, and should not be used by, children under the age of 13. You may not use <a href="http://www.plaxo.com" target="_blank">www.plaxo.com</a> if you are under the age of 13, or to solicit information from children under the age of 13.</p>
+
+                            <h3>22. General Legal Terms</h3>
+                            <p>The Terms constitute the whole legal agreement between you and Comcast and govern your use of the Comcast Web Services, and completely replace any prior agreements between you and Comcast in relation to the Comcast Web Services.</p>
+                            <p>You agree that Comcast may provide you with notices, including those regarding changes to the Terms, by e-mail, regular mail, or postings on the Comcast Web Services.</p>
+                            <p>You agree that if Comcast does not exercise or enforce any legal right or remedy which is contained in the Terms (or which Comcast has the benefit of under any applicable law), this will not be taken to be a formal waiver of Comcast's rights and that those rights or remedies will still be available to Comcast.</p>
+                            <p>If any court of law, having the jurisdiction to decide on this matter, rules that any provision of these Terms is invalid, then that provision will be removed from the Terms without affecting the rest of the Terms. The remaining provisions of the Terms will continue to be valid and enforceable.</p>
+                            <p>You acknowledge and agree that each member of the group of companies of which Comcast Corporation is the parent shall be third party beneficiaries to the Terms and that these other companies shall be entitled to directly enforce, and rely upon, any provision of the Terms which confers a benefit on (or rights in favor of) them. Other than this, no other person or entity shall be third party beneficiaries to the Terms.</p>
+                            <p>The Terms, and your relationship with Comcast under the Terms, shall be governed by the laws of the Commonwealth of Pennsylvania, without regard to its conflict of laws provisions. By using the Comcast Web Services, you consent to the exclusive jurisdiction of the state and federal courts in Philadelphia, Pennsylvania, in all disputes arising out of or relating to the Terms or Comcast Web Services.</p>
+
+                            <h3>23. Special Note About Content Provided as Part of Your Digital Cable with On Demand Subscription.</h3>
+                            <p>If you are a residential subscriber to Comcast Digital Cable with On Demand and Comcast High Speed Internet, you may be entitled to access certain video content that is related to your Comcast Digital Cable with On Demand subscription in addition to the content that is generally available on the Comcast Sites. For example, if you subscribe to HBO as part of your Comcast Digital Cable with On Demand subscription, in addition to the content that is generally available on the Comcast Sites, you may be entitled to access HBO content on the Comcast Sites as well. This additional video content is intended to be used as a complement to your Comcast Digital Cable with On Demand subscription, and therefore should be viewed primarily in and by members of the residence at which you have a Comcast Digital Cable with On Demand subscription. You may not simultaneously view more than three video streams of this additional content per residence at which you already have a Comcast Digital Cable with On Demand subscription.</p>
+
+                            <p></p>
+                            <p><strong>Revised and Effective: March 31, 2011</strong></p>
+						</div>
+					</div>
+					
+				</div>
+			</div>	
+		</div>
+		
+	</div>
+</div>
+<!-- end #pageContactSupport -->
+
+</body>
+</html>
