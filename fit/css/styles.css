@@ -1,0 +1,1071 @@
+@font-face {
+    font-family: 'Myriad pro';
+    src: url('myriadpro-regular-webfont.eot');
+    src: local('☺'), url('myriadpro-regular-webfont.woff') format('woff'), url('myriadpro-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background: url("../i/bg.png");
+    font-family: 'Myriad pro', arial, sans-serif;
+}
+.clear{
+    clear: both;
+}
+.ui-page h2{
+    margin: 0;
+    font-weight: normal;
+}
+.ui-page .bg, .ui-page .bg .bgRight, .ui-page .bg .bgLeft{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.ui-page .bg{
+    background: url("../i/bg.png")
+    }.ui-page .bg .bgRight{
+        background: url("../i/bg-right.png") repeat-y 100% 0;
+    }
+        .ui-page .bg .bgLeft{
+            background: url("../i/bg-left.png") repeat-y 0 100%;
+            font-family: 'Myriad pro',arial,sans-serif;
+        }
+/*logo*/
+.logo{
+    height: 54px;
+    background: url("../i/logo-bg.png") repeat-x 0 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+    .logo .l{
+        background: url("../i/bg-left.png") repeat-y 0 100%;
+    }
+        .logo .l .r{
+            background: url("../i/bg-right.png") repeat-y 100% 0;
+            height: 54px;
+        }
+            .logo .l .r img{
+                margin-top: 5px;
+            }
+/*logo*/
+.splash .logo{
+    margin-top: 75px;
+    height: 108px;
+    background: url("../i/logo-bg.png") repeat-x;
+    text-align: center;
+    vertical-align: middle;
+}
+#splashCnt, #createAccountCnt{
+    /*min-height: 280px;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+}
+    #splashCnt .scroll{
+        padding-bottom: 100px;
+    }
+    .splash .logo .l{
+        background: url("../i/bg-left.png") repeat-y 0 100%;
+    }
+        .splash .logo .l .r{
+            background: url("../i/bg-right.png") repeat-y 100% 0;
+            height: 108px;
+        }
+            .splash .logo .l .r img{
+                margin-top: 28px
+            }
+/*findBuddy*/
+.findBuddy{
+    color: #fffffe;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 25px;
+}
+    .findBuddy .title{
+        font-size: 26px;
+        padding: 0;
+    }
+/*fb login*/
+.loginFb{
+    text-align: center;
+    padding-top: 20px;
+}
+    .loginFb a{
+        display: inline-block;
+        width: 225px;
+        height: 46px;
+        background: url("../i/login-fb.png") no-repeat;
+    }
+    .loginFb a:hover{
+        background: url("../i/login-fb.png") no-repeat 0 -46px;
+    }
+.loginNFb{
+    text-align: center;
+    padding-top: 12px;
+}
+    .loginNFb a.ui-link{
+        display: inline-block;
+        width: 219px;
+        height: 41px;
+        background: url("../i/login-Nfb.png") no-repeat;
+        text-align: center;
+        line-height: 40px;
+        color: #656565;
+        text-shadow: 0 1px 3px #000;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: normal;
+        border-radius: 5px;
+    }
+    .loginNFb a.ui-link:hover, .loginNFb a.ui-link:active{
+        color: #fff;
+    }
+
+/*title*/
+.title{
+    font-size: 20px;
+    color: #fffffe;
+    text-align: center;
+    padding: 35px 0 30px;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+}
+/*create acount*/
+.createAccount{
+    width: 260px;
+    margin: 0 auto;
+}
+    .createAccount .ui-simpledialog-container{
+        width: 250px;
+    }
+    .createAccount .ui-simpledialog-container .user{
+        padding: 15px;
+        background: #f3f3f3;
+    }
+        .createAccount .ui-simpledialog-container .user img, .createAccount .ui-simpledialog-container .user span{
+            display: block;
+            float: left;
+            line-height: 41px;
+            margin-right: 5px;
+        }
+        .createAccount .ui-simpledialog-container .user a{
+            display: block;
+            float: right;
+            line-height: 41px;
+            text-decoration: none;
+            color: #6e88b7;
+            font-size: 11px;
+            font-family: arial,serif;
+        }
+        .createAccount .ui-simpledialog-container .user a:hover{
+            text-decoration: underline;
+        }
+        .createAccount .ui-simpledialog-container .user input{
+            margin-top: 10px;
+            color: #656565;
+            font-size: 16px;
+            border: 1px solid #bdc7d9;
+            width: 205px;
+            height: 26px;
+            padding: 6px;
+            outline: none;
+        }
+        input.waterMark, textarea.waterMark{
+            color: #d0d0d0;
+        }
+        .createAccount .ui-simpledialog-container .user a.signUp{
+            margin-top: 10px;
+            height: 38px;
+            width: 218px;
+            border: 1px solid #224781;
+            background: url("../i/signUp-bg.png") repeat-x;
+            display: block;
+            font-size: 16px;
+            color: #fffffe;
+            text-shadow: 0 0 #fff;
+            font-weight: normal;
+            text-align: center;
+            line-height: 38px;
+            float: none;
+            font-family: 'Myriad pro',arial,sans-serif;
+        }
+        .createAccount .ui-simpledialog-container .user a:hover.signUp{
+            border: 1px solid #222222;
+            background: url("../i/signUp-bg.png") repeat-x 0 -38px;
+            color: #fffeee;
+            text-decoration: none;
+        }
+
+/*game flow */
+.gamesContent{
+    padding: 0 22px;
+    text-align: center;
+    position: absolute;
+    top: 54px;
+    bottom: 65px;
+    left: 0;
+    right: 0;
+}
+    .gamesContent .gamesTitle{
+        font-size: 20px;
+        color: #fffffe;
+        text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, -1px 1px 2px #000, 1px -1px 2px #000;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .gamesContent ul{
+        margin: 0 ;
+        padding: 0;
+    }
+    .gamesContent .gamesIcon{
+        width: 82px;
+        display: inline-block;
+        height: 79px;
+        text-align: center;
+        background: url("../i/games-icon-frame.png") no-repeat;
+        text-align: center;
+        padding-top: 3px;
+        position: relative;
+        margin: 2px 5px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+    }
+    .gamesContent .gamesIcon.select{
+        border: 2px solid #ccc;
+        border-radius: 6px;
+    }
+        .gamesContent .gamesIcon .name{
+            font-size: 14px;
+            color: #fffffe;
+            position: relative;
+            top: -12px;
+            text-shadow: 1px 1px 2px #000, -1px -1px 2px #000;
+        }
+footer{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: #9b9b9b;
+    font-size: 11px;
+    font-family: arial,sans-serif;
+    text-shadow: 0 -1px #000;
+    padding-bottom: 10px;
+}
+.ui-footer.footer{
+    background: none;
+    bottom: 0;
+    text-align: center;
+    height: 60px;
+    position: absolute;
+}
+#gameFlow .ui-footer{
+    position: absolute;
+}
+    .ui-footer .nextButton, .ui-footer .backButton{
+        background: url("../i/next-button.png") no-repeat;
+        text-align: left;
+        height: 52px;
+        width: 76px;
+        padding-left: 25px;
+        border: none;
+        font-size: 16px;
+        box-shadow: none;
+    }
+    .ui-footer :hover.nextButton{
+        background: url("../i/next-button.png") no-repeat 0 -52px;
+    }
+    .ui-footer .backButton{
+        background: url("../i/back-button.png") no-repeat;
+        padding-left: 40px;
+        width: 61px;
+    }
+    .ui-footer :hover.backButton{
+        background: url("../i/back-button.png") no-repeat 0 -52px;
+    }
+    .ui-footer .backButton.left{
+        float: left;
+    }
+    .ui-footer .nextButton.right{
+        float: right;
+    }
+        .ui-footer .nextButton .ui-btn-inner, .ui-footer .backButton .ui-btn-inner{
+            padding: 0;
+            line-height: 50px;
+            border: none;
+        }
+            .ui-footer .nextButton .ui-btn-inner .ui-icon-custom, .ui-footer .backButton .ui-btn-inner .ui-icon-custom{
+                width: 0;
+                height: 0;
+            }
+.wrapper{
+    bottom: 65px;
+    left: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-shadow: 1px 1px #000000;
+    top: 54px;
+}
+#stepThirdContent{
+    position: absolute;
+    top: 64px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+    .wrapper .centerBox{
+        padding-top: 30px;
+        position: absolute;
+        width: 100%;
+    }
+    .stepOne .title{
+        font-size: 20px;
+        font-style: italic;
+        padding-top: 0;
+    }
+    .stepOne .gameIcon{
+        text-align: center;
+    }
+        .stepOne .gameName{
+            font-size: 16px;
+            color: #fffffe;
+        }
+    .stepOne .goodSelect{
+        margin-top: 20px;
+        background: url("../i/good-select-bg.png") no-repeat 50% 0;
+        text-align: center;
+        padding-left: 2px;
+    }
+        .stepOne .goodSelect span{
+            padding-top: 40px;
+            display: inline-block;
+            color: #fffffe;
+            font-size: 12px;
+            width: 52px;
+            background: url("../i/good-not-select-icon.png") no-repeat 50% 0;
+        }
+        .stepOne .goodSelect span.wider{
+            width: 58px;
+        }
+            .stepOne .goodSelect span.select{
+                background: url("../i/good-select-icon.png") no-repeat 50% 0;
+            }
+
+/*step second*/
+#stepSecond .wrapper .title{
+    padding: 0;
+}
+    .stepOne .harasSelect{
+        margin-top: 20px;
+        background: url("../i/haras-bg.png") no-repeat 50% 0;
+        text-align: center;
+        padding-left: 2px;
+    }
+        .stepOne .harasSelect span{
+            padding-top: 40px;
+            display: inline-block;
+            color: #fffffe;
+            font-size: 12px;
+            width: 70px;
+            background: url("../i/good-not-select-icon.png") no-repeat 50% 0;
+        }
+        .stepOne .harasSelect span.left{
+            margin-right: 55px;
+        }
+        .stepOne .harasSelect span.right{
+            margin-left: 55px;
+        }
+        .stepOne .harasSelect span.select{
+            background: url("../i/good-select-icon.png") no-repeat 50% 0;
+        }
+
+    .stepOne .haras {
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .stepOne .howFar {
+        background: url("../i/howfar-border-top.png") repeat-x;
+        padding-top: 30px;
+        margin-top: 30px;
+    }
+
+/*step second*/
+.stepThird .content{
+    background: #fff;
+    padding: 9px 0 0;
+    color: #656565 !important;
+    right: 0;
+    margin-bottom: 10px;
+}
+    .stepThird .content .header{
+        border-bottom: 1px solid #d7d7d7;
+        padding: 0 19px;
+    }
+        .stepThird .content .payment{
+            font-size: 20px;
+        }
+            .stepThird .content span{
+                color: #6db907;
+            }
+        .stepThird .content .incl{
+            font-size: 12px;
+            padding-bottom: 9px;
+        }
+    .stepThird .content .cardInfo{
+        background: #f3f3f3;
+        padding: 0 19px 10px;
+    }
+        .stepThird .content .cardInfo .title, .stepThird .content .bilingInfo .title{
+            padding: 5px 0;
+            font-size: 16px;
+            text-align: left;
+            text-shadow: 0 0 #fff;
+            color: inherit;
+        }
+        .stepThird .content .cardInfo input, .stepThird .content .bilingContent input, .stepThird .content .bilingContent textarea{
+            background: #fff;
+            border: 1px solid #bdc7d9;
+            border-radius: 0;
+            box-shadow: none;
+            margin-bottom: 5px;
+            width: 240px;
+            font-size: 16px;
+            font-family: 'Myriad pro',arial,sans-serif;
+        }
+        .stepThird .content .bilingContent textarea{
+            height: 41px;
+        }
+        .stepThird .content .cardInfo input.month{
+            width: 30px;
+            display: inline;
+        }
+        .stepThird .content .cardInfo input.year{
+            width: 45px;
+            display: inline;
+            margin-right: 10px;
+        }
+        .stepThird .content .cardInfo input.cvv{
+            width: 35px;
+            display: inline;
+        }
+        .stepThird .content .cardInfo span.seperator{
+            width: 12px;
+            display: inline-block;
+            text-align: center;
+        }
+        .stepThird .content .cardInfo img{
+            display: inline-block;
+            left: 7px;
+            position: relative;
+            top: 9px;
+        }
+    .stepThird .content .bilingInfo{
+        background: #f3f3f3;
+        padding: 0 13px 30px;
+    }
+        .stepThird .content .bilingInfo .bilingContent{
+            padding: 5px 6px;
+            border-top: 1px dashed #c2c2c2;
+        }
+            .stepThird .content .bilingInfo .bilingContent #submit{
+                max-width: 240px;
+            }
+            .stepThird .content .bilingInfo input.city{
+                width: 80px;
+                display: inline;
+            }
+            .stepThird .content .bilingInfo input.zip{
+                width: 50px;
+                display: inline;
+            }
+            .stepThird .content .bilingInfo .ui-select{
+                display: inline-block;
+                top: 0px;
+            }
+                .stepThird .content .bilingInfo .ui-select a.ui-btn{
+                    margin: 0;
+                    box-shadow: none;
+                    border-radius: 2px;
+                    background-image: -webkit-linear-gradient(#FDFDFD /*{b-body-background-start}*/, #ddd /*{b-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
+                    background-image:    -moz-linear-gradient(#FDFDFD /*{b-body-background-start}*/, #ddd /*{b-body-background-end}*/); /* FF3.6 */
+                }
+                    .stepThird .content .bilingInfo .ui-select a.ui-btn .ui-btn-inner{
+                        padding: 6px 6px 6px 5px;
+                        height: 21px;
+                        width: 71px;
+                        text-align: left;
+                    }
+                        .stepThird .content .bilingInfo .ui-select a.ui-btn .ui-btn-inner .ui-btn-text{
+                            font-size: 16px;
+                            color: #797979;
+                            line-height: 21px;
+                            font-weight: normal;
+                        }
+                            .stepThird .content .bilingInfo .ui-select a.ui-btn .ui-btn-inner .ui-icon{
+                                background: transparent url("../i/select-arrow.png") no-repeat;
+                                right: 5px;
+                                width: 10px;
+                            }
+
+/*create event*/
+.ui-page .footerLinks{
+    height: 58px;
+    background: url("../i/link-footer-bg.png") repeat-x;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-top: 7px;
+}
+#invite .footerLinks{
+    background: none;
+}
+    .ui-page .footerLinks a{
+        bottom: 0;
+        display: inline-block;
+        width: 97px;
+        height: 52px;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        margin: 0 1px;
+    }
+    .ui-page .footerLinks a.home{
+        background: url("../i/home-icon.png") no-repeat;
+    }
+    .ui-page .footerLinks a:hover.home{
+        background: url("../i/home-icon.png") no-repeat 0 -52px;
+    }
+    .ui-page .footerLinks a.invite{
+        background: url("../i/invite-button.png") no-repeat;
+        width: 121px;
+        line-height: 38px;
+        font-size: 16px;
+        text-align: left;
+        padding-left: 10px;
+        float: right;
+    }
+    .ui-page .footerLinks a.noThanks{
+        float: left;
+        padding: 15px;
+        font-size: 16px;
+        color: #aeadad;
+        text-shadow: 1px -1px #000;
+        text-decoration: none;
+    }
+    .ui-page .footerLinks a:hover.noThanks{
+        color: #fffeff;
+    }
+    .ui-page .footerLinks a.event{
+        background: url("../i/create-event.png") no-repeat;
+    }
+    .ui-page .footerLinks a:hover.event{
+        background: url("../i/create-event.png") no-repeat 0 -52px;
+    }
+    .ui-page .footerLinks a.friend{
+        background: url("../i/frind-link.png") no-repeat;
+    }
+    .ui-page .footerLinks a:hover.friend{
+        background: url("../i/frind-link.png") no-repeat 0 -52px;
+    }
+    .ui-page .footerLinks a.home.select{
+        background: url("../i/home-icon-select.png") no-repeat;
+    }
+    .ui-page .footerLinks a.event.select{
+        background: url("../i/create-event-select.png") no-repeat;
+    }
+    .ui-page .footerLinks a.select.friend{
+        background: url("../i/friend-link-select.png") no-repeat;
+    }
+        .ui-page .footerLinks a .ui-btn-inner{
+            border: none;
+        }
+#createEventContent, .gameDetailContent{
+    position: absolute;
+    top: 54px;
+    bottom: 65px;
+    left: 0;
+    right: 0;
+}
+    #createEventContent .scroll{
+        padding-bottom: 25px;
+    }
+#createEvent .title{
+    font-size: 28px;
+    padding: 0 0 0 55px;
+    background: url("../i/event-icon.png") no-repeat 8px 50%;
+    text-align: left;
+    height: 55px;
+    line-height: 50px;
+    border-bottom: 1px solid #000;
+
+}
+#createEvent .steps{
+    border-top: 1px solid #676767;
+    padding-top: 5px;
+}
+    #createEvent .steps .createButton{
+        width: 301px;
+        height: 55px;
+        padding-top: 10px;
+        text-align: center;
+        padding-bottom: 100px;
+    }
+        #createEvent .steps .createButton #createButton{
+            width: 231px;
+            height: 52px;
+            background: url("../i/create-btn.png") no-repeat;
+            float: none;
+            display: inline-block;
+            line-height: 52px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fffffe;
+            text-transform: uppercase;
+            text-shadow: 1px 1px #000;
+            text-decoration: none;
+        }
+    #createEvent .steps .row{
+        padding: 5px 0;
+        font-size: 20px;
+        color: #fffffe;
+        text-shadow: 1px 1px 1px #000;
+        font-style: italic;
+    }
+        #createEvent .steps .row .step{
+            padding-left: 5px;
+            padding-bottom: 3px;
+        }
+            #createEvent .steps .row span{
+                color: #92be55;
+            }
+        #createEvent .steps #plus,#createEvent .steps #minus{
+            width: 35px;
+            height: 32px;
+            background: url("../i/plus-icon.png") no-repeat;
+            display: inline-block;
+            margin: 10px 5px 0;
+        }#createEvent .steps #minus{
+            background: url("../i/minus-icon.png") no-repeat;
+        }
+        #createEvent .steps #incNumber{
+            display: inline-block;
+            background: url("../i/increment-input-bg.png") no-repeat;
+            height: 41px;
+            padding: 0 5px;
+            position: relative;
+            top: -11px;
+            width: 49px;
+            border: none;
+            text-align: center;
+            color: #fffffe;
+            font-size: 16px;
+            text-shadow: 1px 1px #000;
+        }
+        #createEvent .steps .ui-select{
+            width: 301px;
+        }
+            #createEvent .steps .ui-select a.ui-btn{
+                margin: 0;
+                border-radius: 0;
+                border: none;
+                box-shadow: none;
+                background: url("../i/select-bg.png") no-repeat !important;
+            }
+                #createEvent .steps .ui-select a.ui-btn span.ui-btn-inner{
+                    border-radius: 0;
+                    border: none;
+                    font-size: 16px;
+                    text-shadow: 1px 1px 1px #000;
+                    text-align: left;
+                }
+                #createEvent .steps .ui-select a#gameSelect-button.ui-btn span.ui-btn-inner{
+                    padding-left: 50px;
+                    background: url("../i/basketBall-icon-small.png") no-repeat 15px 2px;
+                }
+                    #createEvent .steps .ui-select a.ui-btn span.ui-btn-inner .ui-btn-text{
+                        color: #fffffe;
+                        font-weight: normal;
+                    }
+                    #createEvent .steps .ui-select a.ui-btn span.ui-btn-inner .ui-icon{
+                        width: 21px;
+                        height: 15px;
+                        background: transparent url("../i/select-dwn-arrow.png") no-repeat !important;
+                        box-shadow: none;
+                        border-radius: 0;
+                        margin-top: -6px;
+                    }
+                    #createEvent .steps .noArrow .ui-select a.ui-btn span.ui-btn-inner .ui-icon{
+                        background: none !important;
+                    }
+                    #createEvent .steps .noArrow .ui-btn-icon-notext{
+                        background: none repeat scroll 0 0 transparent;
+                        border: medium none transparent;
+                        border-radius: 0 ;
+                        box-shadow: none;
+                        left: 0;
+                        position: absolute;
+                        width: 94%;
+                    }
+                        #createEvent .steps .noArrow .ui-btn-icon-notext span{
+                            border: none;
+                        }
+                            #createEvent .steps .noArrow .ui-btn-icon-notext span span{
+                                background: transparent;
+                                border: none;
+                                box-shadow: none;
+                            }
+
+/*game created*/
+#gameCreateContent, #HomeContent, #inviteContent{
+    padding: 0;
+    position: absolute;
+    top: 54px;
+    bottom: 65px;
+    left: 0;
+    right: 0;
+}
+#inviteContent .scroll{
+    padding: 15px;
+    max-height: 93%;
+}
+#dropUpcommingGames , #createUpcommingGames {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 144px;
+}#dropUpcommingGames {
+    top: 92px;
+}
+    #dropUpcommingGames .scroll, #createUpcommingGames .scroll{
+        /*bottom: 15px;*/
+        left: 10px;
+        /*min-height: 100px;*/
+        /*position: absolute;*/
+        right: 10px;
+        /*top: 15px;*/
+        padding-bottom: 20px;
+    }
+
+    #gameCreateContent .createSuccess, #Home .createSuccess{
+        font-size: 24px;
+        text-align: center;
+        color: #7dba00;
+        height: 50px;
+        border-top: 1px solid #303030;
+        border-bottom: 1px solid #515151;
+        line-height: 50px;
+        text-shadow: 1px 1px #000;
+        font-style: italic;
+        background: rgba(0,0,0,0.1);
+    }
+    #gameCreateContent .createSuccess img{
+        margin-right: 5px;
+    }
+    #gameCreateContent .details, #Home .details{
+        font-size: 24px;
+        height: 80px;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #8d8d8d;
+        text-shadow: 1px 1px #000;
+        background: rgba(255,255,255,0.2);
+        padding-top: 10px;
+    }
+        #gameCreateContent .details .photo, #gameCreateContent .details .desc, #Home .details .photo, #Home .details .desc {
+            float: left;
+        }
+        #gameCreateContent .details .photo, #Home .details .photo{
+            padding: 0 5px;
+        }
+        #gameCreateContent .details .search, #Home .details .search {
+            float: right;
+            height: 80px;
+            width: 28px;
+            background: url("../i/search-icon.png") no-repeat 0 50%;
+            padding-right: 10px;
+        }
+        #gameCreateContent .details .desc, #Home .details .desc {
+        }
+            #gameCreateContent .details .desc .name, #Home .details .desc .name{
+                color: #ffd200;
+                font-size: 20px;
+            }
+            #gameCreateContent .details .desc .loc, #gameCreateContent .details .desc .sport, #Home .details .desc .loc, #Home .details .desc .sport{
+                font-size: 14px;
+                color: #fffffe;
+            }
+            #gameCreateContent .details .desc .loc{
+                padding-top: 5px;
+            }
+                #gameCreateContent .details .desc .loc span, #gameCreateContent .details .desc .sport span, #Home .details .desc .loc span, #Home .details .desc .sport span{
+                    color: #cbcbcb;
+                    font-size: 14px;
+                }
+
+    #gameCreateContent .upcommingGames, #Home .upcommingGames{
+        border-top: 1px solid #000;
+        box-shadow: 0 10px 15px 0px rgba(0, 0, 0, 0.8) inset;
+        min-height: 100px;
+        padding: 15px 10px 0;
+    }
+        #gameCreateContent .upcommingGames .title, #Home .upcommingGames .title{
+            padding: 0;
+            text-align: left;
+            color: #a7a7a7;
+            font-size: 16px;
+        }
+        #gameCreateContent .upcommingGames .title.join, #Home .upcommingGames .title.join{
+            padding-top: 15px;
+        }
+            #gameCreateContent .upcommingGames .title span, #Home .upcommingGames .title span{
+                color: #a4db59;
+            }
+        #gameCreateContent .upcommingGames .event, #Home .upcommingGames .event{
+            height: 43px;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.9) inset;
+            border-radius: 5px;
+            background: rgba(60, 100, 0, 0.6);
+            overflow: hidden;
+            margin-bottom: 2px;
+        }
+        #gameCreateContent .upcommingGames .event.join, #Home .upcommingGames .event.join{
+            background: rgba(0,59,66,0.6);
+        }
+            #gameCreateContent .upcommingGames .event .icon, #Home .upcommingGames .event .icon{
+                padding: 7px 10px 0 15px;
+                float: left;
+            }
+            #gameCreateContent .upcommingGames .event .venue, #Home .upcommingGames .event .venue{
+                float: left;
+                font-size: 14px;
+                color: #fffffe;
+                text-shadow: 1px 1px #000;
+                padding-top: 5px;
+            }
+            #gameCreateContent .upcommingGames .event .amount, #Home .upcommingGames .event .amount{
+                float: right;
+                background: url("../i/amount-icon.png") no-repeat;
+                width: 30px;
+                height: 36px;
+                margin: 5px 5px 0 0;
+                padding: 7px 0 0 36px;
+                color: #fffffe;
+                text-shadow: 1px 1px #000;
+            }
+
+/*gameDetail*/
+.gameDetailContent{
+
+}
+    .gameDetailContent .top{
+        padding-bottom: 5px;
+        border-bottom: 1px solid #000;
+    }
+    #inviteContent .top{
+        padding-bottom: 5px;
+        border-bottom: none;
+    }
+        .gameDetailContent .top .title{
+            padding: 0;
+            text-align: left;
+            font-size: 26px;
+        }
+        .gameDetailContent .top .veneu{
+            padding-left: 35px;
+            background: url("../i/basketBall-icon-small.png") no-repeat 3px 3px;
+            color: #fffffe;
+            text-shadow: 1px 1px #000;
+            font-size: 14px;
+        }
+        .gameDetailContent .top .note{
+            color: #fff200;
+            text-shadow: 1px 1px #000;
+            font-size: 16px;
+            font-style: italic;
+        }
+            .gameDetailContent .top .veneu .time span{
+                color: #3bc5ff;
+            }
+            .gameDetailContent .top .veneu .skill span{
+                color: #fcff00;
+            }
+    .gameDetailContent .bottom{
+        padding-top: 20px;
+        border-top: 1px solid #666;
+    }
+    #inviteContent .bottom{
+        padding-top: 10px;
+        border-top: none;
+        position: absolute;
+        top: 95px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+        .gameDetailContent .bottom .button{
+        }
+            .gameDetailContent .bottom .button a{
+                display: block;
+                height: 40px;
+                box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.8) ;
+                border-radius: 4px;
+                text-transform: uppercase;
+                font-size: 21px;
+                color: #fffffe;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                line-height: 40px;
+                text-shadow: 1px 1px #000;
+            }
+            .gameDetailContent .bottom .button.getIn span.leftArrow{
+                background: url("../i/getIn-left-arro.png") repeat-x;
+                width: 9px;
+                height: 16px;
+                display: inline-block;
+            }
+            .gameDetailContent .bottom .button.getIn span.rigtArrow{
+                background: url("../i/getIn-right-arrow.png") repeat-x;
+                width: 9px;
+                height: 16px;
+                display: inline-block;
+            }
+            .gameDetailContent .bottom .button a.getIn{
+                background: url("../i/getIn-button-bg.png") repeat-x;
+            }
+            .gameDetailContent .bottom .button a:hover.getIn{
+                background: url("../i/getIn-button-bg.png") repeat-x 0 -40px;
+            }
+            .gameDetailContent .bottom .button a.drop{
+                background: url("../i/getIn-leave-button-bg.png") repeat-x;
+            }
+            .gameDetailContent .bottom .button a:hover.drop{
+                background: url("../i/getIn-leave-button-bg.png") repeat-x 0 -40px;
+            }
+            .gameDetailContent .bottom .button a .name{
+                display: inline-block;
+                width: 200px;
+            }
+                .gameDetailContent .bottom .button .drop span.leftArrow{
+                    background: url("../i/drop-left-arrow.png") repeat-x;
+                    width: 9px;
+                    height: 16px;
+                    display: inline-block;
+                }
+                .gameDetailContent .bottom .button .drop span.rigtArrow{
+                    background: url("../i/drop-right-arrow.png") repeat-x;
+                    width: 9px;
+                    height: 16px;
+                    display: inline-block;
+                }
+        .gameDetailContent .bottom .listContainer{
+            height: 190px;
+            box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.8) inset;
+            margin-top: 15px;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        #inviteContent .bottom .listContainer{
+            margin: 0 10px;
+            height: 100%;
+            position: relative;
+        }
+            .gameDetailContent .bottom .listContainer .notificatoin{
+                height: 36px;
+                line-height: 36px;
+                background: rgba(0, 0, 0, 0.4);
+                border-radius: 3px 3px 0 0;
+                font-size: 13px;
+                color: #fffffe;
+                text-shadow: 1px 1px #000;
+                padding: 0 3px 0 10px;
+            }
+                .gameDetailContent .bottom .listContainer .notificatoin span{
+                    color: #fcff00;
+                }
+                .gameDetailContent .bottom .listContainer .addButton{
+                    float: right;
+                    height: 36px;
+                    overflow: hidden;
+                }
+                    .gameDetailContent .bottom .listContainer .addButton span{
+                        display: inline-block;
+                        float: left;
+                    }
+                    .gameDetailContent .bottom .listContainer .addButton a{
+                        width: 34px;
+                        height: 34px;
+                        background: url("../i/add-btn.png") no-repeat;
+                        display: inline-block;
+                        margin-top: 1px;
+                    }
+                    .gameDetailContent .bottom .listContainer .addButton a:hover{
+                        background: url("../i/add-btn.png") no-repeat 0 -34px;
+                    }
+            .gameDetailContent .bottom .listContainer #gameDetailUserList, .gameDetailContent .bottom .listContainer #gameDetailDropUserList{
+                height: 154px;
+                position: relative;
+            }
+            .gameDetailContent .bottom .listContainer .users{
+                text-align: center;
+                padding-top: 10px;
+                right: 0;
+            }
+            .gameDetailContent .bottom .listContainer #userList{
+                position: absolute;
+                top: 35px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+                .gameDetailContent .bottom .listContainer .usersList .row{
+                    border-bottom: 1px solid #000;
+                    border-top: 1px solid #464646;
+                    height: 70px;
+                    overflow: hidden;
+                }
+                .gameDetailContent .bottom .listContainer .usersList .row .input,.gameDetailContent .bottom .listContainer .usersList .row .photo,.gameDetailContent .bottom .listContainer .usersList .row .name{
+                    float: left;
+                }
+                .gameDetailContent .bottom .listContainer span.checkBox{
+                    display: inline-block;
+                    width: 23px;
+                    height: 23px;
+                    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.8) inset;
+                    border-radius: 4px;
+                    margin: 5px 5px 0 0;
+                    background: rgba(0, 0, 0, 0.2);
+                }
+                .gameDetailContent .bottom .listContainer span.checkBox.checked{
+                    background: url("../i/check-icon.png") no-repeat 50% 50%;
+                }
+
+            .gameDetailContent .bottom .listContainer .usersList {
+                padding: 0 3px;
+                overflow: hidden;
+            }
+                .gameDetailContent .bottom .listContainer .usersList .row .input span.checkBox{
+                    margin: 25px 5px 0 10px;
+                }
+                .gameDetailContent .bottom .listContainer .notificatoin span.checkBox{
+                    margin: 0 5px 0 0;
+                    position: relative;
+                    top: 8px;
+                }
+                .gameDetailContent .bottom .listContainer .usersList .row .photo{
+                    padding-top: 5px;
+                }
+                .gameDetailContent .bottom .listContainer .usersList .row .name{
+                    font-size: 20px;
+                    color: #ff780b;
+                    text-shadow: 1px 1px #000;
+                    padding: 20px 0 0 10px;
+                }

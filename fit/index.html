@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>FitBuddies </title>
+    <!--style sheet-->
+    <link rel="stylesheet" href="css/jquery.mobile-1.0.1.css">
+    <link rel="stylesheet" href="css/jquery.mobile.simpledialog.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.datebox.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--script-->
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script src="js/jquery.mobile-1.1.0-rc.1.min.js"></script>
+    <script src="js/jquery.mobile.datebox.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+<!--splash-->
+
+<div data-role="page" class="splash" id="splash">
+    <div class="bg">
+        <div class="bgLeft" >
+            <div class="bgRight">
+                <div id="splashCnt">
+                    <div class="scroll">
+                        <!--logo-->
+                        <div class="logo">
+                            <div class="l">
+                                <div class="r">
+                                    <img src="i/logo-beta.png" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--find buddy-->
+                        <div class="findBuddy">
+                            <h2 class="title">
+                                Find buddies
+                            </h2>
+                            to play sports with now
+                        </div>
+                        <!--login with fb-->
+                        <div class="loginFb">
+                            <a id="fbLogin" href="#createAccount"></a>
+                        </div>
+                        <!--login without fb-->
+                        <div class="loginNFb">
+                            <a href="javascript:">Login without Facebook</a>
+                        </div>
+                    </div>
+                </div>
+                <footer>Copyrights © FitBuddies.co, 2012</footer>
+            </div>
+        </div>
+    </div>
+</div>
+<!--create account page-->
+<div data-role="page" id="createAccount">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div id="createAccountCnt">
+                    <div class="scroll">
+                        <div data-role="header" data-nobackbtn="true">
+                            <!--logo-->
+                            <div class="logo">
+                                <div class="l">
+                                    <div class="r">
+                                        <img src="i/logo-beta-inner.png" alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-role="content" id="contentCategories">
+                            <!--title-->
+                            <h2 class="title">
+                                Create a FitBuddies account
+                            </h2>
+                            <div class="createAccount">
+                                <div class="ui-simpledialog-container ui-overlay-shadow ui-corner-all pop ui-body-b in">
+                                    <div class="user">
+                                        <img src="i/user-icon.png" alt=""/>
+                                        <span>MyUsername</span>
+                                        <a href="javascript:">change</a>
+                                        <div class="clear"></div>
+                                        <input class="waterMark" type="text" name="email" placeholder="enter email" data-role="none" />
+                                        <input class="waterMark" type="password" name="email" placeholder="enter password" data-role="none"/>
+                                        <a id="signUp" class="signUp" href="#gameFlow">Sign Up</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="footer" id="ftrCategories">
+                    <footer>Copyrights © FitBuddies.co, 2012</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--game flow-->
+<div class="gameFlow" id="gameFlow" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="content" class="gamesContent" id="gamesContent">
+                    <div id="scroller">
+                        <h2 class="gamesTitle">
+                            How do you get physical?
+                        </h2>
+                        <ul>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/basketBall-icon.png"/>
+                                <span class="name">Basketball</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/runinig-icon.png"/>
+                                <span class="name">Running</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/squoch-icon.png"/>
+                                <span class="name">Squash</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/soccer.png"/>
+                                <span class="name">Soccer</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/lifting-icon.png"/>
+                                <span class="name">Lifting</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/tennis-icon.png"/>
+                                <span class="name">Tennis</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/cycling-icon.png"/>
+                                <span class="name">Cycling</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/frisbee-icon.png"/>
+                                <span class="name">Frisbee</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/ping-pong-icon.png"/>
+                                <span class="name">Ping-Pong</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/football-icon.png"/>
+                                <span class="name">Football</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/kick-ball-icon.png"/>
+                                <span class="name">Kickball</span>
+                            </li>
+                            <li class="gamesIcon">
+                                <img alt="" src="i/other-icon.png"/>
+                                <span class="name">Other</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer" data-role="footer" data-position="">
+                    <a href="#stepFirst" data-role="button" data-transition="slide" id="gameFlowNext" class="nextButton" data-icon="custom">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--step first-->
+<div class="gameFlow" id="stepFirst" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="stepOne" data-role="content" class="stepOne wrapper">
+                    <div class="centerBox">
+                        <h2 class="title">How good is your game in?</h2>
+                        <div class="gameIcon">
+                            <img alt="" src="i/game-icon1.png">
+                            <div class="gameName">Basketball</div>
+                        </div>
+                        <div class="goodSelect">
+                            <span class="select">Michael Jackson</span>
+                            <span>Michael Romero</span>
+                            <span>Michael Owen</span>
+                            <span>Michael Bolton</span>
+                            <span>Michael Jordan</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer" data-role="footer" data-position="">
+                    <a href="#gameFlow" data-role="button" data-rel="back" id="stepFirstBack" class="backButton left" data-icon="custom">Back</a>
+                    <a href="#stepSecond" data-role="button" data-transition="slide" id="stepFirstNext" class="nextButton right" data-icon="custom">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--step second-->
+<div class="gameFlow" id="stepSecond" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="stepTwo" data-role="content" class="stepOne wrapper">
+                    <div class="centerBox">
+                        <h2 class="title">How often should we harass you?</h2>
+                        <div class="haras">
+                            <div class="harasSelect">
+                                <span class="left select">If something interesting comes up</span>
+                                <span class="right">Only when you find me a buddy</span>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="howFar">
+                            <h2 class="title">How far will you go to ball?</h2>
+                            <div class="goodSelect">
+                                <span class="select">&lt; 1 mile</span>
+                                <span>&nbsp;</span>
+                                <span class="wider">5-10 miles</span>
+                                <span>&nbsp;</span>
+                                <span>&gt;20 miles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer" data-role="footer" data-position="">
+                    <a href="#stepFirst" data-role="button" data-rel="back" id="stepSecondBack" class="backButton left" data-icon="custom">Back</a>
+                    <a href="#stepThird" data-role="button" id="stepSecondNext" class="nextButton right" data-icon="custom">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--step third-->
+<div class="gameFlow" id="stepThird" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="content" class="stepThird" id="stepThirdContent">
+                    <div class="content">
+                        <div class="header">
+                            <img alt="" src="i/wePay-logo.png"/>
+                            <div class="payment">Payment Total: <span>$10.50</span></div>
+                            <div class="incl">(Incl. $0.50 fee)</div>
+                        </div>
+                        <div class="cardInfo">
+                            <h2 class="title">Credit Card Info</h2>
+                            <input class="long waterMark" type="text" placeholder="Name on Card">
+                            <input class="long waterMark" type="text" placeholder="Credit Card Number">
+                            <input class="month waterMark" type="text" placeholder="MM"><span class="seperator">/</span>
+                            <input class="year waterMark" type="text" placeholder="YYYY">
+                            <input class="cvv waterMark" type="text" placeholder="CVV">
+                            <img alt="" src="i/creit-card.png"/>
+                        </div>
+                        <div class="bilingInfo">
+                            <div class="bilingContent">
+                                <h2 class="title">Billing Address</h2>
+                                <textarea class="waterMark" placeholder="Street Address"></textarea>
+                                <input class="city waterMark" type="text" placeholder="City">
+                                <select data-native-menu="false">
+                                    <option value="1">State</option>
+                                    <option value="2">State2</option>
+                                    <option value="3">State3</option>
+                                </select>
+                                <input class="zip waterMark" type="text" placeholder="ZIP">
+
+                                <a href="#Home" data-role="button" id="submit" class="nextButton right" data-icon="custom">Submit</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--create event-->
+<div class="gameFlow" id="createEvent" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="content" class="createEvent" id="createEventContent">
+                    <div class="scroll">
+                        <h2 class="title">Create Event</h2>
+                        <div class="steps">
+                            <div class="row">
+                                <div class="step"><span>STEP 1:</span> Pick Sport</div>
+                                <select id="gameSelect" data-native-menu="false">
+                                    <option value="1">Basketball</option>
+                                    <option value="2">Running</option>
+                                    <option value="3">Squash</option>
+                                    <option value="4">Soccer</option>
+                                </select>
+                            </div>
+                            <div class="row noArrow">
+                                <div class="step"><span>STEP 2:</span> Pick Date</div>
+                                <input name="mydate" id="mydate" type="date" data-role="datebox"
+                                       data-options='{"mode": "flipbox"}'/>
+                            </div>
+                            <div class="row noArrow">
+                                <div class="step"><span>STEP 3:</span> Pick Location</div>
+                                <select data-native-menu="false">
+                                    <option value="1">Shad</option>
+                                    <option value="2">Shad</option>
+                                    <option value="3">Shad</option>
+                                    <option value="4">Shad</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <div class="step"><span>STEP 4:</span> Minimum Skill</div>
+                                <select data-native-menu="false">
+                                    <option value="1">Beginner</option>
+                                    <option value="2">Intermediate</option>
+                                    <option value="3">Exellent</option>
+                                </select>
+                            </div>
+                            <div class="createButton">
+                                <a href="#gameCreated" id="createButton">Create</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footerLinks" data-role="footer" data-position="">
+                    <a href="#Home" class="home">&nbsp;</a>
+                    <a href="#createEvent" class="select event">&nbsp;</a>
+                    <a href="#invite" class="friend">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--create event-->
+<div class="gameFlow" id="gameCreated" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="content" class="createEvent" id="gameCreateContent">
+                    <div class="scroll">
+                        <div class="createSuccess"><img src="i/gameCreated-icon.png" alt="">Game created!</div>
+                        <div class="details">
+                            <div class="photo">
+                                <img alt="" src="i/photo-big-icon.png">
+                            </div>
+                            <div class="desc">
+                                <h2 class="name">Name Goes Here</h2>
+                                <div class="loc"><span>Location:</span> Bostan</div>
+                                <div class="sport"><span>Sports:</span> Basketball,Soccer</div>
+                            </div>
+                            <div class="search"></div>
+                        </div>
+                        <div class="upcommingGames" id="createUpcommingGames">
+                            <div class="scroll">
+                                <h2 class="title">YOUR UPCOMING GAMES(<span>3</span>)</h2>
+                                <div class="event">
+                                    <div class="icon">
+                                        <img alt="" src="i/basketBall-icon-small.png"/>
+                                    </div>
+                                    <div class="venue">
+                                        <div class="name">Basketball</div>
+                                        <div class="place">Today 4.00pm @ Shad</div>
+                                    </div>
+                                    <div class="amount">30</div>
+                                </div>
+                                <div class="event">
+                                    <div class="icon">
+                                        <img alt="" src="i/basketBall-icon-small.png">
+                                    </div>
+                                    <div class="venue">
+                                        <div class="name">Basketball</div>
+                                        <div class="place">Today 7.00pm @ Shad</div>
+                                    </div>
+                                    <div class="amount">26</div>
+                                </div>
+                                <div class="event">
+                                    <div class="icon">
+                                        <img alt="" src="i/basketBall-icon-small.png"/>
+                                    </div>
+                                    <div class="venue">
+                                        <div class="name">Basketball</div>
+                                        <div class="place">Today 8.00pm @ Shad</div>
+                                    </div>
+                                    <div class="amount">12</div>
+                                </div>
+                                <h2 class="title join">JOIN GAMES IN YOUR NETWORK(<span>1</span>)</h2>
+                                <div class="event join">
+                                    <div class="icon">
+                                        <img alt="" src="i/basketBall-icon-small.png">
+                                    </div>
+                                    <div class="venue">
+                                        <div class="name">Basketball</div>
+                                        <div class="place">Today 4.00pm @ Shad</div>
+                                    </div>
+                                    <div class="amount">30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerLinks" data-role="footer" data-position="">
+                    <a href="#Home" class="home select">&nbsp;</a>
+                    <a href="#createEvent" class="event">&nbsp;</a>
+                    <a href="#invite" class="friend">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Home screen-->
+<div class="gameFlow" id="Home" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="content" class="createEvent" id="HomeContent">
+                    <div class="scroll">
+                        <div class="details">
+                            <div class="photo">
+                                <img alt="" src="i/photo-big-icon.png">
+                            </div>
+                            <div class="desc">
+                                <h2 class="name">Name Goes Here</h2>
+                                <div class="loc"><span>Location:</span> Bostan</div>
+                                <div class="sport"><span>Sports:</span> Basketball,Soccer</div>
+                            </div>
+                            <div class="search"></div>
+                        </div>
+                        <div class="upcommingGames" id="dropUpcommingGames">
+                            <div class="scroll">
+                                <h2 class="title">YOUR UPCOMING GAMES(<span>3</span>)</h2>
+                                <div class="event">
+                                    <div class="icon">
+                                        <img alt="" src="i/basketBall-icon-small.png">
+                                    </div>
+                                    <div class="venue">
+                                        <div class="name">Basketball</div>
+                                        <div class="place">Today 4.00pm @ Shad</div>
+                                    </div>
+                                    <div class="amount">30</div>
+                                </div>
+                                <div class="event">
+                                    <div class="icon">
+                                        <img alt="" src="i/basketBall-icon-small.png">
+                                    </div>
+                                    <div class="venue">
+                                        <div class="name">Basketball</div>
+                                        <div class="place">Today 7.00pm @ Shad</div>
+                                    </div>
+                                    <div class="amount">26</div>
+                                </div>
+                                <div class="event">
+                                    <div class="icon">
+                                        <img alt="" src="i/basketBall-icon-small.png">
+                                    </div>
+                                    <div class="venue">
+                                        <div class="name">Basketball</div>
+                                        <div class="place">Today 8.00pm @ Shad</div>
+                                    </div>
+                                    <div class="amount">12</div>
+                                </div>
+                                <h2 class="title join">JOIN GAMES IN YOUR NETWORK(<span>1</span>)</h2>
+                                <div class="event join">
+                                    <div class="icon">
+                                        <img alt="" src="i/basketBall-icon-small.png">
+                                    </div>
+                                    <div class="venue">
+                                        <div class="name">Basketball</div>
+                                        <div class="place">Today 4.00pm @ Shad</div>
+                                    </div>
+                                    <div class="amount">30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerLinks" data-role="footer" data-position="">
+                    <a href="#Home" class="select home">&nbsp;</a>
+                    <a href="#createEvent" class="event">&nbsp;</a>
+                    <a href="#invite" class="friend">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Game detail-->
+<div class="gameDetail" id="gameDetail" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="content" class="gameDetailContent" id="gameDetailContent">
+                    <div class="scroll">
+                        <div class="top">
+                            <h2 class="title">Basketball</h2>
+                            <div class="veneu">
+                                <div class="time">Today 4 pm, Location <span>@Shad</span></div>
+                                <div class="skill">Skill : <span>Beginer</span></div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="button getIn">
+                                <a href="#gameDetailDrop" class="getIn"><span class="leftArrow"></span> <span class="name">Get in the Game</span><span class="rigtArrow"></span></a>
+                            </div>
+                            <div class="listContainer">
+                                <div class="notificatoin">
+                                    <span>4</span> Attendee, <span>10</span> Pending Invitation
+                                    <div class="addButton">
+                                        <span>4/12</span>
+                                        <a href="#invite" class="add"> </a>
+                                    </div>
+                                </div>
+                                <div id="gameDetailUserList">
+                                    <div class="users">
+                                        <img alt="" src="i/orgnizer-photo.png">
+                                        <img alt="" src="i/photo-icon.png">
+                                        <img alt="" src="i/photo-icon.png">
+                                        <img alt="" src="i/photo-icon.png">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerLinks" data-role="footer" data-position="">
+                    <a href="#Home" class="home">&nbsp;</a>
+                    <a href="#createEvent" class="event">&nbsp;</a>
+                    <a href="#invite" class="friend">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Game detail Drop-->
+<div class="gameDetail" id="gameDetailDrop" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="content" class="gameDetailContent" id="gameDetailDropContent">
+                    <div class="scroll">
+                        <div class="top">
+                            <h2 class="title">Basketball</h2>
+                            <div class="veneu">
+                                <div class="time">Today 4 pm, Location <span>@Shad</span></div>
+                                <div class="skill">Skill : <span>Beginer</span></div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="button">
+                                <a href="#gameDetail" class="drop"><span class="leftArrow"></span> <span class="name">Drop</span><span class="rigtArrow"></span></a>
+                            </div>
+                            <div class="listContainer">
+                                <div class="notificatoin">
+                                    <span>4</span> Attendee, <span>10</span> Pending Invitation
+                                    <div class="addButton">
+                                        <span>5/12</span>
+                                        <a href="#invite" class="add"> </a>
+                                    </div>
+                                </div>
+                                <div id="gameDetailDropUserList">
+                                    <div class="users">
+                                        <img alt="" src="i/orgnizer-photo.png">
+                                        <img alt="" src="i/photo-icon.png">
+                                        <img alt="" src="i/photo-icon.png">
+                                        <img alt="" src="i/photo-icon.png">
+                                        <img alt="" src="i/photo-icon.png">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerLinks" data-role="footer" data-position="">
+                    <a href="#Home" class="home">&nbsp;</a>
+                    <a href="#createEvent" class="event">&nbsp;</a>
+                    <a href="#invite" class="friend">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--invite screen-->
+<div class="gameDetail" id="invite" data-role="page">
+    <div class="bg">
+        <div class="bgLeft">
+            <div class="bgRight">
+                <div data-role="header" data-nobackbtn="true">
+                    <!--logo-->
+                    <div class="logo">
+                        <div class="l">
+                            <div class="r">
+                                <img src="i/logo-beta-inner.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="content" class="gameDetailContent" id="inviteContent">
+                    <div class="scroll">
+                        <div class="top">
+                            <h2 class="title">Get up to 6 months free!</h2>
+                            <div class="note">
+                                For each friend that joins, you and your<br/>
+                                buddy will get one month on us!
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="listContainer">
+                                <div class="notificatoin">
+                                    <span class="checkBox">&nbsp;</span>Select All (25 Friends)
+                                </div>
+                                <div id="userList">
+                                    <div class="usersList">
+                                    <div class="row">
+                                        <div class="input">
+                                            <span class="checkBox"></span>
+                                        </div>
+                                        <div class="photo">
+                                            <img alt="" src="i/photo-icon.png"/>
+                                        </div>
+                                        <div class="name">
+                                            Arnold Smith
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input">
+                                            <span class="checkBox checked"></span>
+                                        </div>
+                                        <div class="photo">
+                                            <img alt="" src="i/photo-icon.png"/>
+                                        </div>
+                                        <div class="name">
+                                            Boby Fletcher
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input">
+                                            <span class="checkBox"></span>
+                                        </div>
+                                        <div class="photo">
+                                            <img alt="" src="i/photo-icon.png"/>
+                                        </div>
+                                        <div class="name">
+                                            Christian Carlos
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input">
+                                            <span class="checkBox"></span>
+                                        </div>
+                                        <div class="photo">
+                                            <img alt="" src="i/photo-icon.png"/>
+                                        </div>
+                                        <div class="name">
+                                            Arnold Smith
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerLinks" data-role="footer" data-position="">
+                    <a data-rel="back" href="#gameDetail" class="noThanks" data-role="none">No Thanks</a>
+                    <a data-rel="back" href="#gameDetailDrop" class="invite">Invite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html> 
