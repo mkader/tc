@@ -1,0 +1,202 @@
+var deviceJson = {
+	jsonData:[
+		{
+			itemName:"item01",
+			itemData:[
+				{
+					itemStatus:true,
+					itemCellName:"Item1 Video Title 1",
+					itemCellImages: "posters/1412129_HOVERLogo__388744.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"0:54",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:false,
+					itemCellName:"Item1 Video Title 2",
+					itemCellImages: "posters/1442981_FAST_MONEY__237571.jpg",
+					itemCellRating:"4",
+					itemCellRatingNum:"PG-13",
+					itemCellVideoPlayed:"",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				}
+			]
+		},
+		{
+			itemName:"item02",
+			itemData:[
+				{
+					itemStatus:false,
+					itemCellName:"Item2 Video Title 1",
+					itemCellImages: "posters/1442996_CLOSING_BELL__414321.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"PG-13",
+					itemCellVideoPlayed:"0:50",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:true,
+					itemCellName:"Item2 Video Title 2",
+					itemCellImages: "posters/1454_logo04__595729.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:false,
+					itemCellName:"Item2 Video Title 3",
+					itemCellImages: "posters/1576797_0907_HolmesInspections_Standard__878711.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"2:00",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				}
+			]
+		},
+		{
+			itemName:"item03",
+			itemData:[
+				{
+					itemStatus:true,
+					itemCellName:"Item3 Video Title 1",
+					itemCellImages: "posters/1701472_HDSWT810_1012.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:false,
+					itemCellName:"Item3 Video Title 2",
+					itemCellImages: "posters/25540_Kardashian_family__835314.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:false,
+					itemCellName:"Item3 Video Title 3",
+					itemCellImages: "posters/257025_MBAR_logo__601030.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"2:00",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:false,
+					itemCellName:"Item3 Video Title 4",
+					itemCellImages: "posters/4646387_SC_OutdoorRoomJD__664483.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:false,
+					itemCellName:"Item3 Video Title 5",
+					itemCellImages: "posters/4662464_SC_property-brothers__824443.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:false,
+					itemCellName:"Item3 Video Title 6",
+					itemCellImages: "posters/4683144_SC_GetOut__498496.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"2:00",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:false,
+					itemCellName:"Item3 Video Title 7",
+					itemCellImages: "posters/4710280_SC_YardCrashersDIY__485430.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				},
+				{
+					itemStatus:false,
+					itemCellName:"Item3 Video Title 8",
+					itemCellImages: "posters/satcvs__817526.jpg",
+					itemCellRating:"3",
+					itemCellRatingNum:"TV-MA",
+					itemCellVideoPlayed:"2:00",
+					itemCellVideoLength:"3:54",
+					itemCellVideoDate:"May 29, 2012 10:15 AM"
+				}
+			]
+		}
+	]
+};
+
+var cloudJson = {
+	itemData:[
+		{
+			itemCellName:"Video Title 1",
+			itemCellImages: "posters/VSC_BathCrasher__312985.jpg",
+			itemCellRating:"3",
+			itemCellRatingNum:"TV-MA",
+			itemCellVideoLength:"3:54",
+			itemCellVideoDate:"May 29, 2012 10:15 AM"
+		},
+		{
+			itemCellName:"Video Title 2",
+			itemCellImages: "posters/VSC_Designed-to-Sell__615586.jpg",
+			itemCellRating:"4",
+			itemCellRatingNum:"TV-MA",
+			itemCellVideoLength:"3:54",
+			itemCellVideoDate:"May 29, 2012 10:15 AM"
+		},
+		{
+			itemCellName:"Video Title 3",
+			itemCellImages: "posters/VSC_For-Rent__690168.jpg",
+			itemCellRating:"4",
+			itemCellRatingNum:"TV-MA",
+			itemCellVideoLength:"3:54",
+			itemCellVideoDate:"May 29, 2012 10:15 AM"
+		},
+		{
+			itemCellName:"Video Title 4",
+			itemCellImages: "posters/VSC_HHonVacation__148307.jpg",
+			itemCellRating:"3",
+			itemCellRatingNum:"TV-MA",
+			itemCellVideoLength:"3:54",
+			itemCellVideoDate:"May 29, 2012 10:15 AM"
+		},
+		{
+			itemCellName:"Video Title 5",
+			itemCellImages: "posters/VSC_HolmesHomes__419591.jpg",
+			itemCellRating:"4",
+			itemCellRatingNum:"TV-MA",
+			itemCellVideoLength:"3:54",
+			itemCellVideoDate:"May 29, 2012 10:15 AM"
+		},
+		{
+			itemCellName:"Video Title 6",
+			itemCellImages: "posters/VSC_HouseCrashersDIY__009917.jpg",
+			itemCellRating:"4",
+			itemCellRatingNum:"TV-MA",
+			itemCellVideoLength:"3:54",
+			itemCellVideoDate:"May 29, 2012 10:15 AM"
+		}
+	]
+};
