@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <title>PRESIDENTIAL BRIEFS</title>
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.0-rc.1.css"/>
+        <link rel="stylesheet" href="css/style.css"  />
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/jquery.mobile-1.1.0-rc.1.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+    	<!--Splash page-->
+        <div data-role="page" data-theme="g" id="SplashPage">
+            <div data-role="content">
+                <img src="images/logoHome.png" alt="PRESIDENTIAL BRIEFS" id="logoHome"/>
+                <h1>Personalized <br/>Audio News for Mobile</h1>
+              	<p>
+                    <a href="#SignInPage" class="yellowBtn">
+                        Sign In
+                    </a>
+                </p>
+                <p>
+                    <a href="javascript:;" class="yellowBtn">
+                        Sign Up
+                    </a>
+                </p>
+            </div>
+            <!--End content-->
+            <div data-theme="a" data-role="footer" id="footer">
+            	© 2012 Presidential Briefs
+            </div>
+            <!--Footer-->
+        </div>
+    	<!--Sign In page-->
+        <div data-role="page" id="SignInPage">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <a href="#SplashPage" class="backBtn">
+                    Back
+                </a>
+                <h1>
+                </h1>
+                 <a href="#UserDashboardPage" class="yellowBtnSmall">
+                    Sing In
+                </a>
+            </div>
+            <!--End header-->
+            <div data-role="content">
+              	<img src="images/logoHome.png" alt="PRESIDENTIAL BRIEFS" class="logoSmall"/>
+              	<h1>Personalized <br />Audio News for Mobile</h1>
+              <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <input id="signInEmail" placeholder="Email" value="" type="email" class="inputText"/>
+                    </fieldset>
+                </div>
+                <!--End fieldcontain-->
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <input id="signInPassword" placeholder="Password" value="" type="password" class="inputText"/>
+                    </fieldset>
+                </div>
+                <!--End fieldcontain-->
+            </div>
+            <!--End content-->
+            <div data-theme="a" data-role="footer" data-position="fixed" class="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            &nbsp;
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="aboutUsTab">
+                                <span class="icon">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="contactTab">
+                               <span class="icon">Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            &nbsp;
+                        </li>
+                    </ul>
+                </div>
+                <!--End navBar-->
+            </div>
+            <!--Footer-->
+        </div>
+    	<!--UserDashBoard page-->
+        <div data-role="page" id="UserDashboardPage">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h1>
+                	User Dashboard
+                </h1>
+                <a href="#SignInPage" class="yellowBtnSmall ui-btn-right">
+                    Log Out
+                </a>
+            </div>
+            <!--End header-->
+            <div data-role="content">
+                <h3>
+                    Welcome Kevin!
+                </h3>
+                <h4>Your News Briefs Library</h4>
+                
+               <div id="audioList">
+                    <ul data-role="listview" data-divider-theme="c" data-inset="true">
+                        <li data-role="list-divider">
+                        	<span class="arrow"></span>
+                            <a href="#mediaPlayerPage">
+                                Today, 3/25/12
+                            </a>
+                        </li>
+                        <li data-role="list-divider">
+                        	<span class="arrow"></span>
+                            <a href="#mediaPlayerPage2">
+                                Friday, 3/24/12
+                            </a>
+                        </li>
+                        <li data-role="list-divider" class="lastAudio">
+                        	<span class="arrow"></span>
+                            <a href="#mediaPlayerPage3">
+                                Thursday, 3/23/12
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--End audioList-->
+                <h4>Your News Preferences</h4>
+                
+                <div data-role="fieldcontain" id="preferenceList">
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                    	<div>
+                            <input name="checkbox1" id="checkbox1" type="checkbox" class="hide" checked="checked" />
+                            <label for="checkbox1">
+                                Boston
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                    	<div>
+                            <input name="checkbox2" id="checkbox2" type="checkbox" class="hide" />
+                            <label for="checkbox2">
+                                Red Sox
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                    	<div>
+                            <input name="checkbox3" id="checkbox3" type="checkbox" class="hide" />
+                            <label for="checkbox3">
+                                Word News
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                    	<div>
+                            <input name="checkbox4" id="checkbox4" type="checkbox" class="hide" />
+                            <label for="checkbox4">
+                                CNN
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                    	<div>
+                            <input name="checkbox5" id="checkbox5" type="checkbox" class="hide" />
+                            <label for="checkbox5">
+                                BBC News
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <!--End content-->
+            <div data-theme="a" data-role="footer" id="footer">
+            	<strong>Contact Us to change Prefs</strong>
+            </div>
+            <!--Footer-->
+        </div>
+        <!--End page-->
+        <div data-role="page" id="mediaPlayerPage" class="mediaPlayerPage">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <a href="#UserDashboardPage" class="backBtn">
+                    Back
+                </a>
+                <h1>
+                	Media Player
+                </h1>
+                <a href="javascript:;" class="yellowBtnSmall ui-btn-right">
+                    Lirbary
+                </a>
+            </div>
+            <!--End header-->
+            <div data-role="content">
+                <h3>
+                    Welcome Kevin!
+                </h3>
+                <div class="audioContainer">
+                	<div class="audioPlayArea">
+                        <p class="playing"><label>Playing: </label>Today, 3/25/12</p>
+                        <div class="seekBarContainer">
+                            <input type="range" name="slider" value="0" min="0" max="100" data-highlight="true" data-theme="d" data-mini="true" class="seekBar ui-hidden-accessible"/>
+                            <span class="timeDisplay">0:00/0:00</span>
+                        </div>
+                        <audio preload="none" style="width:95%;" class="audio">
+                            <source src="./audio/encoded/podcast-audio.mp3" type="audio/mpeg" />
+                            <source src="./audio/encoded/podcast-audio.m4a" type="audio/mp4" />
+                            <source src="./audio/encoded/podcast-audio.oga" type="audio/ogg" />
+                            <p>Your browser does not support HTML5 audio.</p>
+                        </audio>
+                        <div class="buttonContainer">
+                            <a href="#mediaPlayerPage3" class="prevBtn"></a>
+                            <a href="javascript:;" class="playBtn"></a>
+                            <a href="#mediaPlayerPage2" class="nextBtn"></a>
+                        </div>
+                        <div class="volumeContainer">
+                            <span class="music"></span>
+                            <input type="range" name="slider" value="100" min="0" max="100" data-highlight="true" data-theme="d" data-mini="true" class="audioVolume ui-hidden-accessible"/>
+                        </div>
+                    </div>
+                    <!--End audioPlayArear-->
+                    <p>
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                    	<div class="checkBoxContainer">
+                        <input name="checkbox6" id="checkbox6" type="checkbox" checked="checked" class="hide checkboxUITrans"/>
+                        <label for="checkbox6">
+                            2X Speed
+                        </label>
+                        </div>
+                    </fieldset>
+                    </p>
+               </div>
+               <!--End audioContainer-->
+            </div>
+            <!--End content-->
+        </div>
+        <!--End page-->
+
+        <div data-role="page" id="mediaPlayerPage2" class="mediaPlayerPage">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <a href="#UserDashboardPage" class="backBtn">
+                    Back
+                </a>
+                <h1>
+                    Media Player
+                </h1>
+                <a href="javascript:;" class="yellowBtnSmall ui-btn-right">
+                    Lirbary
+                </a>
+            </div>
+            <!--End header-->
+            <div data-role="content">
+                <h3>
+                    Welcome Kevin!
+                </h3>
+                <div class="audioContainer">
+                    <div class="audioPlayArea">
+                        <p class="playing"><label>Playing: </label>Friday, 3/24/12</p>
+                        <div class="seekBarContainer">
+                            <input type="range" name="slider" value="0" min="0" max="100" data-highlight="true" data-theme="d" data-mini="true" class="seekBar ui-hidden-accessible"/>
+                            <span class="timeDisplay">0:00/0:00</span>
+                        </div>
+                        <audio preload="none" style="width:95%;" class="audio">
+                            <source src="./audio/encoded/podcast-audio.mp3" type="audio/mpeg" />
+                            <source src="./audio/encoded/podcast-audio.m4a" type="audio/mp4" />
+                            <source src="./audio/encoded/podcast-audio.oga" type="audio/ogg" />
+                            <p>Your browser does not support HTML5 audio.</p>
+                        </audio>
+                        <div class="buttonContainer">
+                            <a href="#mediaPlayerPage" class="prevBtn"></a>
+                            <a href="javascript:;" class="playBtn"></a>
+                            <a href="#mediaPlayerPage3" class="nextBtn"></a>
+                        </div>
+                        <div class="volumeContainer">
+                            <span class="music"></span>
+                            <input type="range" name="slider" value="100" min="0" max="100" data-highlight="true" data-theme="d" data-mini="true" class="audioVolume ui-hidden-accessible"/>
+                        </div>
+                    </div>
+                    <!--End audioPlayArear-->
+                    <p>
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <div class="checkBoxContainer">
+                            <input name="checkbox7" id="checkbox7" type="checkbox" checked="checked" class="hide checkboxUITrans"/>
+                            <label for="checkbox7">
+                                2X Speed
+                            </label>
+                        </div>
+                    </fieldset>
+                    </p>
+                </div>
+                <!--End audioContainer-->
+            </div>
+            <!--End content-->
+        </div>
+        <!--End page-->
+
+        <div data-role="page" id="mediaPlayerPage3" class="mediaPlayerPage">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <a href="#UserDashboardPage" class="backBtn">
+                    Back
+                </a>
+                <h1>
+                    Media Player
+                </h1>
+                <a href="javascript:;" class="yellowBtnSmall ui-btn-right">
+                    Lirbary
+                </a>
+            </div>
+            <!--End header-->
+            <div data-role="content">
+                <h3>
+                    Welcome Kevin!
+                </h3>
+                <div class="audioContainer">
+                    <div class="audioPlayArea">
+                        <p class="playing"><label>Playing: </label>Thursday, 3/23/12</p>
+                        <div class="seekBarContainer">
+                            <input type="range" name="slider" value="0" min="0" max="100" data-highlight="true" data-theme="d" data-mini="true" class="seekBar ui-hidden-accessible"/>
+                            <span class="timeDisplay">0:00/0:00</span>
+                        </div>
+                        <audio preload="none" style="width:95%;" class="audio">
+                            <source src="./audio/encoded/podcast-audio.mp3" type="audio/mpeg" />
+                            <source src="./audio/encoded/podcast-audio.m4a" type="audio/mp4" />
+                            <source src="./audio/encoded/podcast-audio.oga" type="audio/ogg" />
+                            <p>Your browser does not support HTML5 audio.</p>
+                        </audio>
+                        <div class="buttonContainer">
+                            <a href="#mediaPlayerPage2" class="prevBtn"></a>
+                            <a href="javascript:;" class="playBtn"></a>
+                            <a href="#mediaPlayerPage" class="nextBtn"></a>
+                        </div>
+                        <div class="volumeContainer">
+                            <span class="music"></span>
+                            <input type="range" name="slider" value="100" min="0" max="100" data-highlight="true" data-theme="d" data-mini="true" class="audioVolume ui-hidden-accessible"/>
+                        </div>
+                    </div>
+                    <!--End audioPlayArear-->
+                    <p>
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <div class="checkBoxContainer">
+                            <input name="checkbox8" id="checkbox8" type="checkbox" checked="checked" class="hide checkboxUITrans"/>
+                            <label for="checkbox8">
+                                2X Speed
+                            </label>
+                        </div>
+                    </fieldset>
+                    </p>
+                </div>
+                <!--End audioContainer-->
+            </div>
+            <!--End content-->
+        </div>
+        <!--End page-->
+
+
+    </body>
+</html>
