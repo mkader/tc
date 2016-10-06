@@ -1,0 +1,289 @@
+{
+	"open-calls":
+	[
+		{
+			"Building": "10 FS",
+			"Unit": "WHQ UN002",
+			"Placed": "06/18/2012"
+		},
+		{
+			"Building": "10 FS",
+			"Unit": "WHQ UN001",
+			"Placed": "02/21/2012"
+		},
+		{
+			"Building": "1FS",
+			"Unit": "NAA UN002",
+			"Placed": "12/12/2011"
+		},
+		{
+			"Building": "5FS",
+			"Unit": "ENG UN001",
+			"Placed": "11/30/2011"
+		},
+		{
+			"Building": "BLDG 36",
+			"Unit": "T1393",
+			"Placed": "10/27/2011"
+		},
+		{
+			"Building": "10 FS",
+			"Unit": "WHQ UN001",
+			"Placed": "09/11/2011"
+		}
+	],
+	"completed-activities":
+	[
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Service Call"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Repair"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Maintenance"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Service Call"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Repair"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Maintenance"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Service Call"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Repair"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Maintenance"
+		}
+	],
+	"performance-dashboard":
+	[
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "7",
+			"Main. Visit": "8",
+			"Avail": "99.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		},
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "1",
+			"Main. Visit": "13",
+			"Avail": "30.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		},
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "7",
+			"Main. Visit": "8",
+			"Avail": "10.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		},
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "1",
+			"Main. Visit": "13",
+			"Avail": "30.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		},
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "7",
+			"Main. Visit": "8",
+			"Avail": "99.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		},
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "1",
+			"Main. Visit": "13",
+			"Avail": "30.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		},
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "7",
+			"Main. Visit": "8",
+			"Avail": "10.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		},
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "1",
+			"Main. Visit": "13",
+			"Avail": "30.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		},
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "7",
+			"Main. Visit": "8",
+			"Avail": "99.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		},
+		{
+			"Unit": "1234 / ABCDUnit",
+			"Service Call": "7",
+			"Main. Visit": "8",
+			"Avail": "99.5%",
+			"Contract": "CON1234",
+			"Unit Type": "REM/ Elite",
+			"Building": "BUIL1234",
+			"Sale Representative": {
+				"Name": "SalesRep Name",
+				"Telephone": "123 123 1234",
+				"Email": "SalesRep@email.com"
+			}
+		}
+	],
+	"unit-details":
+	[
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Service Call"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Repair"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Maintenance"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Service Call"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Repair"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Maintenance"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Service Call"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Repair"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Maintenance"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Service Call"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Repair"
+		},
+		{
+			"Date": "01/03/2012",
+			"Unit": "1234 / ABCDUnit",
+			"Event": "Maintenance"
+		}
+	]
+}

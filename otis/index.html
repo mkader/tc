@@ -1,0 +1,1742 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>OTIS</title>
+<link rel="apple-touch-icon" href="icon.png"/>
+<!--<link rel="apple-touch-startup-image" href="splash.png" />-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- External CSS -->
+<link href="css/jquery.mobile-1.1.1.min.css" rel="stylesheet" media="all" />
+<link href="css/fullcalendar.css" rel="stylesheet" media="all" />
+<link href="css/phone.css" rel="stylesheet" media="all" />
+<!-- External Javascript -->
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/fullcalendar.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/jquery.mobile-1.1.1.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" id="loading" data-title="OTIS - Loading">
+	<div data-role="content">
+    	<div class="loading">
+    		<img src="css/images/ajax-loader.gif" alt="Loading" />
+            <span>0 %</span>
+            <a href="#login-page" class="hidden"></a>
+    	</div>
+        <audio id="door-sound" preload src="sound/ElevatorDing.mp3"></audio>
+    </div>
+</div>
+
+<div data-role="page" id="login-page" data-title="OTIS - Login">
+    <div data-role="header" class="login-header">
+    	<img src="i/icon-logo.png" alt="OTIS" />
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="login-content">
+        <div class="login-wrapper">
+            <div class="login-box-wrapper">
+            	<div id="login-box" class="panel">
+            	    <p>
+            	        <label for="country-language" class="l-country">Country/ Language :</label>
+            	          <span class="select">
+            	            <select id="country-language">
+            	                <option value="en">USA - English</option>
+            	                <option value="de">Germany - Deutsch</option>
+            	            </select>
+            	          </span>
+            	      </p>
+            	      <p class="error"><span>Incorrect Login ID or Password</span></p>
+            	      <p>
+            	        <label for="login-id" class="l-id">Login ID :</label>
+            	          <input type="text" id="login-id" class="text" />
+            	      </p>
+            	      <p>
+            	        <label for="password" class="l-password">Password :</label>
+            	          <input type="password" id="password" class="text" />
+            	      </p>
+            	      <p>
+            	        <input type="checkbox" id="remember-me" checked />
+            	          <label for="remember-me" data-corners="false" data-shadow="false" data-iconshadow="false" class="l-remember">Remember me</label>
+            	      </p>
+            	      <a href="javascript:;" class="button login-btn l-login">LOGIN</a>
+            	</div>
+            	<!-- End #login-box -->
+            	<p class="note l-note">To access eService Mobile Application, you need to register online.</p>
+            </div>
+            
+            <div id="password-expired" class="panel">
+                <h2>Please Change Your Password</h2>
+                <p class="explain">Your current password has expired. In order to continue, you need to create a new password.</p>
+                <p>
+                    <label for="current-password">Current Password :</label>
+                    <input type="password" id="current-password" class="text" />
+                </p>
+                <p>
+                    <label for="new-password">New Password :</label>
+                    <input type="password" id="new-password" class="text" />
+                </p>
+                <p>
+                    <label for="confirm-password">Confirm New Password :</label>
+                    <input type="password" id="confirm-password" class="text" />
+                </p>
+                <a href="javascript:;" class="button submit-btn">SUBMIT NEW PASSWORD</a>
+            </div>
+            <!-- End #password-expired -->
+            
+            <div id="forgot-password" class="panel">
+                <h2>Forgot Password?</h2>
+                <p class="explain">Enter your email address and we’ll send you a new password. Please enter the same email address you registered with initially.</p>
+                <p>
+                    <label for="email">Your Email Address :</label>
+                    <input type="text" id="email" class="text" />
+                </p>
+                <a href="javascript:;" class="button reset-btn">RESET PASSWORD</a>
+            </div>
+            <!-- End #forgot-password -->
+            
+            <div id="email-sent" class="panel">
+                <h2>New Password Sent</h2>
+                <p class="explain">New password has been sent to your email. Please check your email and try to login again.</p>
+                <a href="javascript:;" class="button back-btn">BACK TO LOGIN</a>
+            </div>
+            <!-- End #email-sent -->
+        </div>
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    	<a href="javascript:;" class="link l-forgot" data-role="none">FORGOT YOUR PASSWORD?</a>
+    	<a href="javascript:;" class="link back-link hide" data-role="none">BACK TO LOGIN</a>
+    </div>
+    <!-- End [footer] -->
+</div>
+<!-- End #login-page -->
+
+<div data-role="page" id="contact-info-page" data-title="OTIS - Contact Info">
+    <div data-role="header" data-position="fixed" class="header">
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Contact Info</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content">
+        <p class="note">Please review your contact information</p>
+        <div class="contact-info">
+            <ul class="form-info">
+                <li>
+                	<label for="edit-first-name">First Name</label> <span class="data">John</span>
+                    <input type="text" id="edit-first-name" class="text form-element hide" value="John" >
+                </li>
+                <li>
+                	<label for="edit-last-name">Last Name</label> <span class="data">Doe</span>
+                    <input type="text" id="edit-last-name" class="text form-element hide" value="Doe" >
+                </li>
+                <li>
+                	<label for="edit-email">Email</label> <span class="data">john.doe@gmail.com</span>
+                    <input type="text" id="edit-email" class="text form-element hide" value="john.doe@gmail.com" >
+                </li>
+                <li>
+                	<label for="edit-address">Address</label> <span class="data">123 Nowher street</span>
+                    <input type="text" id="edit-address" class="text form-element hide" value="123 Nowher street" >
+                </li>
+                <li>
+                	<label for="edit-city">City</label> <span class="data">Farmington</span>
+                    <input type="text" id="edit-city" class="text form-element hide" value="Farmington" >
+                </li>
+                <li>
+                	<label for="edit-state">State</label> <span class="data">CT</span>
+                    <input type="text" id="edit-state" class="text form-element hide" value="CT" >
+                </li>
+                <li>
+                	<label for="edit-postal-code">Postal Code</label> <span class="data">12345</span>
+                    <input type="text" id="edit-postal-code" class="text form-element hide" value="12345" >
+                </li>
+                <li>
+                	<label for="edit-country" class="select-l">Country</label> <span class="data">USA</span>
+                    <span class="select form-element hide">
+                    	<select id="edit-country">
+                    		<option>USA</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label for="edit-language" class="select-l">Language</label> <span class="data">English</span>
+                    <span class="select form-element hide">
+                    	<select id="edit-language">
+                    		<option>English</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label for="edit-telephone">Telephone</label> <span class="data">123 456 7891</span>
+                    <input type="text" id="edit-telephone" class="text tel form-element hide" value="123" >
+                    <input type="text" class="text tel form-element hide" value="456" >
+                    <input type="text" class="text tel-long form-element hide" value="7891" >
+                </li>
+                <li>
+                	<label for="edit-password">Password</label> <span class="data">**********</span>
+                    <input type="password" id="edit-password" class="text form-element hide" value="**********" >
+                </li>
+                <li class="last">
+                	<label for="edit-position">Position</label> <span class="data">My Position</span>
+                    <input type="text" id="edit-position" class="text form-element hide" value="My Position" >
+                </li>
+            </ul>
+        </div>
+        <!-- End .contact-info -->
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    	<a href="javascript:;" data-role="none" class="btn edit-btn left-side">EDIT</a>
+    	<a href="#home-page" data-role="none" class="btn done-btn right-side">DONE</a>
+    	<a href="javascript:;" data-role="none" class="btn cancel-btn left-side hide">CANCEL</a>
+    	<a href="javascript:;" data-role="none" class="btn save-btn right-side hide">SAVE</a>
+    </div>
+    <!-- End [footer] -->
+</div>
+<!-- End #contact-info-page -->
+
+<div data-role="page" id="home-page" data-title="OTIS - Home">
+    <div data-role="header" data-position="fixed" class="header">
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Home</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content">
+        <table>
+        	<tbody>
+            	<tr>
+                	<td class="left"><a href="#open-calls-page" data-role="none" class="osc"><span></span>View Open Service Call</a></td>
+                	<td><a href="#completed-activities-page" data-role="none" class="ca">View Completed Activities</a></td>
+                </tr>
+            	<tr>
+                	<td class="left"><a href="#log-service-call-page" data-role="none" class="lsc">Log Service Call&nbsp;</a></td>
+                	<td><a href="#performance-dashboard-page" data-role="none" class="pd">Performance Dashboard</a></td>
+                </tr>
+            	<tr>
+                	<td class="left"><a href="#contact-otis-page" data-role="none" class="co">Contact Otis</a></td>
+                	<td><a href="#settings-page" data-role="none" class="settings">Settings</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    	<a href="javascript:;" data-role="none" class="btn help-btn left-side">HELP</a>
+    	<a href="#login-page" data-role="none" class="btn right-side logout-btn">LOGOUT</a>
+    </div>
+    <!-- End [footer] -->
+</div>
+<!-- End #home-page -->
+
+<div data-role="page" id="open-calls-page" data-title="OTIS - Open Calls">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="javascript:;" data-role="none" class="blue-btn menu-btn left-side">Menu</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Open Calls</h1>
+    </div>
+    <!-- End [header] -->
+    <div data-role="content" class="content full">
+    	<div class="menu hidden">
+        	<ul>
+            	<li class="first">
+                	<div>
+            			<a href="#home-page" data-role="none" class="home">Home</a>
+            		</div>
+                </li>
+            	<li class="active">
+                	<div>
+                		<a href="#open-calls-page" data-role="none" class="osc">View Open Service Calls</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#completed-activities-page" data-role="none" class="ca">View Completed Activities</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#log-service-call-page" data-role="none" class="lsc">Log Service Call</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#performance-dashboard-page" data-role="none" class="pd">Performance Dashboard</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#contact-otis-page" data-role="none" class="co">Contact OTIS</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#settings-page" data-role="none" class="settings">Settings</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="javascript:;" data-role="none" class="help">Help</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#login-page" data-role="none" class="lo">Log Out</a>
+                	</div>
+                </li>
+            </ul>
+        </div>
+        <!-- End .menu -->
+        <div class="filter">
+            <div class="filter-header">
+                <table >
+                    <tbody>
+                        <tr>
+                            <td class="btn"><a href="javascript:;" data-role="none" class="toggle-btn">+</a></td>
+                            <td><strong>Contract :</strong> <span>All</span></td>
+                            <td><strong>Building :</strong> <span>All</span></td>
+                            <td><strong>Unit :</strong> <span>All</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End .filter-header -->
+            <div class="filter-content hide">
+                <p class="first">
+                    <label for="contract" class="selectLabel">Contract</label>
+                    <span class="select">
+                        <select id="contract">
+                        	<option>All</option>
+                            <option>CT 0369</option>
+                            <option>TX 3991</option>
+                        </select>
+                    </span>
+                </p>
+                <p>
+                    <label for="building" class="selectLabel">Building</label>
+                    <span class="select">
+                        <select id="building">
+                        	<option>All</option>
+                        </select>
+                    </span>
+                </p>
+                <p>
+                    <label for="unit" class="selectLabel">Unit</label>
+                    <span class="select">
+                        <select id="unit">
+                            <option>All</option>
+                        </select>
+                    </span>
+                </p>
+                <p class="last">
+                	<span class="remember">
+                		<input type="checkbox" id="remember-filter" checked />
+                		<label for="remember-filter" data-corners="false" data-shadow="false" data-iconshadow="false">Remember my filter</label>
+                	</span>
+                    <a href="javascript:;" data-role="none" class="gray-btn">Filter</a>
+                    <a href="javascript:;" data-role="none" class="white-btn cancel-btn">Cancel</a>
+                </p>
+            </div>
+            <!-- End .filter-content -->
+        </div>
+        <!-- End .filter -->
+        <div class="pager">
+        	<a href="javascript:;" data-role="none" class="next-btn">Next</a>
+        	<a href="javascript:;" data-role="none" class="prev-btn">Prev</a>
+        	<strong>1 - 10 of 50</strong>
+        </div>
+        <!-- End .pager -->
+        <table  class="data-table">
+        	<thead>
+            	<tr>
+                	<th>Building</th>
+                	<th>Unit</th>
+                	<th>Placed</th>
+                	<th class="arrowTh"></th>
+                </tr>
+            </thead>
+            <tbody>
+            	<!--<tr>
+                	<td>Building 1234</td>
+                	<td>1234 / ABCDUnit</td>
+                	<td>5/31/2001</td>
+                	<td><a href="#open-call-detail-page-detail" data-role="none" class="btn-arrow">&gt;</a></td>
+                </tr>-->
+            </tbody>
+        </table>
+    </div>
+    <!-- End [content] -->
+</div>
+<!-- End #open-calls-page -->
+
+<div data-role="page" id="open-call-detail-page-detail" data-title="OTIS - Unit 1234">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="#open-calls-page" data-role="none" class="blue-btn left-side">Back</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Unit 1234</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content detail-content">
+        <div class="panel form">
+        	<h2>Service Call Details</h2>
+            <div class="formRow">
+                <label >Buiding</label>
+                <span>Buiding 1234</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Unit</label>
+                <span>191767 / CAR I</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Type</label>
+                <span>Equipment Problem</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Call Placed</label>
+                <span>03/01/2012 08:11:00</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Caller</label>
+                <span>CHRIS PERCOULIS / TECH</span>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- End #contact-info -->
+    </div>
+    <!-- End [content] -->
+</div>
+<!-- End #open-call-detail-page-detail -->
+
+<div data-role="page" id="completed-activities-page" data-title="OTIS - Completed Activities">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="javascript:;" data-role="none" class="blue-btn menu-btn left-side">Menu</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Completed Activities</h1>
+    </div>
+    <!-- End [header] -->
+    <div data-role="content" class="content full">
+    	<div class="menu hidden">
+        	<ul>
+            	<li class="first">
+                	<div>
+            			<a href="#home-page" data-role="none" class="home">Home</a>
+            		</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#open-calls-page" data-role="none" class="osc">View Open Service Calls</a>
+                	</div>
+                </li>
+            	<li class="active">
+                	<div>
+                		<a href="#completed-activities-page" data-role="none" class="ca">View Completed Activities</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#log-service-call-page" data-role="none" class="lsc">Log Service Call</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#performance-dashboard-page" data-role="none" class="pd">Performance Dashboard</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#contact-otis-page" data-role="none" class="co">Contact OTIS</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#settings-page" data-role="none" class="settings">Settings</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="javascript:;" data-role="none" class="help">Help</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#login-page" data-role="none" class="lo">Log Out</a>
+                	</div>
+                </li>
+            </ul>
+        </div>
+        <!-- End .menu -->
+        <div class="filter">
+            <div class="filter-header">
+                <table >
+                    <tbody>
+                        <tr>
+                            <td class="btn"><a href="javascript:;" data-role="none" class="toggle-btn">+</a></td>
+                            <td><strong>Contract :</strong> <span>All</span></td>
+                            <td><strong>Building :</strong> <span>All</span></td>
+                            <td><strong>Unit :</strong> <span>All</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End .filter-header -->
+            <div class="filter-content hide">
+                <p class="first">
+                    <label for="contract1" class="selectLabel">Contract</label>
+                    <span class="select">
+                        <select id="contract1">
+                        	<option>All</option>
+                            <option>CT 0369</option>
+                            <option>TX 3991</option>
+                        </select>
+                    </span>
+                </p>
+                <p>
+                    <label for="building1" class="selectLabel">Building</label>
+                    <span class="select">
+                        <select id="building1">
+                        	<option>All</option>
+                        </select>
+                    </span>
+                </p>
+                <p>
+                    <label for="unit1" class="selectLabel">Unit</label>
+                    <span class="select">
+                        <select id="unit1">
+                            <option>All</option>
+                        </select>
+                    </span>
+                </p>
+                <p>
+                    <label for="dr" class="selectLabel">Date Range</label>
+                    <span class="select">
+                        <select id="dr">
+                            <option>Last 90 days</option>
+                        </select>
+                    </span>
+                </p>
+                <p class="last btn">
+                    <a href="javascript:;" data-role="none" class="gray-btn">Filter</a>
+                    <a href="javascript:;" data-role="none" class="white-btn cancel-btn">Cancel</a>
+                </p>
+            </div>
+            <!-- End .filter-content -->
+        </div>
+        <!-- End .filter -->
+        <div class="filter follow">
+            <div class="filter-header activities">
+                <table >
+                    <tbody>
+                        <tr>
+                            <td class="btn"><a href="javascript:;" data-role="none" class="toggle-btn">+</a></td>
+                            <td><span class="sc">Service Call</span></td>
+                            <td><span class="repair">Repair</span></td>
+                            <td><span class="maintenance">Maintenance</span></td>
+                            <td class="hide"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End .filter-header -->
+            <div class="filter-content activities hide">
+                <p class="first">
+                	<input type="checkbox" id="service-call-c1" checked />
+                	<label for="service-call-c1" data-corners="false" data-shadow="false" data-iconshadow="false" class="sc">Service Call</label>
+                </p>
+                <p>
+                	<input type="checkbox" id="repair-c1" checked />
+                	<label for="repair-c1" data-corners="false" data-shadow="false" data-iconshadow="false" class="repair">Repair</label>
+                </p>
+                <p>
+                	<input type="checkbox" id="maintenance-c1" checked />
+                	<label for="maintenance-c1" data-corners="false" data-shadow="false" data-iconshadow="false" class="maintenance">Maintenance</label>
+                </p>
+                <p class="last btn">
+                    <a href="javascript:;" data-role="none" class="gray-btn filter-btn">Filter</a>
+                    <a href="javascript:;" data-role="none" class="white-btn cancel-btn">Cancel</a>
+                </p>
+            </div>
+            <!-- End .filter-content -->
+        </div>
+        <!-- End .filter -->
+        <table  class="data-table">
+        	<thead>
+            	<tr>
+                	<th></th>
+                	<th>Date</th>
+                	<th>Unit</th>
+                	<th>Event</th>
+                	<th class="arrowTh"></th>
+                </tr>
+            </thead>
+            <tbody>
+            	<!--<tr>
+                	<td><img src="i/icon-sc.png" alt="" /></td>
+                	<td>01/03/2012</td>
+                	<td>1234 / ABCDUnit</td>
+                	<td class="left-align">Service Call</td>
+                	<td><a href="#service-call-detail-page-detail" data-role="none" class="btn-arrow">&gt;</a></td>
+                </tr>-->
+            </tbody>
+        </table>
+    </div>
+    <!-- End [content] -->
+</div>
+<!-- End #completed-activities-page -->
+
+<div data-role="page" id="service-call-detail-page-detail" data-title="OTIS - Unit 1234">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="#" data-role="none" class="blue-btn back-btn left-side">Back</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Unit 1234</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content detail-content">
+        <div class="panel form">
+        	<h2>Service Call Details</h2>
+            <div class="formRow">
+                <label >Buiding</label>
+                <span>Buiding 1234</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Unit</label>
+                <span>191767 / CAR I</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Type</label>
+                <span>Equipment Problem</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Call Placed</label>
+                <span>03/01/2012 08:11:00</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Dispatched</label>
+                <span>03/01/2012 08:11:00</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Arrived</label>
+                <span>03/01/2012 08:11:00</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Closed</label>
+                <span>03/01/2012 08:11:00</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Caller</label>
+                <span>CHRIS PERCOULIS / TECH</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Service Call</label>
+                <span>CAR I, DRS ARE NOT OPENING ATFLR I, RTCB*TDY*</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Resolution</label>
+                <span>TROUBLESHOOT CAR CONTROLLER - PC BOARD, PROCESSOR</span>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- End #contact-info -->
+    </div>
+    <!-- End [content] -->
+</div>
+<!-- End #service-call-detail-page-detail -->
+
+<div data-role="page" id="repair-detail-page-detail" data-title="OTIS - Unit 1234">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="#" data-role="none" class="blue-btn back-btn left-side">Back</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Unit 1234</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content detail-content">
+        <div  class="panel form">
+        	<h2>Repair Details</h2>
+            <div class="formRow">
+                <label >Unit</label>
+                <span>191767 / CAR I</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Date</label>
+                <span> 01/18/2012 </span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Procedure</label>
+                <ul>
+                    <li>Elevator visited as scheduled by usage, calendar and/or contract calculations.</li>
+                    <li>Checked general operation of elevator.</li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- End #contact-info -->
+    </div>
+    <!-- End [content] -->
+</div>
+<!-- End #repair-detail-page-detail -->
+
+<div data-role="page" id="maintenance-detail-page-detail" data-title="OTIS - Unit 1234">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="#" data-role="none" class="blue-btn back-btn left-side">Back</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Unit 1234</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content detail-content">
+        <div  class="panel form">
+        	<h2>Maintenance Visit Details</h2>
+            <div class="formRow">
+                <label >Unit</label>
+                <span>191767 / CAR I</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Type</label>
+                <span>Scheduled Unit Visit</span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Date</label>
+                <span> 01/18/2012 </span>
+                <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                <label >Procedure</label>
+                <ul>
+                    <li>
+                        Elevator visited as scheduled 
+                          by usage, calendar and/or 
+                          contract calculations.
+                    </li>
+                    <li>
+                        Checked general operation of 
+                          elevator.
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- End #contact-info -->
+    </div>
+    <!-- End [content] -->
+</div>
+<!-- End #maintenance-detail-page-detail -->
+
+<div data-role="page" id="log-service-call-page" data-title="OTIS - Log Service Call">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="javascript:;" data-role="none" class="blue-btn menu-btn left-side">Menu</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Log Service Call</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content full">
+    	<div class="menu hidden">
+        	<ul>
+            	<li class="first">
+                	<div>
+            			<a href="#home-page" data-role="none" class="home">Home</a>
+            		</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#open-calls-page" data-role="none" class="osc">View Open Service Calls</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#completed-activities-page" data-role="none" class="ca">View Completed Activities</a>
+                	</div>
+                </li>
+            	<li class="active">
+                	<div>
+                		<a href="#log-service-call-page" data-role="none" class="lsc">Log Service Call</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#performance-dashboard-page" data-role="none" class="pd">Performance Dashboard</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#contact-otis-page" data-role="none" class="co">Contact OTIS</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#settings-page" data-role="none" class="settings">Settings</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="javascript:;" data-role="none" class="help">Help</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#login-page" data-role="none" class="lo">Log Out</a>
+                	</div>
+                </li>
+            </ul>
+        </div>
+        <!-- End .menu -->
+        <p class="note">Please review your contact information</p>
+        <div class="contact-info">
+            <ul class="form-info">
+                <li>
+                	<label for="log-contract" class="selectLabel">Contract</label>
+                    <span class="select">
+                    	<select id="log-contract">
+                    		<option>Please Select</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label for="log-building" class="selectLabel">Building</label>
+                    <span class="select">
+                    	<select id="log-building">
+                    		<option>Please Select</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label for="log-unit" class="selectLabel">Unit</label>
+                    <span class="select">
+                    	<select id="log-unit">
+                    		<option>Please Select</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label for="log-rp" class="multi-line">Response Preference</label>
+                    <span class="select">
+                    	<select id="log-rp">
+                    		<option>Please Select</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label>Condition</label>
+                    <table >
+                    	<tbody>
+                        	<tr>
+                            	<td>
+                                    <input type="checkbox" id="tp1" />
+                                    <label for="tp1" data-corners="false" data-shadow="false" data-iconshadow="false" class="long">Trapped Passenger</label>
+                                </td>
+                            	<td>
+                                    <input type="checkbox" id="oc1" />
+                                    <label for="oc1" data-corners="false" data-shadow="false" data-iconshadow="false">Other Condition</label>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                    <input type="checkbox" id="tp2" />
+                                    <label for="tp2" data-corners="false" data-shadow="false" data-iconshadow="false" class="long">Trapped Passenger</label>
+                                </td>
+                            	<td>
+                                    <input type="checkbox" id="oc2" />
+                                    <label for="oc2" data-corners="false" data-shadow="false" data-iconshadow="false">Other Condition</label>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                    <input type="checkbox" id="tp3" />
+                                    <label for="tp3" data-corners="false" data-shadow="false" data-iconshadow="false" class="long">Trapped Passenger</label>
+                                </td>
+                            	<td>
+                                    <input type="checkbox" id="oc3" />
+                                    <label for="oc3" data-corners="false" data-shadow="false" data-iconshadow="false">Other Condition</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li class="last">
+                	<label class="log-description">Description</label>
+                    <textarea  class="textarea"></textarea>
+                </li>
+            </ul>
+        </div>
+        <!-- End #contact-info -->
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    	<a href="javascript:;" data-role="none" class="btn done-btn right-side">SUBMIT</a>
+    </div>
+    <!-- End [footer] -->
+    <div class="alpha hide"></div>
+    <div class="popup success-popup hide">
+    	<a href="javascript:;" data-role="none" class="close-btn">x</a>
+        <p class="success">Service Call has been successfully logged.</p>
+        <p>
+        	<a href="#home-page" data-role="none" class="white-btn">Return Home</a>
+            <a href="#log-service-call-page" data-role="none" class="gray-btn">Log New Service Call</a>
+        </p>
+    </div>
+    <!-- End .popup -->
+    <div class="popup error-popup hide">
+    	<a href="javascript:;" data-role="none" class="close-btn">x</a>
+        <p class="error">Log Service Call Unsuccessful</p>
+        <p class="reason">Please complete all fields</p>
+        <p>
+        	<a href="#home-page" data-role="none" class="white-btn">Return Home</a>
+            <a href="javascript:;" data-role="none" class="gray-btn try-again-btn">Try Again</a>
+        </p>
+    </div>
+    <!-- End .popup -->
+</div>
+<!-- End #log-service-call-page -->
+
+<div data-role="page" id="performance-dashboard-page" data-title="OTIS - Performance Dashboard">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="javascript:;" data-role="none" class="blue-btn menu-btn left-side">Menu</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1 class="long">Performance Dashboard</h1>
+    </div>
+    <!-- End [header] -->
+    <div data-role="content" class="content full">
+    	<div class="menu hidden">
+        	<ul>
+            	<li class="first">
+                	<div>
+            			<a href="#home-page" data-role="none" class="home">Home</a>
+            		</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#open-calls-page" data-role="none" class="osc">View Open Service Calls</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#completed-activities-page" data-role="none" class="ca">View Completed Activities</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#log-service-call-page" data-role="none" class="lsc">Log Service Call</a>
+                	</div>
+                </li>
+            	<li class="active">
+                	<div>
+                		<a href="#performance-dashboard-page" data-role="none" class="pd">Performance Dashboard</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#contact-otis-page" data-role="none" class="co">Contact OTIS</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#settings-page" data-role="none" class="settings">Settings</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="javascript:;" data-role="none" class="help">Help</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#login-page" data-role="none" class="lo">Log Out</a>
+                	</div>
+                </li>
+            </ul>
+        </div>
+        <!-- End .menu -->
+        <div class="filter">
+            <div class="filter-header">
+                <table >
+                    <tbody>
+                        <tr>
+                            <td class="btn"><a href="javascript:;" data-role="none" class="toggle-btn">+</a></td>
+                            <td><strong>Contract :</strong> All</td>
+                            <td><strong>Building :</strong> All</td>
+                            <td class="left-align">Last 90 days</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End .filter-header -->
+            <div class="filter-content hide">
+                <p class="first">
+                    <label for="contract2" class="selectLabel">Contract</label>
+                    <span class="select">
+                        <select id="contract2">
+                        	<option>All</option>
+                        </select>
+                    </span>
+                </p>
+                <p>
+                    <label for="building2" class="selectLabel">Building</label>
+                    <span class="select">
+                        <select id="building2">
+                        	<option>All</option>
+                        </select>
+                    </span>
+                </p>
+                <p>
+                    <label for="dr1" class="selectLabel">Date Range</label>
+                    <span class="select">
+                        <select id="dr1">
+                            <option>Last 90 days</option>
+                        </select>
+                    </span>
+                </p>
+                <p class="last btn">
+                    <a href="javascript:;" data-role="none" class="gray-btn">Filter</a>
+                    <a href="javascript:;" data-role="none" class="white-btn cancel-btn">Cancel</a>
+                </p>
+            </div>
+            <!-- End .filter-content -->
+        </div>
+        <!-- End .filter -->
+        <div class="pager">
+        	<a href="javascript:;" data-role="none" class="next-btn">Next</a>
+        	<a href="javascript:;" data-role="none" class="prev-btn">Prev</a>
+        	<strong>1 - 10 of 20</strong>
+        </div>
+        <!-- End .pager -->
+        <table  class="data-table">
+        	<thead>
+            	<tr>
+                	<th></th>
+                	<th class="unit">Unit</th>
+                	<th>Service Call</th>
+                	<th>Main. Visit</th>
+                	<th>Avail</th>
+                    <th class="arrowTh"></th>
+                </tr>
+            </thead>
+            <tbody>
+            	<!--<tr>
+                	<td class="btn"><a href="javascript:;" data-role="none" class="toggle-btn">+</a></td>
+                	<td>1234 / ABCDUnit</td>
+                	<td>7</td>
+                	<td>8</td>
+                	<td><span class="avail high">99.5%</span></td>
+                	<td><a href="#unit-details-page" data-role="none" class="btn-arrow">&gt;</a></td>
+                </tr>
+                <tr class="detail hide">
+                	<td></td>
+                    <td colspan="4">
+                    	<table >
+                        	<tbody>
+                            	<tr class="first">
+                                	<th>Contract</th>
+                                    <th>Unit Type</th>
+                                    <th>Building</th>
+                                </tr>
+                                <tr>
+                                	<td>CON1234</td>
+                                    <td>REM/ Elite</td>
+                                    <td>BUIL1234</td>
+                                </tr>
+                                <tr>
+                                	<th colspan="3">Sale Representative</th>
+                                </tr>
+                                <tr>
+                                	<td colspan="3"><a href="tel:1231231234" data-role="none" class="phone">SalesRep Name | 123 123 1234</a></td>
+                                </tr>
+                                <tr>
+                                	<td colspan="3"><a href="mailto:SalesRep@email.com" data-role="none" class="email">SalesRep@email.com</a></td>
+                                </tr>
+                                <tr class="last">
+                                	<td colspan="3"><a href="#log-service-call-page" class="gray-btn" data-role="none">Log Service Call</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td></td>
+                </tr>-->
+            </tbody>
+        </table>
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    	<table class="data-table">
+        	<tbody>
+            	<tr class="total">
+                	<td class="btn"></td>
+                	<td class="left-align total">TOTAL</td>
+                	<td class="sc">7</td>
+                	<td class="mv">84</td>
+                	<td class="avail"><span class="avail high">99.5%</span></td>
+                	<td class="arrow"><a href="#unit-details-page" data-role="none" class="btn-arrow">&gt;</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- End #performance-dashboard-page -->
+
+<div data-role="page" id="unit-details-page" data-title="OTIS - Completed Activities">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="#performance-dashboard-page" data-role="none" class="blue-btn back-btn left-side">Back</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Unit Details</h1>
+    </div>
+    <!-- End [header] -->
+    <div data-role="content" class="content full">
+        <div class="filter">
+            <div class="filter-header activities">
+                <table >
+                    <tbody>
+                        <tr>
+                            <td class="btn"><a href="javascript:;" data-role="none" class="toggle-btn">+</a></td>
+                            <td><span class="sc">Service Call</span></td>
+                            <td><span class="repair">Repair</span></td>
+                            <td><span class="maintenance">Maintenance</span></td>
+                            <td class="hide"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End .filter-header -->
+            <div class="filter-content activities hide">
+                <p class="first">
+                	<input type="checkbox" id="service-call-c" checked />
+                	<label for="service-call-c" data-corners="false" data-shadow="false" data-iconshadow="false" class="sc">Service Call</label>
+                </p>
+                <p>
+                	<input type="checkbox" id="repair-c" checked />
+                	<label for="repair-c" data-corners="false" data-shadow="false" data-iconshadow="false" class="repair">Repair</label>
+                </p>
+                <p>
+                	<input type="checkbox" id="maintenance-c" checked />
+                	<label for="maintenance-c" data-corners="false" data-shadow="false" data-iconshadow="false" class="maintenance">Maintenance</label>
+                </p>
+                <p class="last btn">
+                    <a href="javascript:;" data-role="none" class="gray-btn filter-btn">Filter</a>
+                    <a href="javascript:;" data-role="none" class="white-btn cancel-btn">Cancel</a>
+                </p>
+            </div>
+            <!-- End .filter-content -->
+        </div>
+        <!-- End .filter -->
+        <div data-role="navbar" class="view-nav">
+            <ul>
+                <li class="first"><a href="#" class="ui-btn-active">Event View</a></li>
+                <li class="last"><a href="#">Calendar View</a></li>
+            </ul>
+        </div>
+        <table  class="data-table event-view">
+        	<thead>
+            	<tr>
+                	<th></th>
+                	<th>Date</th>
+                	<th>Unit</th>
+                	<th>Event</th>
+                	<th class="arrowTh"></th>
+                </tr>
+            </thead>
+            <tbody>
+            	<!--<tr>
+                	<td><img src="i/icon-sc.png" alt="" /></td>
+                	<td>01/03/2012</td>
+                	<td>1234 / ABCDUnit</td>
+                	<td class="left-align">Service Call</td>
+                	<td><a href="#service-call-detail-page-detail?from=pd" data-role="none" class="btn-arrow">&gt;</a></td>
+                </tr>-->
+            </tbody>
+        </table>
+        <div id="calendar" class="hide"></div>
+        <table  class="data-table calendar-view hide">
+        	<thead>
+            	<tr>
+                	<th></th>
+                	<th>Date</th>
+                	<th>Unit</th>
+                	<th>Event</th>
+                	<th class="arrowTh"></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    </div>
+    <!-- End [footer] -->
+</div>
+<!-- End #unit-details-page -->
+
+<div data-role="page" id="contact-otis-page" data-title="OTIS - Contact Otis">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="javascript:;" data-role="none" class="blue-btn menu-btn left-side">Menu</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Contact Otis</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content full">
+    	<div class="menu hidden">
+        	<ul>
+            	<li class="first">
+                	<div>
+            			<a href="#home-page" data-role="none" class="home">Home</a>
+            		</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#open-calls-page" data-role="none" class="osc">View Open Service Calls</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#completed-activities-page" data-role="none" class="ca">View Completed Activities</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#log-service-call-page" data-role="none" class="lsc">Log Service Call</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#performance-dashboard-page" data-role="none" class="pd">Performance Dashboard</a>
+                	</div>
+                </li>
+            	<li class="active">
+                	<div>
+                		<a href="#contact-otis-page" data-role="none" class="co">Contact OTIS</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#settings-page" data-role="none" class="settings">Settings</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="javascript:;" data-role="none" class="help">Help</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#login-page" data-role="none" class="lo">Log Out</a>
+                	</div>
+                </li>
+            </ul>
+        </div>
+        <!-- End .menu -->
+        <p class="note">Contact Sales Rep</p>
+        <div class="contact-info">
+            <ul class="form-info">
+                <li class="building">
+                	<label for="ci-building" class="selectLabel">Building #</label>
+                    <span class="select">
+                    	<select id="ci-building">
+                    		<option>B123 / BUIL1234</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label>Sales Rep</label> John Doe
+                </li>
+                <li>
+                	<label>Telephone</label> <a href="tel:1234567891" data-role="none" class="phone">123 456 7891</a>
+                </li>
+                <li class="last">
+                	<label>Email</label> <a href="mailto:SaleRep@email.com" data-role="none" class="email">SaleRep@email.com</a>
+                </li>
+            </ul>
+        </div>
+        <!-- End .contact-info -->
+        <div class="contact-info otisline">
+            <ul class="form-info">
+                <li>
+                	<label>Contact OTISLINE</label>
+                    <a href="tel:1234567891" data-role="none" class="phone icon">123 456 7891</a>
+                </li>
+                <li class="last">
+                	<label>Customer Feedback</label>
+                    <a href="tel:1234567891" data-role="none" class="phone icon">123 456 7891</a>
+                    <a href="#feedback-page" data-role="none" class="feedback">Feedback</a>
+                </li>
+            </ul>
+        </div>
+        <!-- End .contact-info -->
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    </div>
+    <!-- End [footer] -->
+</div>
+<!-- End #contact-otis-page -->
+
+<div data-role="page" id="feedback-page" data-title="OTIS - Feedback">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="#contact-otis-page" data-role="none" class="blue-btn back-btn left-side">Back</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Feedback</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content full">
+        <div class="contact-info">
+            <ul class="form-info">
+                <li>
+                	<label for="ci-building1">Tell us about our service.</label>
+                    <textarea  id="ci-building1" class="textarea"></textarea>
+                </li>
+                <li class="last">
+                	<label>Please rate your overall satisfaction with Otis.</label>
+                    <div class="slider">
+                    	<input type="range" value="4" min="1" max="7" step="1" data-highlight="true" />
+                    </div>
+                    <div class="rate"><span>1</span>Extremely Dissatisfied</div>
+                    <div class="rate"><span>2</span>Very Dissatisfied</div>
+                    <div class="rate"><span>3</span>Dissatisfied</div>
+                    <div class="rate"><span>4</span>Neutral</div>
+                    <div class="rate"><span>5</span>Satisfied</div>
+                    <div class="rate"><span>6</span>Very Satisfied</div>
+                    <div class="rate"><span>7</span>Extremely Satisfied</div>
+                </li>
+            </ul>
+        </div>
+        <!-- End .contact-info -->
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    	<a href="#contact-otis-page" data-role="none" class="btn done-btn right-side">SUBMIT</a>
+    </div>
+    <!-- End [footer] -->
+</div>
+<!-- End #comment-page -->
+
+<div data-role="page" id="settings-page" data-title="OTIS - Settings">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="javascript:;" data-role="none" class="blue-btn menu-btn left-side">Menu</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Settings</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content full">
+    	<div class="menu hidden">
+        	<ul>
+            	<li class="first">
+                	<div>
+            			<a href="#home-page" data-role="none" class="home">Home</a>
+            		</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#open-calls-page" data-role="none" class="osc">View Open Service Calls</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#completed-activities-page" data-role="none" class="ca">View Completed Activities</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#log-service-call-page" data-role="none" class="lsc">Log Service Call</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#performance-dashboard-page" data-role="none" class="pd">Performance Dashboard</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#contact-otis-page" data-role="none" class="co">Contact OTIS</a>
+                	</div>
+                </li>
+            	<li class="active">
+                	<div>
+                		<a href="#settings-page" data-role="none" class="settings">Settings</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="javascript:;" data-role="none" class="help">Help</a>
+                	</div>
+                </li>
+            	<li>
+                	<div>
+                		<a href="#login-page" data-role="none" class="lo">Log Out</a>
+                	</div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <!-- End .menu -->
+        <div class="clear"></div>
+        <div class="contact-info">
+            <ul class="form-info">
+                <li>
+                	<label>Add Building</label>
+                    <a href="#add-building-page" data-role="none" class="btn-arrow">&gt;</a>
+                </li>
+                <li>
+                	<label>Contact Information</label>
+                    <a href="#sales-contact-info-page" data-role="none" class="btn-arrow">&gt;</a>
+                </li>
+                <li>
+                	<label>Auto Logout</label>
+                    <fieldset data-role="controlgroup" data-type="horizontal" >
+                    	<input type="radio" name="al-choice" id="al-choice-1" value="Always keep user logged-in" />
+                        <label for="al-choice-1">Always keep user logged-in</label>
+                
+                        <input type="radio" name="al-choice" id="al-choice-2" value="Logout user once App is closed" checked />
+                        <label for="al-choice-2">Logout user once App is closed</label>
+                    </fieldset>
+                </li>
+                <li>
+                	<label>Sync Infomation</label>
+                    <fieldset data-role="controlgroup" data-type="horizontal" class="single-line" >
+                    	<input type="radio" name="si-choice" id="si-choice-1" value="Offline" checked />
+                        <label for="si-choice-1">Offline</label>
+                
+                        <input type="radio" name="si-choice" id="si-choice-2" value="After Login" />
+                        <label for="si-choice-2">After Login</label>
+                    </fieldset>
+                </li>
+                <li class="last">
+                	<label for="default-screen">Default Screen</label>
+                    <span class="select exclude">
+                        <select id="default-screen">
+                            <option>Home</option>
+                        </select>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <!-- End .contact-info -->
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    </div>
+    <!-- End [footer] -->
+</div>
+<!-- End #settings-page -->
+
+<div data-role="page" id="add-building-page" data-title="OTIS - Contact Otis">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="#settings-page" data-role="none" class="blue-btn back-btn left-side">Back</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Add Building</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content full">
+        <div class="contact-info">
+            <ul class="form-info">
+                <li class="building">
+                	<label for="building-name-id">Building Name/ ID #</label>
+                    <input type="text" id="building-name-id" class="text">
+                    <a href="javascript:;" data-role="none" class="add-btn">ADD</a>
+                </li>
+            </ul>
+        </div>
+        <!-- End .contact-info -->
+        <div class="building-list">
+        	<h2>Requested Building Number(s)</h2>
+        	<ul>
+            	<li class="first">
+                	<span class="name">Building12345</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            	<li>
+                	<span class="name">Building23456</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            	<li>
+                	<span class="name">Building34567</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            	<li>
+                	<span class="name">Building12345</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            	<li>
+                	<span class="name">Building23456</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            	<li>
+                	<span class="name">Building34567</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            	<li>
+                	<span class="name">Building12345</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            	<li>
+                	<span class="name">Building23456</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            	<li>
+                	<span class="name">Building34567</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            	<li class="last">
+                	<span class="name">Building34567</span>
+                    <a href="javascript:;" data-role="none" class="delete-btn">DELETE</a>
+                    <span class="confirm">
+                    	Remove?
+                    	<a href="javascript:;" data-role="none" class="yes-btn">YES</a> <span>|</span> 
+                    	<a href="javascript:;" data-role="none" class="no-btn">NO</a>
+                    </span>
+                    <div class="clear"></div>
+                </li>
+            </ul>
+        </div>
+        <!-- End .building-list -->
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    	<a href="#settings-page" data-role="none" class="btn done-btn right-side">SUBMIT</a>
+    </div>
+    <!-- End [footer] -->
+</div>
+<!-- End #add-building-page -->
+
+<div data-role="page" id="sales-contact-info-page" data-title="OTIS - Contact Otis">
+    <div data-role="header" data-position="fixed" class="header">
+    	<a href="#settings-page" data-role="none" class="blue-btn back-btn left-side">Back</a>
+    	<img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+    	<h1>Contact Info</h1>
+    </div>
+    <!-- End [header] -->
+	<div data-role="content" class="content full">
+        <div data-role="navbar" class="view-nav">
+            <ul>
+                <li class="first"><a href="#" class="ui-btn-active">Sales Representative</a></li>
+                <li class="last"><a href="#">My Contact Details</a></li>
+            </ul>
+        </div>
+        <!-- End .view-nav -->
+        <div class="contact-info contact">
+            <ul class="form-info">
+                <li class="building">
+                	<label for="ci-building2" class="selectLabel">Building #</label>
+                    <span class="select">
+                    	<select id="ci-building2">
+                    		<option>B123 / BUIL1234</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label>Sales Rep</label> John Doe
+                </li>
+                <li>
+                	<label>Telephone</label> <a href="tel:1234567891" data-role="none" class="phone">123 456 7891</a>
+                </li>
+                <li class="last">
+                	<label>Email</label> <a href="mailto:SaleRep@email.com" data-role="none" class="email">SaleRep@email.com</a>
+                </li>
+            </ul>
+        </div>
+        <!-- End .contact-info -->
+        <div class="contact-info hide">
+            <ul class="form-info">
+                <li>
+                	<label for="edit-first-name1">First Name</label> <span class="data">John</span>
+                    <input type="text" id="edit-first-name1" class="text form-element hide" value="John" >
+                </li>
+                <li>
+                	<label for="edit-last-name1">Last Name</label> <span class="data">Doe</span>
+                    <input type="text" id="edit-last-name1" class="text form-element hide" value="Doe" >
+                </li>
+                <li>
+                	<label for="edit-email1">Email</label> <span class="data">john.doe@gmail.com</span>
+                    <input type="text" id="edit-email1" class="text form-element hide" value="john.doe@gmail.com" >
+                </li>
+                <li>
+                	<label for="edit-address1">Address</label> <span class="data">123 Nowher street</span>
+                    <input type="text" id="edit-address1" class="text form-element hide" value="123 Nowher street" >
+                </li>
+                <li>
+                	<label for="edit-city1">City</label> <span class="data">Farmington</span>
+                    <input type="text" id="edit-city1" class="text form-element hide" value="Farmington" >
+                </li>
+                <li>
+                	<label for="edit-state1">State</label> <span class="data">CT</span>
+                    <input type="text" id="edit-state1" class="text form-element hide" value="CT" >
+                </li>
+                <li>
+                	<label for="edit-postal-code1">Postal Code</label> <span class="data">12345</span>
+                    <input type="text" id="edit-postal-code1" class="text form-element hide" value="12345" >
+                </li>
+                <li>
+                	<label for="edit-country1" class="select-l">Country</label> <span class="data">USA</span>
+                    <span class="select form-element hide">
+                    	<select id="edit-country1">
+                    		<option>USA</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label for="edit-language1" class="select-l">Language</label> <span class="data">English</span>
+                    <span class="select form-element hide">
+                    	<select id="edit-language1">
+                    		<option>English</option>
+                    	</select>
+                    </span>
+                </li>
+                <li>
+                	<label for="edit-telephone1">Telephone</label> <span class="data">123 456 7891</span>
+                    <input type="text" id="edit-telephone1" class="text tel form-element hide" value="123" >
+                    <input type="text" class="text tel form-element hide" value="456" >
+                    <input type="text" class="text tel-long form-element hide" value="7891" >
+                </li>
+                <li>
+                	<label for="edit-password1">Password</label> <span class="data">**********</span>
+                    <input type="password" id="edit-password1" class="text form-element hide" value="**********" >
+                </li>
+                <li class="last">
+                	<label for="edit-position1">Position</label> <span class="data">My Position</span>
+                    <input type="text" id="edit-position1" class="text form-element hide" value="My Position" >
+                </li>
+            </ul>
+        </div>
+        <!-- End .contact-info -->
+    </div>
+    <!-- End [content] -->
+    <div data-role="footer" data-position="fixed" class="footer">
+    	<a href="javascript:;" data-role="none" class="btn edit-btn right-side hide">EDIT</a>
+    	<a href="javascript:;" data-role="none" class="btn cancel-btn left-side hide">CANCEL</a>
+    	<a href="javascript:;" data-role="none" class="btn save-btn right-side hide">SAVE</a>
+    </div>
+    <!-- End [footer] -->
+</div>
+<!-- End #sales-contact-info-page -->
+
+<div class="door">
+    <div class="headWrap">
+        <div class="header lheader">
+            <h1>Home</h1>
+        </div>
+        <div class="header rheader">
+            <img src="i/icon-small-logo.png" alt="OTIS" class="logo" />
+            <h1>Home</h1>
+        </div>
+    </div>
+    <!-- End [header] -->
+    <div class="contentWrap">
+        <div class="door-left">
+            <div data-role="content" class="content">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="left"><a href="#open-calls-page" data-role="none" class="osc"><span></span>View Open Service Call</a></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><a href="#log-service-call-page" data-role="none" class="lsc">Log Service Call&nbsp;</a></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><a href="#contact-otis-page" data-role="none" class="co">Contact Otis</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End [content] -->
+        </div>
+        <div class="door-right">
+            <div data-role="content" class="content">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><a href="#completed-activities-page" data-role="none" class="ca">View Completed Activities</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#performance-dashboard-page" data-role="none" class="pd">Performance Dashboard</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#settings-page" data-role="none" class="settings">Settings</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End [content] -->
+        </div>
+    </div>
+    <div class="footWrap">
+        <div class="footer lfooter">
+            <a href="javascript:;" data-role="none" class="btn help-btn left-side">HELP</a>
+        </div>
+        <div class="footer rfooter">
+            <a href="#login-page" data-role="none" class="btn right-side">LOGOUT</a>
+        </div>
+    </div>
+    <!-- End [footer] -->
+</div>
+
+</body>
+</html>
