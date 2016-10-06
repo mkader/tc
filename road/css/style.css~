@@ -1,0 +1,1304 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #66c2ec;
+}
+a{
+    border: none;
+    outline: none;
+}
+.container{
+    width: 890px;
+    margin: 0 auto 0 -445px;
+    height: 500px;
+    overflow: hidden;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.hide{
+    display: none !important;
+}
+.clear{
+    clear: both;
+    width: 0;
+    height: 0;
+}
+
+/*welcome page style*/
+.welcome{
+    background: #66c2ec url("../i/welcome-Bg.jpg") no-repeat;
+    z-index: 1
+}
+    .container a{
+        position: absolute;
+        display: block;
+    }
+    .container .playerProfile{
+        background: url("../i/player-prorile.png") no-repeat;
+        width: 114px;
+        height: 127px;
+        top: 70px;
+        left: 10px;
+    }
+    .container .playerProfile:hover{
+        background: url("../i/player-prorile.png") no-repeat 0 -133px;
+    }
+    .welcome .howToPlay{
+        background: url("../i/howToPlay.png") no-repeat;
+        width: 208px;
+        height: 109px;
+        top: 374px;
+        left: -4px;
+    }
+    .welcome .howToPlay:hover{
+        background: url("../i/howToPlay.png") no-repeat 4px -109px;
+    }
+    .welcome .newGame{
+        background: url("../i/new-game.png") no-repeat;
+        width: 192px;
+        height: 91px;
+        top: 331px;
+        right: 82px;
+    }
+    .welcome .newGame:hover{
+        background: url("../i/new-game.png") no-repeat 0 -91px;
+    }
+    .welcome .loadGame{
+        background: url("../i/load-game.png") no-repeat;
+        width: 192px;
+        height: 89px;
+        top: 412px;
+        right: 82px;
+    }
+    .welcome .loadGame:hover{
+        background: url("../i/load-game.png") no-repeat 0 -89px;
+    }
+
+/*how to play page style*/
+.howToPlay{
+    background: url("../i/selectPageBg.jpg") no-repeat;
+}
+    .howToPlay .howToPlayGroup{
+        width: 459px;
+        margin: 0 auto;
+        background: url("../i/howToPlayGroup.png") no-repeat 50% 100%;
+        height: 438px;
+        padding: 0 62px;
+    }
+        .howToPlay .howToPlayGroup .title{
+            text-align: center;
+            padding: 15px 0 40px;
+        }
+            .howToPlay .howToPlayGroup .title h1{
+                font-size: 36px;
+                color: #ffff00;
+                margin: 0;
+            }
+        .howToPlay .howToPlayGroup .desc{
+        }
+            .howToPlay .howToPlayGroup .desc p{
+                font-size: 18px;
+                color: #fff;
+                margin: 0;
+            }
+    .howToPlay .playHolder{
+        position: absolute;
+        bottom: 0;
+        right: 16px;
+        background: url("../i/stand.png") no-repeat 50% 0;
+        width: 147px;
+        height: 119px;
+    }
+        .howToPlay .playHolder a{
+            display: block;
+            position: absolute;
+        }
+        .howToPlay .playHolder a.play{
+            top: -8px;
+            height: 99px;
+            width: 147px;
+            background: url("../i/play-btn.png") no-repeat;
+            right: -7px;
+        }
+        .howToPlay .playHolder a.play:hover{
+            background: url("../i/play-btn.png") no-repeat 0 -100px;
+        }
+        .howToPlay .playHolder a.next{
+            top: -8px;
+            height: 99px;
+            width: 147px;
+            background: url("../i/next-btn.png") no-repeat;
+            right: -7px;
+        }
+        .howToPlay .playHolder a.next:hover{
+            background: url("../i/next-btn.png") no-repeat 0 -100px;
+        }
+        .howToPlay .playHolder a.start{
+            top: -8px;
+            height: 99px;
+            width: 147px;
+            background: url("../i/start-btn.png") no-repeat;
+            right: -7px;
+        }
+        .howToPlay .playHolder a.start:hover{
+            background: url("../i/start-btn.png") no-repeat 0 -100px;
+        }
+    .howToPlay .backHolder{
+        position: absolute;
+        bottom: 0;
+        left: 12px;
+        background: url("../i/stand.png") no-repeat 50% 0;
+        width: 147px;
+        height: 100px;
+    }
+        .howToPlay .backHolder a{
+            display: block;
+            position: absolute;
+        }
+        .howToPlay .backHolder a.back{
+            top: -15px;
+            height: 106px;
+            width: 147px;
+            background: url("../i/back-btn.png") no-repeat;
+            right: 8px;
+        }
+        .howToPlay .backHolder a.back:hover{
+            background: url("../i/back-btn.png") no-repeat 0 -106px;
+        }
+
+/*character select page style*/
+    .charSelect .playHolder{
+        height: 100px;
+    }
+    .charSelect .playCharacter{
+        left: 350px;
+        bottom: 10px;
+        background: url("../i/playCharacter-btn.png") no-repeat;
+        width: 208px;
+        height: 68px;
+    }
+    .charSelect .playCharacter:hover{
+        background: url("../i/playCharacter-btn.png") no-repeat 0 -68px;
+    }
+    .charSelect .content{
+        position: relative;
+        margin: 0 auto;
+        width: 538px;
+        height: 425px;
+    }
+        .content .title{
+            text-align: center;
+            padding-top: 20px;
+            font-size: 30px;
+            color: #fff;
+        }
+        .charSelect .content .next{
+            width: 59px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            top: 205px;
+            right: -45px;
+            background: url("../i/next.png") no-repeat;
+        }
+        .charSelect .content .next:hover{
+            background: url("../i/next.png") no-repeat 0 -80px;
+        }
+        .charSelect .content .next.disable:hover{
+            background: url("../i/next.png") no-repeat 0 0;
+            cursor: default;
+        }
+        .charSelect .content .prew{
+            width: 59px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            top: 205px;
+            left: -45px;
+            background: url("../i/prev.png") no-repeat;
+        }
+        .charSelect .content .prew:hover{
+            background: url("../i/prev.png") no-repeat 0 -80px;
+        }
+        .charSelect .content .prew.disable:hover{
+            background: url("../i/prev.png") no-repeat 0 0;
+            cursor: default;
+        }
+
+        .charSelect .content .charContent{
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+            .charSelect .content .charContent .innerContent{
+                width: 2690px;
+            }
+                .charSelect .content .charContent .innerContent .character{
+                    display: inline-block;
+                    width: 538px;
+                    cursor: pointer;
+                    float: left;
+                    overflow: hidden;
+                }
+                    .charSelect .content .charContent .innerContent .character .charTitle{
+                        text-align: center;
+                        padding-top: 30px;
+                        height: 55px;
+                    }
+                    .charSelect .content .charContent .innerContent .character .charTitle.select{
+                        text-align: center;
+                        padding-top: 10px;
+                        height: 75px;
+                    }
+                        .charSelect .content .charContent .innerContent .character .charTitle h1{
+                            margin: 0;
+                            font-size: 48px;
+                            color: #ffff00;
+                            display: inline;
+                        }
+                        .charSelect .content .charContent .innerContent .character .charTitle img{
+                            display: inline;
+                            position: relative;
+                            top: 15px;
+                        }
+                    .charSelect .content .charContent .innerContent .character .charIcon{
+                        text-align: center;
+                        height: 225px;
+                    }
+                    .charSelect .content .charContent .innerContent .character .description{
+                        text-align: center;
+                        color: #fff;
+                        font-size: 18px;
+                    }
+
+/*level select styles*/
+.levelSelect .playHolder {
+    height: 100px;
+}
+.levelSelect .currentSelectedLevel {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 auto;
+    width: 350px;
+}
+.levelSelect .levelContent {
+    width: 522px;
+    height: 260px;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+    .levelSelect .levelContent .level{
+        float: left;
+        padding: 8px 7px;
+        width: 90px;
+        height: 95px;
+    }
+        .levelSelect .levelContent .level a{
+            display: block;
+            width: 98px;
+            height: 106px;
+            background: url("../i/level-icon.png") no-repeat;
+            text-decoration: none;
+            position: relative;
+        }
+        .levelSelect .levelContent .level a:hover{
+            background: url("../i/level-icon.png") no-repeat 0 -106px;
+        }
+            .levelSelect .levelContent .level a span.text{
+                font-size: 36px;
+                color: #000;
+                position: absolute;
+                left: 39px;;
+                top: 25px;
+            }
+            .levelSelect .levelContent .level a span.star{
+                position: absolute;
+                left: 23px;;
+                bottom: 20px;
+                background: url("../i/star-icon.png") no-repeat;
+                height: 16px;
+                width: 53px;
+            }
+            .levelSelect .levelContent .level a span.star.one{
+                background: url("../i/star-icon.png") no-repeat 0 -16px;
+                width: 18px;
+            }
+            .levelSelect .levelContent .level a span.star.two{
+                background: url("../i/star-icon.png") no-repeat 0 -16px;
+                width: 35px;
+            }
+            .levelSelect .levelContent .level a span.star.three{
+                background: url("../i/star-icon.png") no-repeat 0 -16px;
+                width: 53px;
+            }
+    .levelSelect .levelContent .level.select{
+        width: 104px;
+        height: 111px;
+        float: left;
+        padding: 0;
+    }
+        .levelSelect .levelContent .level.select a{
+            display: block;
+            width: 112px;
+            height: 122px;
+            background: url("../i/level-select-icon.png") no-repeat;
+        }
+        .levelSelect .levelContent .level.select a:hover{
+            background: url("../i/level-select-icon.png") no-repeat 0 -121px;
+        }
+        .levelSelect .levelContent .level.select a span.text{
+            left: 47px;;
+            top: 30px;
+        }
+        .levelSelect .levelContent .level.select a span.star{
+            position: absolute;
+            left: 25px;;
+            bottom: 23px;
+            background: url("../i/star-icon.png") no-repeat 0 -32px;
+            height: 16px;
+            width: 63px;
+        }
+        .levelSelect .levelContent .level.select a span.star.one{
+            background: url("../i/star-icon.png") no-repeat 0 -48px;
+            width: 21px;
+        }
+        .levelSelect .levelContent .level.select a span.star.two{
+            background: url("../i/star-icon.png") no-repeat 0 -48px;
+            width: 42px;
+        }
+        .levelSelect .levelContent .level.select a span.star.three{
+            background: url("../i/star-icon.png") no-repeat 0 -48px;
+            width: 63px;
+        }
+    .levelSelect .levelContent .level.locked{
+    }
+        .levelSelect .levelContent .level.locked a{
+            background: url("../i/level-locked-icon.png") no-repeat 50% 50%;
+            cursor: default;
+        }
+        .levelSelect .levelContent .level.locked a:hover{
+            background: url("../i/level-locked-icon.png") no-repeat 50% 50%;
+        }
+            .levelSelect .levelContent .level.locked a span{
+                display: none;
+            }
+
+
+/*profile screen style*/
+.profile .content .title{
+    font-size: 36px;
+    color: #ffff00;
+}
+.profile .content .profileCnt{
+    width: 538px;
+    height: 318px;
+    background: url("../i/profile-bg.png") no-repeat;
+    margin: 40px auto 0;
+}
+    .profile .content .profileCnt .upper{
+        height: 180px;
+        padding: 30px 32px 0;
+    }
+        .profile .content .profileCnt .upper .photo{
+            text-align: center;
+            width: 110px;
+            float: left;
+        }
+        .profile .content .profileCnt .upper .details{
+            float: right;
+            width: 335px;
+        }
+            .profile .content .profileCnt .row{
+                height: 28px;
+            }
+                .profile .content .profileCnt  .label{
+                    width: 165px;
+                    display: inline-block;
+                    font-size: 24px;
+                }
+                .profile .content .profileCnt  .separator{
+                    display: inline-block;
+                    font-size: 24px;
+                }
+                .profile .content .profileCnt .value{
+                    font-size: 24px;
+                    color: #fff;
+                }
+
+
+/*complete screen style*/
+.complete .content .title{
+    font-size: 36px;
+    color: #ffff00;
+}
+.complete .content .stars{
+    width: 198px;
+    height: 56px;
+    margin: 12px auto 0;
+    background: url("../i/stars.png") no-repeat;
+}
+.complete .content .stars.one{
+    background: url("../i/stars.png") no-repeat 0 -112px;
+}
+.complete .content .stars.two{
+    background: url("../i/stars.png") no-repeat 0 -56px;
+}
+.complete .content .stars.three{
+    background: url("../i/stars.png") no-repeat 0 0;
+}
+.complete .content .completeCnt{
+    width: 364px;
+    height: 258px;
+    background: url("../i/level-complete-bg.png") no-repeat;
+    margin: 0 auto;
+    padding: 20px 32px;
+}
+    .complete .content .completeCnt .row{
+        height: 32px;
+    }
+    .complete .content .completeCnt .row.first{
+        height: 40px;
+        padding-top: 10px;
+    }
+        .complete .content .completeCnt .row span{
+            display: inline-block;
+            float: left;
+            width: 50%;
+            font-size: 24px;
+        }
+        .complete .content .completeCnt .row span.label{
+            text-align: right;
+            color: #000;
+        }
+        .complete .content .completeCnt .row span.value{
+            color: #fff;
+        }
+        .complete .content .completeCnt .row span.short{
+            width:25%;
+            text-align: right;
+        }
+        .complete .content .completeCnt .row span.gray{
+            color: #7a0026;
+        }
+
+.complete .content .buttonContent{
+    width: 425px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+    .complete .content .buttonContent a.menu{
+
+        background: url("../i/menu-btn.png") no-repeat;
+        width: 128px;
+        height: 77px;
+        display: block;
+    }
+    .complete .content .buttonContent a.menu:hover{
+        background: url("../i/menu-btn.png") no-repeat 0 -80px;
+    }
+    .complete .content .buttonContent a.restart{
+        background: url("../i/restart-btn.png") no-repeat;
+        width: 148px;
+        height: 78px;
+        display: block;
+        left: 50%;
+        margin-left: -64px;
+    }
+    .complete .content .buttonContent a.restart:hover{
+        background: url("../i/restart-btn.png") no-repeat 0 -81px;
+    }
+    .complete .content .buttonContent a.next{
+        background: url("../i/next-small-btn.png") no-repeat;
+        width: 107px;
+        height: 74px;
+        display: block;
+        right: -5px;
+    }
+    .complete .content .buttonContent a.next:hover{
+        background: url("../i/next-small-btn.png") no-repeat 0 -74px;
+    }
+
+/*failed screen style*/
+.failed {
+    left: 50%;
+    margin: 0 auto 0 -445px;
+    position: absolute;
+    background: url("../i/popup-bg.png");
+}
+.failed .content .title{
+    font-size: 36px;
+    color: #ffff00;
+}
+.failed .content .msg{
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    padding-top: 15px;
+}
+.failed .content .completeCnt{
+    width: 364px;
+    height: 258px;
+    background: url("../i/level-complete-bg.png") no-repeat;
+    margin: 0 auto;
+    padding: 20px 32px;
+}
+    .failed .content .completeCnt .row{
+        height: 32px;
+    }
+    .failed .content .completeCnt .row.first{
+        height: 40px;
+        padding-top: 10px;
+    }
+        .failed .content .completeCnt .row span{
+            display: inline-block;
+            float: left;
+            width: 50%;
+            font-size: 24px;
+        }
+        .failed .content .completeCnt .row span.label{
+            text-align: right;
+            color: #000;
+        }
+        .failed .content .completeCnt .row span.value{
+            color: #fff;
+        }
+        .failed .content .completeCnt .row span.short{
+            width:25%;
+            text-align: right;
+        }
+        .failed .content .completeCnt .row span.gray{
+            color: #7a0026;
+        }
+
+.failed .content .buttonContent{
+    width: 425px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    padding-top: 5px;
+}
+    .failed .content .buttonContent a.quit{
+        background: url("../i/quit-btn.png") no-repeat;
+        width: 107px;
+        height: 74px;
+        display: block;
+    }
+    .failed .content .buttonContent a.quit:hover{
+        background: url("../i/quit-btn.png") no-repeat 0 -76px;
+    }
+    .failed .content .buttonContent a.menu{
+        background: url("../i/menu-btn.png") no-repeat;
+        width: 128px;
+        height: 77px;
+        display: block;
+        left: 50%;
+        margin-left: -80px;
+    }
+    .failed .content .buttonContent a.menu:hover{
+        background: url("../i/menu-btn.png") no-repeat 0 -80px;
+    }
+    .failed .content .buttonContent a.restart{
+        background: url("../i/restart-btn.png") no-repeat;
+        width: 148px;
+        height: 78px;
+        display: block;
+        right: 0;
+        top: 0;
+    }
+    .failed .content .buttonContent a.restart:hover{
+        background: url("../i/restart-btn.png") no-repeat 0 -81px;
+    }
+
+
+/*game level styles*/
+#gameLevel1{
+    background: url("../i/level1-bg.jpg") no-repeat;
+}
+#gameLevel2{
+    background: url("../i/level2-bg.jpg") no-repeat;
+}
+#gameLevel3{
+    background: url("../i/level3-bg.jpg") no-repeat;
+}
+    .gameScreen .car{
+        position: absolute;
+        height: 50px;
+        width: 74px   ;
+        left: 50%;
+        top: 50%;
+        padding: 47px 50px;
+    }
+    .gameScreen .car1{
+        background: url("../i/moving-car1.png") no-repeat 50% 50%;
+        left: 558px;
+        top: 374px;
+    }
+    .gameScreen .car1.car12{
+        background: url("../i/moving-car1.png") no-repeat 50% 50%;
+        left: -87px;
+        top: 47px;
+    }
+    .gameScreen .car1.car13{
+        background: url("../i/moving-car1.png") no-repeat 50% 50%;
+        left: 275px;
+        top: 231px;
+    }
+    .gameScreen .car2{
+        background: url("../i/moving-car2.png") no-repeat 50% 50%;
+        left: 51px;
+        top: 47px;
+    }
+    .gameScreen .car2.car22{
+        background: url("../i/moving-car2.png") no-repeat 50% 50%;
+        top: 276px;
+        left: 463px;
+    }
+    .gameScreen .car2.car23{
+        background: url("../i/moving-car2.png") no-repeat 50% 50%;
+        left: 300px;
+        top: 200px;
+    }
+    .gameScreen .car3{
+        background: url("../i/moving-car3.png") no-repeat 50% 50%;
+        left: 850px;
+        top: 463px;
+    }
+    .gameScreen .car3.car32{
+        background: url("../i/moving-car3.png") no-repeat 50% 50%;
+        left: 168px;
+        top: 108px;
+    }
+    .gameScreen .car4{
+        background: url("../i/moving-car4.png") no-repeat 50% 50%;
+        top: -75px;
+        left: 700px;
+    }
+    .gameScreen .car4.car42{
+        background: url("../i/moving-car4.png") no-repeat 50% 50%;
+        left: 309px;
+        top: 123px;
+    }
+    .gameScreen .car5{
+        background: url("../i/moving-car5.png") no-repeat 50% 50%;
+        top: -17px;
+        left: 700px;
+    }
+    .gameScreen .car5.car52{
+        background: url("../i/moving-car5.png") no-repeat 50% 50%;
+        top: 275px;
+        left: 130px;
+    }
+    .gameScreen .car6{
+        background: url("../i/moving-car6.png") no-repeat 50% 50%;
+        top: 30px;
+        left: 550px;
+    }
+    .gameScreen .car7{
+        background: url("../i/moving-car7.png") no-repeat 50% 50%;
+        left: 452px;
+        top: 100px;
+    }
+    .gameScreen .car8{
+        background: url("../i/moving-car8.png") no-repeat 50% 50%;
+        left: 659px;
+        top: -101px;
+    }
+    .gameScreen .car9{
+        background: url("../i/moving-car5.png") no-repeat 50% 50%;
+        top: -77px;
+        left: 700px;
+    }
+    .gameScreen .car10{
+        background: url("../i/moving-car6.png") no-repeat 50% 50%;
+        top: -30px;
+        left: 550px;
+    }
+    .gameScreen .car11 {
+        background: url("../i/moving-car7.png") no-repeat 50% 50%;
+        top: 230px;
+        left: -8px;
+    }
+    .gameScreen .target{
+        background: url("../i/target.png") no-repeat;
+        width: 34px;
+        height: 32px;
+        position: absolute;
+        top: 230px;
+        left: 485px;
+        display: none;
+        cursor: pointer;
+        z-index: 5;
+    }
+    #gameLevel2 .target{
+        top: 230px;
+        left: 135px;
+    }
+    #gameLevel3 .target{
+        top: 192px;
+        left: 615px;
+    }
+    #gameLevel1 .destination{
+        height: 40px;
+        left: 475px;
+        position: absolute;
+        top: 226px;
+        width: 40px;
+    }
+    #gameLevel2 .destination{
+        height: 40px;
+        left: 662px;
+        position: absolute;
+        top: 183px;
+        width: 40px;
+    }
+    #gameLevel3 .destination{
+        height: 40px;
+        left: 25px;
+        position: absolute;
+        top: 226px;
+        width: 40px;
+    }
+    .gameScreen .parent{
+        width: 32px;
+        height: 28px;
+        position: absolute;
+        cursor: pointer;
+        padding: 43px 12px 0;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+    .gameScreen .children{
+        width: 28px;
+        height: 24px;
+        position: absolute;
+        padding: 47px 14px 0;
+        background-repeat: no-repeat;
+        z-index: 4;
+    }
+    .gameScreen .children2{
+        z-index: 3;
+    }
+    #gameLevel3{
+        /*display: block;*/
+        /*z-index: 5;*/
+    }
+    #gameLevel1.gameScreen .parent{
+        top: 208px;
+        left: 128px;
+    }
+    #gameLevel1.gameScreen .children{
+        top: 208px;
+        left: 100px;
+    }
+    #gameLevel2.gameScreen .parent{
+        top: -5px;
+        left: 65px;
+    }
+    #gameLevel2.gameScreen .children{
+        top: -5px;
+        left: 45px;
+    }
+    #gameLevel3.gameScreen .parent{
+        top: 0;
+        left: 430px;
+    }
+    #gameLevel3.gameScreen .children{
+        top: 0;
+        left: 450px;
+    }
+    #gameLevel3.gameScreen .children2{
+        top: 0;
+        left: 470px;
+    }
+    .gameScreen .rocky.parent{
+        background-image: url("../i/rocky-parent.png");
+    }
+    .gameScreen .rocky.children{
+        background-image: url("../i/rocky-child.png");
+    }
+    .gameScreen .jacky.parent{
+        background-image: url("../i/jacky-parent.png");
+    }
+    .gameScreen .jacky.children{
+        background-image: url("../i/jacky-child.png");
+    }
+    .gameScreen .demi.parent{
+        background-image: url("../i/demi-parent.png");
+    }
+    .gameScreen .demi.children{
+        background-image: url("../i/demi-child.png");
+    }
+    .gameScreen .squi.parent{
+        background-image: url("../i/squirrelachi-parent.png");
+    }
+    .gameScreen .squi.children{
+        background-image: url("../i/squirrelachi-child.png");
+    }
+    .gameScreen .jamesDear.parent{
+        background-image: url("../i/james-parent.png");
+    }
+    .gameScreen .jamesDear.children{
+        background-image: url("../i/james-child.png");
+    }
+    .gameScreen .stopped{
+        background-position: 50% -80px !important;
+    }
+    .gameScreen .ready{
+        background-position: 50% 0 !important;
+    }
+    .gameScreen .clicked{
+        background-position: 50% -148px !important;
+    }
+    .gameScreen .moving{
+        background-position: 50% -75px !important;
+    }
+	.gameScreen .rocky.parent.moving{
+        background-position: 50% -75px !important;
+    }
+    .gameScreen .rocky.moving2{
+        background-position: 50% -67px !important;
+    }
+	.gameScreen .jacky.parent.moving{
+        background-position: 50% -230px !important;
+    }
+	.gameScreen .squi.moving2{
+        background-position: 50% -225px !important;
+    }
+	.gameScreen .jacky.parent.stopped{
+        background-position: 50% -230px; !important;
+    }
+	.gameScreen .jacky.moving2{
+        background-position: 50% -75px !important;
+    }
+	.gameScreen .demi.moving2{
+        background-position: 50% -70px !important;
+    }
+	.gameScreen .demi.children.clicked{
+        background-position: 50% -140px !important;
+    }
+	.gameScreen .jamesDear.moving{
+        background-position: 50% -75px !important;
+    }
+	.gameScreen .jamesDear.stopped{
+        background-position: 50% -148px !important;
+    }
+	.gameScreen .jamesDear.children.moving2{
+        background-position: 50% 0px !important;
+    }
+	.gameScreen .jamesDear.children.stopped{
+        background-position: 50% -70px !important;
+    }
+    .gameScreen .hit{
+        background-position: 50% -300px !important;
+    }
+	.gameScreen .jamesDear.hit{
+        background-position: 50% -300px !important;
+    }
+    .gameScreen .hitValue{
+        background: url("../i/hit-medium.png") no-repeat;
+        width: 48px;
+        height: 52px;
+        position: absolute;
+        z-index: 6;
+        display: none;
+    }
+
+
+    .gameScreen .topBar{
+       
+        position: relative;
+        padding-top: 3px;
+    }
+        .gameScreen .topBar div{
+            position: absolute;
+            padding-top: 8px;
+            height: 70px;
+        }
+        .gameScreen .topBar div.level{
+            left: -10px;
+			z-index: 3;
+        }
+        .gameScreen .topBar div.hitted{
+            left: 83px;
+			z-index: 3;
+        }
+        .gameScreen .topBar div.damage{
+            left: 200px;
+			z-index: 3;
+        }
+        .gameScreen .topBar div.time{
+            left: 350px;
+            background: url("../i/time-bg.png") no-repeat 50% 0;
+			z-index: 3;
+        }
+        .gameScreen .topBar a.menu{
+            background: url("../i/menu-small.png") no-repeat;
+            display: block;
+            width: 102px;
+            height: 64px;
+            position: absolute;
+            right: 10px;
+			z-index:1000;
+        }
+        .gameScreen .topBar a.menu:hover{
+            background: url("../i/menu-small.png") no-repeat 0 -67px;
+        }
+            .gameScreen .topBar div .label{
+                display: block;
+                width: 110px;
+                color: #fff;
+                font-size: 18px;
+                text-align: center;
+            }
+            .gameScreen .topBar div .value{
+                display: block;
+                width: 110px;
+                color: #ffff00;
+                font-size: 24px;
+                text-align: center;
+            }
+            .gameScreen .topBar div.time .value{
+                font-size: 40px;
+            }
+
+/*popup style*/
+.popup{
+    background: url("../i/popup-bg.png");
+    z-index: 4;
+    display: none;
+}
+    .popup .close{
+        background: url("../i/close-btn.png");
+        width: 68px;
+        height: 68px;
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .popup .close:hover{
+        background: url("../i/close-btn.png") 0 -71px;
+    }
+    .popup .menu{
+        text-align: center;
+        width: 430px;
+        margin: 0 auto;
+        height: 500px;
+        position: relative;
+    }
+    .popup .menu .title{
+        color: #ffff00;
+        font-size: 36px;
+        display: block;
+        padding: 10px 0 50px;
+    }
+    .popup .menu a{
+        display: inline-block;
+        color: #fff;
+        font-size: 30px;
+        position: relative;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 15px;
+    }
+    .popup .menu a:hover{
+        border-bottom: 1px solid #ffff00;
+    }
+    .popup .menu a.back{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        margin-left: -29px;
+    }
+    .popup .menu a.no{
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+    }
+    .popup .menu a.yes{
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+    .popup .menu span.msg{
+        font-size: 30px;
+        color: #fff;
+    }
+
+
+/*tree positioning*/
+.gameScreen .tree {
+    z-index: 6;
+    position: absolute;
+}
+
+#gameLevel3 .bigTree{
+    background: url("../i/big_tree3.png") no-repeat;
+    position: absolute;
+    width: 36px;
+    height: 40px;
+    padding: 67px 18px 0;
+}
+#gameLevel3 .bigTree1{
+    top: 305px;
+    left: 253px;
+}
+#gameLevel3 .bigTree2{
+    top: 262px;
+    left: 736px;
+}
+#gameLevel3 .smallTree{
+    background: url("../i/small_tree3.png") no-repeat;
+    position: absolute;
+    width: 36px;
+    height: 40px;
+    padding: 42px 13px 0;
+}
+#gameLevel3 .smallTree1{
+    top: 424px;
+    left: 545px;
+}
+#gameLevel3 .smallTree2{
+    top: 100px;
+    left: 770px;
+}
+#gameLevel3 .smallTree3{
+    top: 90px;
+    left: 718px;
+}
+
+.gameScreen .grass{
+    position: absolute;
+    /*background: red;*/
+}
+#gameLevel3 .grass1{
+    height: 40px;
+    left: 200px;
+    top: 115px;
+    width: 224px;
+}
+#gameLevel3 .grass8{
+    height: 31px;
+    left: 283px;
+    top: 155px;
+    width: 83px;
+}
+#gameLevel3 .grass2{
+    height: 122px;
+    left: 194px;
+    top: 0;
+    width: 40px;
+}
+#gameLevel3 .grass9{
+    height: 33px;
+    left: 154px;
+    top: 243px;
+    width: 40px;
+}
+#gameLevel3 .grass3{
+    height: 58px;
+    left: 473px;
+    top: 235px;
+    width: 78px;
+}
+#gameLevel3 .grass4{
+    height: 39px;
+    left: 634px;
+    top: 148px;
+    width: 60px;
+}
+#gameLevel3 .grass5{
+    height: 39px;
+    left: 566px;
+    top: 310px;
+    width: 60px;
+}
+#gameLevel3 .grass6{
+    height: 39px;
+    left: 373px;
+    top: 350px;
+    width: 60px;
+}
+#gameLevel3 .grass7{
+    height: 30px;
+    left: 187px;
+    top: 373px;
+    width: 66px;
+}
+
+#gameLevel2 .grass1{
+    height: 74px;
+    left: 159px;
+    top: 0;
+    width: 163px;
+}
+#gameLevel2 .grass8{
+    height: 45px;
+    left: 199px;
+    top: 74px;
+    width: 50px;
+}
+#gameLevel2 .grass2{
+    height: 96px;
+    left: 446px;
+    top: 175px;
+    width: 60px;
+}
+#gameLevel2 .grass3{
+    height: 37px;
+    left: 0;
+    top: 445px;
+    width: 215px;
+}
+#gameLevel2 .grass4{
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 40px;
+}
+#gameLevel2 .grass5{
+    height: 27px;
+    right: 162px;
+    top: 96px;
+    width: 138px;
+}
+#gameLevel2 .tree{
+    /*background: green;*/
+    height: 34px;
+    width: 35px;
+}
+#gameLevel2 .tree1{
+    left: 4px;
+    top: 207px;
+}
+#gameLevel2 .tree2{
+    left: 83px;
+    top: 279px;
+}
+#gameLevel2 .tree3{
+    left: 275px;
+    top: 367px;
+}
+#gameLevel2 .tree4{
+    left: 487px;
+    top: 421px;
+}
+#gameLevel2 .tree5{
+    left: 559px;
+    top: 465px;
+}
+#gameLevel2 .tree6{
+    right: 140px;
+    top: 279px;
+}
+#gameLevel2 .tree7{
+    right: 278px;
+    top: 251px;
+}
+#gameLevel2 .tree8{
+    right: 327px;
+    top: 161px;
+}
+
+#gameLevel1 {
+    /*z-index: 5;*/
+    /*display: block;*/
+}
+
+#gameLevel1 .grass7{
+    height: 30px;
+    left: 184px;
+    top: 270px;
+    width: 30px;
+}
+#gameLevel1 .grass1{
+    height: 61px;
+    left: 149px;
+    top: 29px;
+    width: 30px;
+}
+#gameLevel1 .grass2{
+    bottom: 0;
+    height: 53px;
+    left: 0;
+    width: 221px;
+}
+#gameLevel1 .grass3{
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 43px;
+}
+#gameLevel1 .grass4{
+    height: 30px;
+    right: 164px;
+    top: 93px;
+    width: 43px;
+}
+#gameLevel1 .grass5{
+    bottom: 0;
+    height: 75px;
+    right: 306px;
+    width: 80px;
+}
+#gameLevel1 .grass6{
+    height: 30px;
+    left: 10px;
+    top: 214px;
+    width: 30px;
+}
+#gameLevel1 .tree{
+    /*background: green;*/
+}
+#gameLevel1 .tree1{
+    height: 30px;
+    left: 87px;
+    top: 280px;
+    width: 30px;
+}
+#gameLevel1 .tree2{
+    height: 30px;
+    left: 276px;
+    top: 375px;
+    width: 30px;
+}
+#gameLevel1 .tree3{
+    height: 30px;
+    left: 576px;
+    top: 264px;
+    width: 30px;
+}
+#gameLevel1 .tree4{
+    height: 30px;
+    left: 713px;
+    top: 284px;
+    width: 30px;
+}
+#gameLevel1 .tree5{
+    height: 30px;
+    left: 373px;
+    top: 166px;
+    width: 30px;
+}
+#gameLevel1 .tree6{
+    height: 42px;
+    left: 277px;
+    top: 62px;
+    width: 30px;
+}
+/*#gameLevel3 {*/
+    /*z-index: 5;*/
+    /*display: block;*/
+/*}*/
+/*.tree{*/
+    /*background: red*/
+/*}*/
+/*.grass{*/
+    /*background: #ffff00*/
+/*}*/
+/*.car{*/
+    /*display: none;*/
+/*}*/
