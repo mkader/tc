@@ -1,0 +1,1377 @@
+@charset "utf-8";
+
+@media screen and (max-device-width: 480px){  
+img{max-width:100%;height:auto;}  
+}
+
+/*  HTML Elements  */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article,aside,command,details,figcaption,figure,
+footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+address,article,aside,header,footer,section,nav,menu,hgroup,figure,figcaption{  
+    display:block;  
+}
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {-webkit-text-size-adjust:none;}
+caption,th {
+	text-align: left;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+a:hover, a:active, a:focus, a:active{
+    outline: none;
+} 
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* the display of screen */
+img, iframe, fieldset {
+	border: none;
+}
+.clearFixed{
+	clear:both;
+	width:0px;
+	height:0px;
+	overflow-y:visible;
+}
+.blue{
+	color:#00aeef !important;
+	}
+
+
+/* body */
+body {
+	color: #333333;
+	font-family:"Myriad Pro", Arial, Helvetica, sans-serif !important;
+	font-size: 0.69em;
+	line-height: 1.2;
+}
+
+/* -Links */
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+.ui-body-c{
+	font-family:"Myriad Pro", Arial, Helvetica, sans-serif !important;
+	}
+div.ui-page[data-role="page"]{
+	font-size:15px;
+	min-width:320px;
+	background:#f6bc00 url(../i/bg-wrapper.png) center top no-repeat;
+}
+.ui-mobile .ui-page{
+	border:0 !important;
+}
+.ui-mobile .ui-content{
+	margin:0 auto;
+	padding:0;
+}
+.search{
+	border:2px solid #c57400;
+	-moz-border-radius: 	15px ;
+	-webkit-border-radius: 	15px ;
+	border-radius: 			15px ;
+	height:26px;
+	position:relative;
+	background:#fffffe url(../i/icon-glass.png) 10px center no-repeat;
+	-moz-box-shadow: 0px 2px 0px	rgba(255,255,255,.25),inset 1px 2px 2px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0px 2px 0px	rgba(255,255,255,.25),inset 1px 2px 2px rgba(0,0,0,.3);
+	box-shadow: 0px 2px 0px			rgba(255,255,255,.25),inset 1px 2px 2px rgba(0,0,0,.3);
+	}
+input[type='text'].ui-input-text{
+	outline:none;
+	font-size:15px;
+	line-height:18px;
+	font-family:Arial, Helvetica, sans-serif;
+	background:none transparent;
+	border:0;
+	margin:0;
+	padding:4px 5px;
+	color:#333;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-shadow:none;
+	width:auto;
+	-moz-border-radius: 	0px ;
+	-webkit-border-radius: 	0px ;
+	border-radius: 			0px ;
+	position:absolute;
+	left:27px;
+	right:12px;
+}
+
+
+/*********************************************************************************
+ * normal style
+ *********************************************************************************/
+header.ui-header{
+	height:54px;
+	background:url(../i/bg-header.png) left top repeat-x !important;
+	border-width:0px !important;
+	text-shadow:none !important;
+	}
+	header.ui-header .navbar{
+		position:relative;
+		height:52px;
+		width:100%;
+		}
+		header.ui-header .navbar .home{
+			width:50px;
+			height:52px;
+			position:absolute;
+			left:0px;
+			top:0px;
+			padding-right:2px;
+			background:url(../i/line.png) right top repeat-y;
+			}
+			header.ui-header .navbar .home span{
+				width:50px;
+				height:52px;
+				display:block;
+				background:url(../i/icon-home.png) center center no-repeat;
+				}
+			header.ui-header .navbar .home.hover span{
+				background-image:url(../i/icon-home-hover.png);
+				}
+		header.ui-header .navbar .setting{
+			width:50px;
+			height:52px;
+			position:absolute;
+			right:0px;
+			top:0px;
+			padding-left:2px;
+			background:url(../i/line.png) left top repeat-y;
+			}
+			header.ui-header .navbar .setting span{
+				width:50px;
+				height:52px;
+				display:block;
+				background:url(../i/icon-setting.png) center 16px no-repeat;
+				}
+			header.ui-header .navbar .setting.hover span{
+				background-image:url(../i/icon-setting-hover.png);
+				}
+		header.ui-header .navbar h2{
+			height:52px;
+			margin:0 52px;
+			line-height:52px;
+			text-align:center;
+			font-size:26px;
+			font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+			text-shadow:0px 2px 2px #000;
+			background:url(../i/light-blue.png) center top no-repeat;
+			}
+
+
+
+
+/* modal panel */
+.modalWrapper{
+	position:fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	display:none;
+	z-index:9999;
+	}
+	.modal{
+		position:fixed;
+		display:none;
+		width:258px;
+		height:134px;
+		text-align:center;
+		padding:5px;
+		border:2px solid rgba(178,183,194, 0.85);
+		border-top-color:rgba(226,227,228, 0.65);
+		-moz-border-radius: 	12px ;
+		-webkit-border-radius: 	12px ;
+		border-radius: 			12px ;
+		-moz-box-shadow: 0px 4px 10px #000000;
+		-webkit-box-shadow: 0px 4px 10px #000000;
+		box-shadow: 0px 4px 10px #000000;
+		background:rgba(25,48,5, 0.65) url(../i/light.png) top center no-repeat;
+		z-index:10000;
+		}
+		.modal h3{
+			font-size:18px;
+			line-height:32px;
+			color:#fff;
+			padding-top:2px;
+			text-shadow:0px -1px 0px rgba(0,0,0, 0.8);
+			}
+		.modal section{
+			font-size:16px;
+			line-height:20px;
+			color:#fff;
+			text-shadow:0px -1px 0px rgba(0,0,0, 0.8);
+			}
+		.modal .command {
+			height:40px;
+			padding-top:15px;
+			}
+			.modal .command .largeGreenBtn:nth-child(1){
+				width:125px;
+				float:left;
+				}
+			.modal .command .largeGreenBtn:nth-child(2){
+				width:125px;
+				float:right;
+				}
+
+		
+/*********************************************************************************
+ * page
+ *********************************************************************************/
+
+
+/* page Splash */
+#pageSplash{
+	height:480px;
+	}
+#pageSplash .logoBox{
+	width:272px;
+	height:205px;
+	margin:130px auto 0px;
+	background:url(../i/logo-splash.png) left top no-repeat;
+	}
+#pageSplash .loadingTips{
+	color:#ececec;
+	text-align:center;
+	text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+	font-weight:bold;
+	}
+	#pageSplash .ui-content{
+		height:460px;
+		}
+
+/* page main */
+#pageMain{
+	height:480px;
+	}
+#pageMain .ui-content .logoBox{
+	margin-top:15px;
+	height:106px;
+	background:url(../i/logo.png) center top no-repeat;
+	}
+#pageMain .ui-content .commandList{
+	width:305px;
+	height:204px;
+	margin:15px auto 0px;
+	padding-top:25px;
+	text-align:center;
+	background:url(../i/icon-menu.png) left top no-repeat;
+	}
+	#pageMain .ui-content .commandList a{
+		display:inline-block;
+		width:76px;
+		height:85px;
+		line-height:17px;
+		overflow:hidden;
+		color:#ffffff;
+		text-shadow:1px 1px 0px rgba(0,0,0,0.5);
+		font-family:Arial, Helvetica, sans-serif;
+		position:relative;
+		}
+	#pageMain .ui-content .commandList a img{
+		float:left;
+		}
+	#pageMain .ui-content .commandList a:nth-child(5){
+		width:86px;
+		}
+	#pageMain .ui-content .commandList a span{
+		display:block;
+		position:absolute;
+		line-height:17px;
+		height:17px;
+		left:0px;
+		top:60px;
+		width:76px;
+		text-align:center;
+		}
+		#pageMain .ui-content .commandList a:nth-child(5) span{
+			width:86px;
+			}
+
+	#pageMain .ui-content .commandList a.hover{
+		color:#333;
+		text-shadow:1px 1px 0px rgba(255,255,255,0.5);
+		}
+	
+	
+#pageMain .searchBox{
+	height:36px;
+	padding:40px 22px 0px;
+	}
+
+
+
+/* page Media Questions */
+#pageMedicalQuestions{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageMedicalQuestions header.ui-header .navbar h2{
+		background:url(../i/light-red.png) center top no-repeat;
+		}
+	
+	#pageMedicalQuestions .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageMedicalQuestions .ui-content .viewList{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			}
+			#pageMedicalQuestions .ui-content .viewList ul li{
+				background:url(../i/line-1.png) left bottom repeat-x;
+				padding-bottom:2px;
+                padding-top:2px;
+				}
+				#pageMedicalQuestions .ui-content .viewList ul li a{
+					display:block;
+					padding-left:13px;
+					padding-right:13px;
+					color:#ffc600;
+					font-size:14px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-go.png) 96% center no-repeat;
+					}
+				#pageMedicalQuestions .ui-content .viewList ul li a.hover{
+					background-color:rgba(255,255,255,0.1);
+					}
+					#pageMedicalQuestions .ui-content .viewList ul li a .praise{
+						color:#fff;
+						background:url(../i/icon-praise.png) left center no-repeat;
+						line-height:42px;
+						display:inline-block;
+						padding-left:25px;
+						}
+
+
+/* page Media Questions */
+#pageMedicalAnswer{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageMedicalAnswer header.ui-header .navbar h2{
+		background:url(../i/light-red.png) center top no-repeat;
+		}
+	#pageMedicalAnswer .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageMedicalAnswer .ui-content .viewAnswer{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			position:relative;
+			}
+			#pageMedicalAnswer .ui-content .viewAnswer .titleBar{
+				background-color:rgba(255,255,255,0.13);
+				-moz-border-radius-topleft: 10px; 
+				-moz-border-radius-topright: 10px;
+				-webkit-border-top-left-radius: 10px; 
+				-webkit-border-top-right-radius: 10px;
+				border-top-right-radius: 10px; 
+				border-top-left-radius: 10px;
+				left:-3px;
+				right:-3px;
+				top:-3px;
+				}
+				#pageMedicalAnswer .ui-content .viewAnswer .titleBar a{
+					display:block;
+                    padding-left:13px;
+                    padding-right:13px;
+					line-height:46px;
+					color:#ffc600;
+					font-size:18px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					text-align:center;
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-back.png) 16px center no-repeat;
+					}
+			
+			#pageMedicalAnswer .ui-content .contentDetails{
+                width:100%;
+				position:absolute;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				line-height:20px;
+				font-weight:normal;
+				text-shadow:none;
+				color:#fff;
+				padding-left:14px;
+				padding-right:6px;
+				padding-bottom:6px;
+				}
+				#pageMedicalAnswer .ui-content .contentDetails p{
+					padding-bottom:10px;
+					}
+					#pageMedicalAnswer .ui-content .contentDetails dt{
+						padding-bottom:10px;
+						color:#ffc600;
+						font-size:14px;
+						}
+					#pageMedicalAnswer .ui-content .contentDetails dd{
+						min-height:1px;
+						overflow:hidden;
+						}
+						#pageMedicalAnswer .ui-content .contentDetails dd .order{
+							float:left;
+							width:16px;
+							}
+						#pageMedicalAnswer .ui-content .contentDetails dd .details{
+							float:left;
+							width:260px;
+							}
+						
+				#pageMedicalAnswer .ui-content .contentDetails .control{
+					height:30px;
+					padding-top:10px;
+					padding-bottom:8px;
+					padding-right:20px;
+					}
+					#pageMedicalAnswer .ui-content .contentDetails .control .praise{
+						float:left;
+						line-height:28px;
+						background:url(../i/icon-praise.png) left 2px no-repeat;
+						padding-left:25px;
+						}
+					#pageMedicalAnswer .ui-content .contentDetails .control .add{
+						float:right;
+						background:url(../i/btn-add.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						}
+					#pageMedicalAnswer .ui-content .contentDetails .control .reduce{
+						float:right;
+						background:url(../i/btn-reduce.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						margin-left:4px;
+						}
+					#pageMedicalAnswer .ui-content .contentDetails .control .reduce.hover,
+					#pageMedicalAnswer .ui-content .contentDetails .control .add.hover{
+						background-position:left -29px;
+						}
+			
+
+/* page Auto Questions */
+#pageAutoQuestions{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageAutoQuestions header.ui-header .navbar h2{
+		background:url(../i/light-gray.png) center top no-repeat;
+		}
+	
+	#pageAutoQuestions .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageAutoQuestions .ui-content .viewList{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			}
+			#pageAutoQuestions .ui-content .viewList ul li{
+                background:url(../i/line-1.png) left bottom repeat-x;
+				padding-bottom:2px;
+                padding-top:2px;
+				}
+				#pageAutoQuestions .ui-content .viewList ul li a{
+					display:block;
+					padding-left:13px;
+					padding-right:13px;
+					color:#ffc600;
+					font-size:14px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-go.png) 96% center no-repeat;
+					}
+				#pageAutoQuestions .ui-content .viewList ul li a.hover{
+					background-color:rgba(255,255,255,0.1);
+					}
+					#pageAutoQuestions .ui-content .viewList ul li a .praise{
+						color:#fff;
+						background:url(../i/icon-praise.png) left center no-repeat;
+						line-height:42px;
+						display:inline-block;
+						padding-left:25px;
+						}
+
+
+/* page Auto Questions */
+#pageAutoAnswer{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageAutoAnswer header.ui-header .navbar h2{
+		background:url(../i/light-gray.png) center top no-repeat;
+		}
+	#pageAutoAnswer .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageAutoAnswer .ui-content .viewAnswer{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			position:relative;
+			}
+			#pageAutoAnswer .ui-content .viewAnswer .titleBar{
+				background-color:rgba(255,255,255,0.13);
+				-moz-border-radius-topleft: 10px; 
+				-moz-border-radius-topright: 10px;
+				-webkit-border-top-left-radius: 10px; 
+				-webkit-border-top-right-radius: 10px;
+				border-top-right-radius: 10px; 
+				border-top-left-radius: 10px;
+				left:-3px;
+				right:-3px;
+				top:-3px;
+				}
+				#pageAutoAnswer .ui-content .viewAnswer .titleBar a{
+					display:block;
+                    padding-left:13px;
+                    padding-right:13px;
+					line-height:46px;
+					color:#ffc600;
+					font-size:18px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					text-align:center;
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-back.png) 16px center no-repeat;
+					}
+			
+			#pageAutoAnswer .ui-content .contentDetails{
+				width:100%;
+				position:absolute;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				line-height:20px;
+				font-weight:normal;
+				text-shadow:none;
+				color:#fff;
+				padding-left:14px;
+				padding-right:6px;
+				padding-bottom:6px;
+				}
+				#pageAutoAnswer .ui-content .contentDetails p{
+					padding-bottom:10px;
+					}
+					#pageAutoAnswer .ui-content .contentDetails dt{
+						padding-bottom:10px;
+						color:#ffc600;
+						font-size:14px;
+						}
+					#pageAutoAnswer .ui-content .contentDetails dd{
+						min-height:1px;
+						overflow:hidden;
+						}
+						#pageAutoAnswer .ui-content .contentDetails dd .order{
+							float:left;
+							width:16px;
+							}
+						#pageAutoAnswer .ui-content .contentDetails dd .details{
+							float:left;
+							width:260px;
+							}
+						
+				#pageAutoAnswer .ui-content .contentDetails .control{
+					height:30px;
+					padding-top:10px;
+					padding-bottom:8px;
+					padding-right:20px;
+					}
+					#pageAutoAnswer .ui-content .contentDetails .control .praise{
+						float:left;
+						line-height:28px;
+						background:url(../i/icon-praise.png) left 2px no-repeat;
+						padding-left:25px;
+						}
+					#pageAutoAnswer .ui-content .contentDetails .control .add{
+						float:right;
+						background:url(../i/btn-add.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						}
+					#pageAutoAnswer .ui-content .contentDetails .control .reduce{
+						float:right;
+						background:url(../i/btn-reduce.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						margin-left:4px;
+						}
+					#pageAutoAnswer .ui-content .contentDetails .control .reduce.hover,
+					#pageAutoAnswer .ui-content .contentDetails .control .add.hover{
+						background-position:left -29px;
+						}
+			
+
+
+/* page Travel Questions */
+#pageTravelQuestions{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	
+	#pageTravelQuestions .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageTravelQuestions .ui-content .viewList{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			}
+			#pageTravelQuestions .ui-content .viewList ul li{
+				background:url(../i/line-1.png) left bottom repeat-x;
+				padding-bottom:2px;
+                padding-top:2px;
+				}
+				#pageTravelQuestions .ui-content .viewList ul li a{
+					display:block;
+					padding-left:13px;
+					padding-right:13px;
+					color:#ffc600;
+					font-size:14px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-go.png) 96% center no-repeat;
+					}
+				#pageTravelQuestions .ui-content .viewList ul li a.hover{
+					background-color:rgba(255,255,255,0.1);
+					}
+					#pageTravelQuestions .ui-content .viewList ul li a .praise{
+						color:#fff;
+						background:url(../i/icon-praise.png) left center no-repeat;
+						line-height:42px;
+						display:inline-block;
+						padding-left:25px;
+						}
+
+
+/* page Travel Questions */
+#pageTravelAnswer{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	
+	#pageTravelAnswer .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageTravelAnswer .ui-content .viewAnswer{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			position:relative;
+			}
+			#pageTravelAnswer .ui-content .viewAnswer .titleBar{
+				background-color:rgba(255,255,255,0.13);
+				-moz-border-radius-topleft: 10px; 
+				-moz-border-radius-topright: 10px;
+				-webkit-border-top-left-radius: 10px; 
+				-webkit-border-top-right-radius: 10px;
+				border-top-right-radius: 10px; 
+				border-top-left-radius: 10px;
+				left:-3px;
+				right:-3px;
+				top:-3px;
+				}
+				#pageTravelAnswer .ui-content .viewAnswer .titleBar a{
+					display:block;
+                    padding-left:13px;
+                    padding-right:13px;
+					line-height:46px;
+					color:#ffc600;
+					font-size:18px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					text-align:center;
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-back.png) 16px center no-repeat;
+					}
+			
+			#pageTravelAnswer .ui-content .contentDetails{
+                width:100%;
+				position:absolute;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				line-height:20px;
+				font-weight:normal;
+				text-shadow:none;
+				color:#fff;
+				padding-left:14px;
+				padding-right:6px;
+				padding-bottom:6px;
+				}
+				#pageTravelAnswer .ui-content .contentDetails p{
+					padding-bottom:10px;
+					}
+					#pageTravelAnswer .ui-content .contentDetails dt{
+						padding-bottom:10px;
+						color:#ffc600;
+						font-size:14px;
+						}
+					#pageTravelAnswer .ui-content .contentDetails dd{
+						min-height:1px;
+						overflow:hidden;
+						}
+						#pageTravelAnswer .ui-content .contentDetails dd .order{
+							float:left;
+							width:16px;
+							}
+						#pageTravelAnswer .ui-content .contentDetails dd .details{
+							float:left;
+							width:260px;
+							}
+						
+				#pageTravelAnswer .ui-content .contentDetails .control{
+					height:30px;
+					padding-top:10px;
+					padding-bottom:8px;
+					padding-right:20px;
+					}
+					#pageTravelAnswer .ui-content .contentDetails .control .praise{
+						float:left;
+						line-height:28px;
+						background:url(../i/icon-praise.png) left 2px no-repeat;
+						padding-left:25px;
+						}
+					#pageTravelAnswer .ui-content .contentDetails .control .add{
+						float:right;
+						background:url(../i/btn-add.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						}
+					#pageTravelAnswer .ui-content .contentDetails .control .reduce{
+						float:right;
+						background:url(../i/btn-reduce.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						margin-left:4px;
+						}
+					#pageTravelAnswer .ui-content .contentDetails .control .reduce.hover,
+					#pageTravelAnswer .ui-content .contentDetails .control .add.hover{
+						background-position:left -29px;
+						}
+			
+/* page Survival Questions */
+#pageSurvivalQuestions{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageSurvivalQuestions header.ui-header .navbar h2{
+		background:url(../i/light-green.png) center top no-repeat;
+		}
+	
+	#pageSurvivalQuestions .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageSurvivalQuestions .ui-content .viewList{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			}
+			#pageSurvivalQuestions .ui-content .viewList ul li{
+				background:url(../i/line-1.png) left bottom repeat-x;
+				padding-bottom:2px;
+                padding-top:2px;
+				}
+				#pageSurvivalQuestions .ui-content .viewList ul li a{
+					display:block;
+					padding-left:13px;
+					padding-right:13px;
+					color:#ffc600;
+					font-size:14px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-go.png) 96% center no-repeat;
+					}
+				#pageSurvivalQuestions .ui-content .viewList ul li a.hover{
+					background-color:rgba(255,255,255,0.1);
+					}
+					#pageSurvivalQuestions .ui-content .viewList ul li a .praise{
+						color:#fff;
+						background:url(../i/icon-praise.png) left center no-repeat;
+						line-height:42px;
+						display:inline-block;
+						padding-left:25px;
+						}
+
+
+/* page Survival Questions */
+#pageSurvivalAnswer{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageSurvivalAnswer header.ui-header .navbar h2{
+		background:url(../i/light-green.png) center top no-repeat;
+		}
+	#pageSurvivalAnswer .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageSurvivalAnswer .ui-content .viewAnswer{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			position:relative;
+			}
+			#pageSurvivalAnswer .ui-content .viewAnswer .titleBar{
+				background-color:rgba(255,255,255,0.13);
+				-moz-border-radius-topleft: 10px; 
+				-moz-border-radius-topright: 10px;
+				-webkit-border-top-left-radius: 10px; 
+				-webkit-border-top-right-radius: 10px;
+				border-top-right-radius: 10px; 
+				border-top-left-radius: 10px;
+				left:-3px;
+				right:-3px;
+				top:-3px;
+				}
+				#pageSurvivalAnswer .ui-content .viewAnswer .titleBar a{
+					display:block;
+					padding-left:13px;
+                    padding-right:13px;
+					line-height:46px;
+					color:#ffc600;
+					font-size:18px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					text-align:center;
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-back.png) 16px center no-repeat;
+					}
+			
+			#pageSurvivalAnswer .ui-content .contentDetails{
+                width:100%;
+				position:absolute;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				line-height:20px;
+				font-weight:normal;
+				text-shadow:none;
+				color:#fff;
+				padding-left:14px;
+				padding-right:6px;
+				padding-bottom:6px;
+				}
+				#pageSurvivalAnswer .ui-content .contentDetails p{
+					padding-bottom:10px;
+					}
+					#pageSurvivalAnswer .ui-content .contentDetails dt{
+						padding-bottom:10px;
+						color:#ffc600;
+						font-size:14px;
+						}
+					#pageSurvivalAnswer .ui-content .contentDetails dd{
+						min-height:1px;
+						overflow:hidden;
+						}
+						#pageSurvivalAnswer .ui-content .contentDetails dd .order{
+							float:left;
+							width:16px;
+							}
+						#pageSurvivalAnswer .ui-content .contentDetails dd .details{
+							float:left;
+							width:260px;
+							}
+						
+				#pageSurvivalAnswer .ui-content .contentDetails .control{
+					height:30px;
+					padding-top:10px;
+					padding-bottom:8px;
+					padding-right:20px;
+					}
+					#pageSurvivalAnswer .ui-content .contentDetails .control .praise{
+						float:left;
+						line-height:28px;
+						background:url(../i/icon-praise.png) left 2px no-repeat;
+						padding-left:25px;
+						}
+					#pageSurvivalAnswer .ui-content .contentDetails .control .add{
+						float:right;
+						background:url(../i/btn-add.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						}
+					#pageSurvivalAnswer .ui-content .contentDetails .control .reduce{
+						float:right;
+						background:url(../i/btn-reduce.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						margin-left:4px;
+						}
+					#pageSurvivalAnswer .ui-content .contentDetails .control .reduce.hover,
+					#pageSurvivalAnswer .ui-content .contentDetails .control .add.hover{
+						background-position:left -29px;
+						}
+					#pageSurvivalAnswer .ui-content .contentDetails ul{
+						margin-bottom:20px;
+						}
+			
+
+
+
+
+/* page Daily CrApp Questions */
+#pageDailyCrAppQuestions{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageDailyCrAppQuestions header.ui-header .navbar h2{
+		background:url(../i/light-orange.png) center top no-repeat;
+		}
+	
+	#pageDailyCrAppQuestions .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageDailyCrAppQuestions .ui-content .viewList{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			}
+			#pageDailyCrAppQuestions .ui-content .viewList ul li{
+				background:url(../i/line-1.png) left bottom repeat-x;
+				padding-bottom:2px;
+                padding-top:2px;
+				}
+				#pageDailyCrAppQuestions .ui-content .viewList ul li a{
+					display:block;
+					padding-left:13px;
+					padding-right:13px;
+					color:#ffc600;
+					font-size:14px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-go.png) 96% center no-repeat;
+					}
+				#pageDailyCrAppQuestions .ui-content .viewList ul li a.hover{
+					background-color:rgba(255,255,255,0.1);
+					}
+					#pageDailyCrAppQuestions .ui-content .viewList ul li a .praise{
+						color:#fff;
+						background:url(../i/icon-praise.png) left center no-repeat;
+						line-height:42px;
+						display:inline-block;
+						padding-left:25px;
+						}
+
+
+/* page Daily CrApp Answer */
+#pageDailyCrAppAnswer{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageDailyCrAppAnswer header.ui-header .navbar h2{
+		background:url(../i/light-orange.png) center top no-repeat;
+		}
+	#pageDailyCrAppAnswer .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageDailyCrAppAnswer .ui-content .viewAnswer{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			position:relative;
+			}
+			#pageDailyCrAppAnswer .ui-content .viewAnswer .titleBar{
+				background-color:rgba(255,255,255,0.13);
+				-moz-border-radius-topleft: 10px; 
+				-moz-border-radius-topright: 10px;
+				-webkit-border-top-left-radius: 10px; 
+				-webkit-border-top-right-radius: 10px;
+				border-top-right-radius: 10px; 
+				border-top-left-radius: 10px;
+				left:-3px;
+				right:-3px;
+				top:-3px;
+				}
+				#pageDailyCrAppAnswer .ui-content .viewAnswer .titleBar a{
+					display:block;
+					padding-left:13px;
+                    padding-right:13px;
+					line-height:46px;
+					color:#ffc600;
+					font-size:18px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					text-align:center;
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-back.png) 16px center no-repeat;
+					}
+			
+			#pageDailyCrAppAnswer .ui-content .contentDetails{
+                width:100%;
+				position:absolute;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				line-height:20px;
+				font-weight:normal;
+				text-shadow:none;
+				color:#fff;
+				padding-left:14px;
+				padding-right:6px;
+				padding-bottom:6px;
+				}
+				#pageDailyCrAppAnswer .ui-content .contentDetails p{
+					padding-bottom:20px;
+					}
+					#pageDailyCrAppAnswer .ui-content .contentDetails dt{
+						padding-bottom:10px;
+						color:#ffc600;
+						font-size:14px;
+						}
+					#pageDailyCrAppAnswer .ui-content .contentDetails dd{
+						min-height:1px;
+						overflow:hidden;
+						}
+						#pageDailyCrAppAnswer .ui-content .contentDetails dd .order{
+							float:left;
+							width:16px;
+							}
+						#pageDailyCrAppAnswer .ui-content .contentDetails dd .details{
+							float:left;
+							width:260px;
+							}
+						
+				#pageDailyCrAppAnswer .ui-content .contentDetails .control{
+					height:30px;
+					padding-top:10px;
+					padding-bottom:8px;
+					padding-right:20px;
+					}
+					#pageDailyCrAppAnswer .ui-content .contentDetails .control .praise{
+						float:left;
+						line-height:28px;
+						background:url(../i/icon-praise.png) left 2px no-repeat;
+						padding-left:25px;
+						}
+					#pageDailyCrAppAnswer .ui-content .contentDetails .control .add{
+						float:right;
+						background:url(../i/btn-add.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						}
+					#pageDailyCrAppAnswer .ui-content .contentDetails .control .reduce{
+						float:right;
+						background:url(../i/btn-reduce.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						margin-left:4px;
+						}
+					#pageDailyCrAppAnswer .ui-content .contentDetails .control .reduce.hover,
+					#pageDailyCrAppAnswer .ui-content .contentDetails .control .add.hover{
+						background-position:left -29px;
+						}
+					#pageDailyCrAppAnswer .ui-content .contentDetails ul li{
+						padding-bottom:10px;
+						background:url(../i/list-icon.png) left 6px no-repeat;
+						padding-left:13px;
+						min-height:10px;
+						}
+
+
+
+/* page Search Questions */
+#pageSearchQuestions{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageSearchQuestions header.ui-header .navbar h2{
+		background:url(../i/light-orange.png) center top no-repeat;
+		}
+	
+	#pageSearchQuestions .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageSearchQuestions .ui-content .viewList{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			}
+			#pageSearchQuestions .ui-content .viewList ul li{
+				background:url(../i/line-1.png) left bottom repeat-x;
+				padding-bottom:2px;
+                padding-top:2px;
+				}
+				#pageSearchQuestions .ui-content .viewList ul li a{
+					display:block;
+					padding-left:13px;
+					padding-right:13px;
+					color:#ffc600;
+					font-size:14px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-go.png) 96% center no-repeat;
+					}
+				#pageSearchQuestions .ui-content .viewList ul li a.hover{
+					background-color:rgba(255,255,255,0.1);
+					}
+					#pageSearchQuestions .ui-content .viewList ul li a .praise{
+						color:#fff;
+						background:url(../i/icon-praise.png) left center no-repeat;
+						line-height:42px;
+						display:inline-block;
+						padding-left:25px;
+						}
+
+
+/* page Search Questions */
+#pageSearchAnswer{
+	min-height:426px !important;
+	background:#0d0d0d url(../i/bg-wrapper-figure.png) center top repeat;
+	}
+	#pageSearchAnswer header.ui-header .navbar h2{
+		background:url(../i/light-orange.png) center top no-repeat;
+		}
+	#pageSearchAnswer .ui-content{
+		padding:6px 7px 10px 8px;
+		}
+		#pageSearchAnswer .ui-content .viewAnswer{
+			border:3px solid #4d4d4d;
+			min-height:406px;
+			background-color:rgba(40,40,40,0.85);
+			-moz-border-radius: 	10px;
+			-webkit-border-radius: 	10px;
+			border-radius: 			10px;
+			-moz-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			-webkit-box-shadow:	inset 0px 0px 6px rgba(0,0,0,.75);
+			box-shadow:			inset 0px 0px 6px rgba(0,0,0,.75);
+			position:relative;
+			}
+			#pageSearchAnswer .ui-content .viewAnswer .titleBar{
+				background-color:rgba(255,255,255,0.13);
+				-moz-border-radius-topleft: 10px; 
+				-moz-border-radius-topright: 10px;
+				-webkit-border-top-left-radius: 10px; 
+				-webkit-border-top-right-radius: 10px;
+				border-top-right-radius: 10px; 
+				border-top-left-radius: 10px;
+				left:-3px;
+				right:-3px;
+				top:-3px;
+				}
+				#pageSearchAnswer .ui-content .viewAnswer .titleBar a{
+					display:block;
+					padding-left:13px;
+                    padding-right:13px;
+					line-height:46px;
+					color:#ffc600;
+					font-size:18px;
+					font-weight:normal;
+					text-shadow:0px 1px 3px rgba(0,0,0,0.9);
+					text-align:center;
+					font-family:Arial, Helvetica, sans-serif;
+					background:url(../i/icon-list-back.png) 16px center no-repeat;
+					}
+			
+			#pageSearchAnswer .ui-content .contentDetails{
+                width:100%;
+				position:absolute;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				line-height:20px;
+				font-weight:normal;
+				text-shadow:none;
+				color:#fff;
+				padding-left:14px;
+				padding-right:6px;
+				padding-bottom:6px;
+				}
+				#pageSearchAnswer .ui-content .contentDetails p{
+					padding-bottom:10px;
+					}
+					#pageSearchAnswer .ui-content .contentDetails dt{
+						padding-bottom:10px;
+						color:#ffc600;
+						font-size:14px;
+						}
+					#pageSearchAnswer .ui-content .contentDetails dd{
+						min-height:1px;
+						overflow:hidden;
+						}
+						#pageSearchAnswer .ui-content .contentDetails dd .order{
+							float:left;
+							width:16px;
+							}
+						#pageSearchAnswer .ui-content .contentDetails dd .details{
+							float:left;
+							width:260px;
+							}
+						
+				#pageSearchAnswer .ui-content .contentDetails .control{
+					height:30px;
+					padding-top:10px;
+					padding-bottom:8px;
+					padding-right:20px;
+					}
+					#pageSearchAnswer .ui-content .contentDetails .control .praise{
+						float:left;
+						line-height:28px;
+						background:url(../i/icon-praise.png) left 2px no-repeat;
+						padding-left:25px;
+						}
+					#pageSearchAnswer .ui-content .contentDetails .control .add{
+						float:right;
+						background:url(../i/btn-add.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						}
+					#pageSearchAnswer .ui-content .contentDetails .control .reduce{
+						float:right;
+						background:url(../i/btn-reduce.png) left top no-repeat;
+						width:28px;
+						height:29px;
+						overflow:hidden;
+						display:inline;
+						margin-left:4px;
+						}
+					#pageSearchAnswer .ui-content .contentDetails .control .reduce.hover,
+					#pageSearchAnswer .ui-content .contentDetails .control .add.hover{
+						background-position:left -29px;
+						}
+			
+            
+div.content {
+padding-left:13px;
+padding-right:13px;
+}

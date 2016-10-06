@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta id="viewport" name="viewport" content="width=320,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>holy crApp</title>
+
+<link rel="stylesheet" href="./css/style.css" media="all" />
+<link rel="stylesheet" href="./css/jquery.mobile-1.1.0-rc.1.css" media="all" />
+
+<!-- external javascript -->
+    
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/cordova-1.5.0.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.mobile-1.1.0-rc.1.min.js"></script>
+</head>
+
+<body>
+
+
+
+<!-- Start of main page -->
+<div data-role="page" id="pageMain" data-title="Holy crApp - Main">
+	<div data-role="content">
+		<div class="logoBox"></div>
+		<div class="commandList">
+			<a href="#pageSurvivalQuestions" class="tap"><img src="i/icon-survival.png" alt="Survival" /><span>Survival</span></a>
+			<a href="#pageTravelQuestions" class="tap"><img src="i/icon-travel.png" alt="Travel" /><span>Travel</span></a>
+			<a href="#pageMedicalQuestions" class="tap"><img src="i/icon-medical.png" alt="Medical" /><span>Medical</span></a>
+			<a href="#pageAutoQuestions" class="tap"><img src="i/icon-auto.png" alt="Auto" /><span>Auto</span></a>
+			<a href="#pageDailyCrAppQuestions" class="tap"><img src="i/icon-daily-crapp.png" alt="Daily crApp" /><span>Daily crApp</span></a>
+		</div>
+		<div class="searchBox">
+			<div class="search">
+                <form>
+                    <input type="text" placeholder="Search situation.." />
+                    
+                </form>
+			</div>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+<!-- Start of Medical Questions page -->
+<div data-role="page" id="pageMedicalQuestions" data-title="Holy crApp - Medical Questions">
+	<header data-role="header" data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Medical</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewList">
+			<ul>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+<!-- Start of Medical Questions page -->
+<div data-role="page" class="answerPage" id="pageMedicalAnswer" data-title="Holy crApp - Medical Answer">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Medical</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewAnswer">
+			<div class="titleBar">
+				<a href="#" class="title" data-rel="back">I had low blood sugar</a>
+			</div>
+			<div class="contentDetails">
+				<div class="control">
+					<span class="praise">0</span>
+					<div class="commandBox">
+						<a href="#" class="reduce tap"></a>
+						<a href="#" class="add tap"></a>
+					</div>
+				</div>
+				<div class="content">
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+
+<!-- Start of Auto Questions page -->
+<div data-role="page" id="pageAutoQuestions" data-title="Holy crApp - Auto Questions">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Auto</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewList">
+			<ul>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+<!-- Start of Auto Questions page -->
+<div data-role="page" class="answerPage" id="pageAutoAnswer" data-title="Holy crApp - Auto Answer">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Auto</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewAnswer">
+			<div class="titleBar">
+				<a href="#" class="title" data-rel="back">Flat Tire</a>
+			</div>
+			<div class="contentDetails">
+				<div class="control">
+					<span class="praise">0</span>
+					<div class="commandBox">
+						<a href="#" class="reduce tap"></a>
+						<a href="#" class="add tap"></a>
+					</div>
+				</div>
+				<div class="content">
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+
+
+<!-- Start of Travel Questions page -->
+<div data-role="page" id="pageTravelQuestions" data-title="Holy crApp - Travel Questions">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Travel</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewList">
+			<ul>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+<!-- Start of Travel Questions page -->
+<div data-role="page" class="answerPage" id="pageTravelAnswer" data-title="Holy crApp - Travel Answer">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Survival</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewAnswer">
+			<div class="titleBar">
+				<a href="#" class="title" data-rel="back">Passport lost or stolen</a>
+			</div>
+			<div class="contentDetails">
+				<div class="control">
+					<span class="praise">0</span>
+					<div class="commandBox">
+						<a href="#" class="reduce tap"></a>
+						<a href="#" class="add tap"></a>
+					</div>
+				</div>
+				<div class="content">
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+
+
+
+<!-- Start of Survival Questions page -->
+<div data-role="page" id="pageSurvivalQuestions" data-title="Holy crApp - Survival Questions">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Survival</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewList">
+			<ul>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+<!-- Start of Survival Answer page -->
+<div data-role="page" class="answerPage" id="pageSurvivalAnswer" data-title="Holy crApp - Survival Answer">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Survival</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewAnswer">
+			<div class="titleBar">
+				<a href="#" class="title" data-rel="back">Picking survival shelter</a>
+			</div>
+			<div class="contentDetails">
+				<div class="control">
+					<span class="praise">0</span>
+					<div class="commandBox">
+						<a href="#" class="reduce tap"></a>
+						<a href="#" class="add tap"></a>
+					</div>
+				</div>
+				<div class="content">
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+
+
+<!-- Start of Daily CrApp Questions page -->
+<div data-role="page" id="pageDailyCrAppQuestions" data-title="Holy crApp - Daily CrApp Questions">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Daily crApp</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewList">
+			<ul>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+<!-- Start of Daily CrApp Answer page -->
+<div data-role="page" class="answerPage" id="pageDailyCrAppAnswer" data-title="Holy crApp - Daily CrApp Answer">
+	<header data-role="header" data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Daily crApp</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewAnswer">
+			<div class="titleBar">
+				<a href="#" class="title" data-rel="back">I forgot to wear my pants</a>
+			</div>
+			<div class="contentDetails">
+				<div class="control">
+					<span class="praise">0</span>
+					<div class="commandBox">
+						<a href="#" class="reduce tap"></a>
+						<a href="#" class="add tap"></a>
+					</div>
+				</div>
+				<div class="content">
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+
+<!-- Start of search Questions page -->
+<div data-role="page" id="pageSearchQuestions" data-title="Holy crApp - Seach Results">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Search Results</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewList">
+			<ul>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+<!-- Start of Search Questions page -->
+<div data-role="page" class="answerPage" id="pageSearchAnswer" data-title="Holy crApp - Search Results">
+	<header data-role="header"  data-position="fixed">
+		<div class="navbar">
+			<a href="#pageMain" class="home tap" data-transition="flip"><span></span></a>
+			<h2>Search Results</h2>
+			<a href="#" class=" tap"><span></span></a>
+		</div>
+	</header>
+	<div data-role="content">
+		<div class="viewAnswer">
+			<div class="titleBar">
+				<a href="#" class="title" data-rel="back">Replace door hinge pins</a>
+			</div>
+			<div class="contentDetails">
+				<div class="control">
+					<span class="praise">0</span>
+					<div class="commandBox">
+						<a href="#" class="reduce tap"></a>
+						<a href="#" class="add tap"></a>
+					</div>
+				</div>
+				<div class="content">
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
+
+</body>
+</html>
