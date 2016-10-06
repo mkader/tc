@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Styx Video Playback</title>
+
+
+
+<link rel="stylesheet" href="./css/jquery.mobile.structure-1.1.0-rc.2.css" media="all"/>
+
+<link rel="stylesheet" href="./css/jquery.mobile.css" media="all"/>
+<link rel="stylesheet" href="./css/style.css" media="all" />
+
+<!-- external javascript -->
+<script src="js/jquery.js"></script><!-- v1.7.1 -->
+<script src="js/jquery.bxSlider.js"></script> 
+<script src="js/script.js"></script>
+<script src="js/jquery.mobile-1.1.0-rc.2.js"></script>
+</head>
+
+<body>
+<!-- Start of login page -->
+<div data-role="page"  data-title="capture single view" class="single-view-page">
+
+	<header data-role="header" data-theme="c" data-fullscreen="true" data-position="fixed"  data-visible-on-page-show="false"  class="ui-fixed-hidden">
+        <a href="javascript:;" class="back" data-rel="back" data-role="none">Back</a>
+        <h1>
+            VID_20120221_155652.mp4
+            <span class="time">on MM/DD/YYYY, 00:00</span>
+        </h1>
+        <a href="multi-view.html" data-role="button" data-theme="a">Home</a>
+    </header>
+	<div data-role="content">
+        <img src="i/video-placeholder.png" alt="" />
+         
+    	<div class="modelBG"></div>
+        <div class="deleteModel"> 
+        	<div class="adjustProperty">Continue Remove Device?</div>
+            <div class="clear"></div>
+        	<div class="myslider">
+    			<input  id="theSlider" type="range" width="50px" max="100" min="0" value="50"/>
+    		</div>
+            
+            <div class="myswitch">
+    			<select data-role="slider" >
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select> 
+			</div>
+            
+            <div class="adjustPropertyLeft">
+				<a href="javascript:;" class="login okPopUp" data-role="button" data-theme="a">OK</a>
+            </div>
+            <div class="adjustPropertyRight">
+            	<a href="javascript:;" class="login cancelPopUp" data-role="button" data-theme="a">Cancel</a>
+            </div>
+                     
+        </div>
+        
+    	
+    </div>
+   
+    
+    <footer data-role="footer"  data-position="fixed" data-visible-on-page-show="false"  class="ui-fixed-hidden">
+        <div class="popup popup4"  id="ptz-popup">
+            <div class="top"></div>
+            <div class=" body">
+                <ul>
+                    <li>
+                        <label>Zoom :</label>
+                        <a class="minus" href="javascript:;"></a>
+                        <span class="value">100%</span>
+                        <a class="plus" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <label>Iris :</label>
+                        <a class="minus" href="javascript:;"></a>
+                        <span class="value">[ Value ]</span>
+                        <a class="plus" href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <label>Focus :</label>
+                        <a class="minus" href="javascript:;"></a>
+                        <span class="value">[ Value ]</span>
+                        <a class="plus" href="javascript:;"></a>
+                    </li>
+                    
+                     <li>
+                        <div class="panCharacterLeft"></div>
+                        <div class="panImageUp"></div>
+                        <div class="panCharacterRight"></div>
+                        <div class="liClear"></div>
+                    </li>
+                    <li>
+                        <div class="panImageLeft"></div>
+                        <div class="panImageRight"></div>
+                        <div class="liClear"></div>
+                    </li>
+                    <li>
+                        <div class="panCharacterLeft"></div>
+                        <div class="panImageDown"></div>
+                        <div class="panCharacterRight"></div>
+                        <div class="liClear"></div>
+                    </li>
+                </ul>
+                <div class="actions">
+                    <select data-role="none">
+                        <option>Load a Preset</option>
+                        <option>Load a Preset 1</option>
+                        <option>Load a Preset 2</option>
+                    </select>
+                    <a href="#" data-theme="a" data-role="button" class="save">Save a Preset</a>
+                    <a href="#" data-theme="a" data-role="button">Reset</a>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+        <div class="popup popup5"  id="movie-popup">
+            <div class="top"></div>
+            <div class=" body">
+                <img src="i/capture-thumbnail.png" alt="" />
+            </div>
+            <div class="bottom"></div>
+        </div>
+        
+        
+        
+        <div class="popup popup3"  id="setting-popup">
+       
+            <div class="top"></div>
+            <div class=" body">
+                <p class="line1">
+                    <a class="brightness trigerSlicer" href="javascript:;">Brightness</a>
+                    <a class="constrast trigerSlicer" href="javascript:;">Constrast</a>
+                    <a class="saturation trigerSlicer" href="javascript:;">Saturation</a>
+                    <a class="hue trigerSlicer" href="javascript:;">Hue</a>
+                    
+                </p>
+                <p>
+                	<div class="slideSimulate">
+                    	<div class="slideHandle drag"></div>
+                    </div>
+                </p>
+                <p class="line2">
+                    <a class="mute trigerSlicer" href="javascript:;">Audio Mute</a>
+                    <a class="ratio" href="javascript:;">Aspect Ratio</a>
+                    <a class="ptz-enable trigerSlicer" href="javascript:;">Enable PTZ</a>
+                </p>
+            </div>
+            <div class="bottom"></div>
+        </div>
+        
+        
+        <span class="star"></span>
+        <a href="javascript:;" class="setting popup-trigger" data-icon="setting" data-popup="#setting-popup" data-theme="a" data-role="button">&nbsp;</a>
+        <a href="javascript:;" class="movie popup-trigger" data-icon="movie" data-popup="#movie-popup" data-theme="a" data-role="button">&nbsp;</a>
+        <a href="javascript:;" class="ptz popup-trigger" data-popup="#ptz-popup" data-theme="a" data-role="button">PTZ</a>
+
+    </footer>
+</div><!-- /page -->
+
+</body>
+</html>
